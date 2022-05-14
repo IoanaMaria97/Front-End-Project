@@ -17,7 +17,16 @@
 
         <div class="right">
             <h2>Sign In!</h2>
-            <svg class="fillColor" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-3.123 0-5.914-1.441-7.749-3.69.259-.588.783-.995 1.867-1.246 2.244-.518 4.459-.981 3.393-2.945-3.155-5.82-.899-9.119 2.489-9.119 3.322 0 5.634 3.177 2.489 9.119-1.035 1.952 1.1 2.416 3.393 2.945 1.082.25 1.61.655 1.871 1.241-1.836 2.253-4.628 3.695-7.753 3.695z"/></svg>
+            <svg class="fillColor" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-3.123 0-5.914-1.441-7.749-3.69.259-.588.783-.995 1.867-1.246 2.244-.518 4.459-.981 3.393-2.945-3.155-5.82-.899-9.119 2.489-9.119 3.322 0 5.634 3.177 2.489 9.119-1.035 1.952 1.1 2.416 3.393 2.945 1.082.25 1.61.655 1.871 1.241-1.836 2.253-4.628 3.695-7.753 3.695z"/>
+               <!-- Linear Gradient for svg
+                    https://stackoverflow.com/questions/14051351/svg-gradient-using-css-->
+                <defs>
+                    <linearGradient id="MyGradient">
+                      <stop offset="5%" stop-color="#8C7268" />
+                      <stop offset="95%" stop-color="#BDCFCC" />
+                    </linearGradient>
+                  </defs>
+                </svg>
             <form>
                 <label for="email">Email Address</label>
                 <input type="email" id="email" placeholder="ioanamaria1997@yahoo.com" required>
@@ -25,9 +34,9 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" placeholder="****" required>
 
-                <input class="button" type="submit" value="Sign Ip">
+                <input class="button" type="submit" value="Sign In">
             </form>
-            <p><a href="#">Don't have an account? Sign Up here!</a></p>
+            <p><a href="./SignUp.html">Don't have an account? Sign Up here!</a></p>
         </div>
     </div>
 </body>
