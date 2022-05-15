@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 40px;
+}
+
+h2 {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 25px;
+}
+
+p {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 20px;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.3))), url("../Img/coffee7.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.3) 100%), url("../Img/coffee7.jpg");
+  background-size: cover;
+  height: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .container {
+  position: relative;
+  width: 80%;
+}
+
+.hero .container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F5F5F5;
+}
+
+.hero .container header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 380px;
+  padding: 0;
+}
+
+.hero .container header nav ul .li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+.hero .container header nav ul .li svg {
+  fill: #F5F5F5;
+}
+
+.hero .container header nav ul .li li a {
+  text-decoration: none;
+  font-family: 'Gill Sans', sans-serif;
+  color: #F5F5F5;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.hero .container .category {
+  color: #F5F5F5;
+}
+
+.hero .container .category nav {
+  width: 100%;
+}
+
+.hero .container .category nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero .container .category nav ul li a {
+  text-decoration: none;
+  font-family: 'Gill Sans', sans-serif;
+  color: #F5F5F5;
+  font-size: 17px;
+}
+
+.hero .container .quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #F5F5F5;
+  padding: 100px 200px;
+}
+
+.hero .container .quote p {
+  text-align: center;
+}
+
+.hero .container .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero .container .search input {
+  width: 40%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #F5F5F5;
+}
+
+.hero .container .search button {
+  background-color: transparent;
+  border: none;
+  margin-left: 15px;
+}
+
+.hero .container .search button .fill {
+  fill: #F5F5F5;
+}
+
+.bestSeller {
+  background-color: #BDCFCC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 120px;
+}
+
+.bestSeller h3 {
+  margin-bottom: 70px;
+  font-size: 35px;
+}
+
+.bestSeller .containerCards {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bestSeller .containerCards .card {
+  height: 450px;
+  width: 280px;
+  border: 1px solid #b9b8b8;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
+          box-shadow: 5px 5px 5px 5px #b9b8b8;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.bestSeller .containerCards .card img {
+  height: 260px;
+  width: 260px;
+}
+
+.bestSeller .containerCards .card .nameProduct p:nth-child(1) {
+  font-size: 30px;
+  margin: 0;
+}
+
+.bestSeller .containerCards .card .button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.bestSeller .containerCards .card .button button {
+  height: 70px;
+  width: 100%;
+  border: none;
+  background-color: #8C7268;
+  color: #F5F5F5;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+}
+
+.middle {
+  background-color: #fceae3;
+  height: 600px;
+  position: relative;
+}
+
+.middle .square {
+  background-color: #cea898;
+  opacity: 0.4;
+  height: 60%;
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+
+.middle .info {
+  position: absolute;
+  width: 30%;
+  top: 33%;
+  left: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.middle .info p:nth-child(1) {
+  font-size: 25px;
+}
+
+.middle .info p:nth-child(2) {
+  text-align: center;
+  font-size: 18px;
+}
+
+.middle .photo {
+  height: 100%;
+}
+
+.middle .photo img {
+  height: 80%;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
+.products {
+  background-color: #BDCFCC;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-top: 80px;
+}
+
+.products .productLeft {
+  height: 80%;
+  width: 35%;
+  background-image: url("../Img/coffee10.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.products .productLeft .details {
+  width: 80%;
+  height: 20%;
+  background-color: white;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products .productLeft .details p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.products .productLeft .btn {
+  position: absolute;
+  top: 107%;
+  left: 29%;
+}
+
+.products .productLeft .btn button {
+  height: 40px;
+  width: 200px;
+  border: none;
+  background-color: #8C7268;
+  color: #F5F5F5;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 15px;
+}
+
+.products .productRight {
+  height: 80%;
+  width: 35%;
+  background-image: url("../Img/coffee5.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.products .productRight .details {
+  width: 80%;
+  height: 20%;
+  background-color: white;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products .productRight .details p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.products .productRight .btn {
+  position: absolute;
+  top: 107%;
+  left: 29%;
+}
+
+.products .productRight .btn button {
+  height: 40px;
+  width: 200px;
+  border: none;
+  background-color: #8C7268;
+  color: #F5F5F5;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 15px;
+}
+/*# sourceMappingURL=Homepage.css.map */

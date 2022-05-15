@@ -1,0 +1,279 @@
+@import "colors";
+@import "spacing";
+@import "base";
+
+.hero{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+        ), url("../Img/coffee7.jpg"); 
+    background-size: cover;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    .container {
+        position: relative;
+        width: 80%;
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $milky;
+            nav {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    width: 380px;
+                    padding: 0;
+                    .li {
+                        display: flex;
+                        justify-content: flex-end;
+                        width:100%;
+                        svg {
+                            fill: $milky;
+                        }
+                        li {
+                            a {
+                                text-decoration: none;
+                                font-family:'Gill Sans', sans-serif;
+                                color: $milky;
+                                font-size: 17px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .category {
+            color: $milky;
+            nav {
+                width: 100%;
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-family:'Gill Sans', sans-serif;
+                            color: $milky;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+
+        }
+        .quote {
+            display: flex;
+            color: $milky;
+            padding: 100px 200px;
+            p {
+                text-align: center;
+            }
+        }
+        .search {
+            display: flex;
+            justify-content: center;
+            input {
+                width: 40%;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.4);
+                border: 1px solid $milky;
+            }
+            button {
+                background-color: transparent;
+                border: none;
+                margin-left: 15px;
+                .fill {
+                    fill: $milky;
+                }
+            }
+        }
+    }
+}
+
+.bestSeller {
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    h3 {
+        margin-bottom: 70px;
+        font-size: 35px;
+    }
+    .containerCards {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .card {
+            height: 450px;
+            width: 280px;
+            border: 1px solid $grey;
+            background-color: $white;
+            box-shadow: 5px 5px 5px 5px $grey;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            img {
+                height: 260px;
+                width: 260px;
+            }
+            .nameProduct {
+                p:nth-child(1) {
+                    font-size: 30px;
+                    margin: 0;
+                }
+            }
+            .button {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                button {
+                    height: 70px;
+                    width: 100%;
+                    border: none;
+                    background-color: $brown;
+                    color: $milky;
+                    font-family: 'Gill Sans', sans-serif;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.middle {
+    background-color: $nude;
+    height: 600px;
+    position: relative;
+    .square {
+        background-color: $darkNude;
+        opacity: 0.4;
+        height: 60%;
+        width: 50%;
+        position: absolute;
+        top:20%;
+        left: 25%;
+    }
+    .info {
+        position: absolute;
+        width: 30%;
+        top: 33%;
+        left: 12%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        p:nth-child(1) {
+            font-size: 25px;
+        }
+        p:nth-child(2) {
+            text-align: center;
+            font-size: 18px;
+        }
+
+    }
+    .photo {
+        height: 100%;
+        img {
+            height: 80%;
+            width: 40%;
+            position: absolute;
+            left: 50%;
+            top: 10%;
+        }
+    }
+}
+
+.products {
+    background-color: $blue;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 80px;
+    .productLeft {
+        height: 80%;
+        width: 35%;
+        background-image: url("../Img/coffee10.jpg");
+        background-size: cover;
+        position: relative;
+        .details {
+            width: 80%;
+            height: 20%;
+            background-color: white;
+            position: absolute;
+            top: 90%;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+        .btn {
+            position: absolute;
+            top: 107%;
+            left: 29%;
+            button {
+                height: 40px;
+                width: 200px;
+                border: none;
+                background-color: $brown;
+                color: $milky;
+                font-family: 'Gill Sans', sans-serif;
+                font-size: 15px;
+            }
+        }
+
+    }
+    .productRight {
+        height: 80%;
+        width: 35%;
+        background-image: url("../Img/coffee5.jpg");
+        background-size: cover;
+        position: relative;
+        .details {
+            width: 80%;
+            height: 20%;
+            background-color: white;
+            position: absolute;
+            top: 90%;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                margin: 0;
+                font-size: 18px;
+            }
+        }
+        .btn {
+            position: absolute;
+            top: 107%;
+            left: 29%;
+            button {
+                height: 40px;
+                width: 200px;
+                border: none;
+                background-color: $brown;
+                color: $milky;
+                font-family: 'Gill Sans', sans-serif;
+                font-size: 15px;
+            }
+        }
+
+    }
+}
