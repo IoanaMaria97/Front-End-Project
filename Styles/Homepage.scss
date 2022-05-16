@@ -125,12 +125,20 @@
             flex-direction: column;
             position: relative;
             img {
-                height: 260px;
-                width: 260px;
+                height: 250px;
+                width: 250px;
             }
             .nameProduct {
                 p:nth-child(1) {
                     font-size: 30px;
+                    margin: 5px;
+                }
+                p:nth-child(2) {
+                    font-size:20px;
+                    margin:0;
+                }
+                p:nth-child(3) {
+                    font-size: 16px;
                     margin: 0;
                 }
             }
@@ -287,8 +295,156 @@
     }
 }
 
-footer {
+.brightIdea {
     background-color: $nude;
+    height: 950px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .containerIdea {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        .title {
+            h5 {
+                font-family: 'Gill Sans', sans-serif;
+                font-size: 30px;
+            }
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 50px;
+            .gridItem1 {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+               .style {
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   img {
+                    height: 250px;
+                    width: 250px;
+                    border-radius: 50%;
+                }
+                p {
+                    font-family: 'Gill Sans', sans-serif;
+                    font-size: 17px;
+                    text-align: center;
+                }
+               }
+            }
+            .gridItem2 {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                .style {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     height: 250px;
+                     width: 250px;
+                     border-radius: 50%;
+                 }
+                 p {
+                     font-family: 'Gill Sans', sans-serif;
+                     font-size: 17px;
+                     text-align: center;
+                 }
+                }
+            }
+            .gridItem3 {
+                grid-column: 3 / 4;
+                grid-row: 1 / 2;
+                .style {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     height: 250px;
+                     width: 250px;
+                     border-radius: 50%;
+                 }
+                 p {
+                     font-family: 'Gill Sans', sans-serif;
+                     font-size: 17px;
+                     text-align: center;
+                 }
+                }
+            }
+            .gridItem4 {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                .style {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     height: 250px;
+                     width: 250px;
+                     border-radius: 50%;
+                 }
+                 p {
+                     font-family: 'Gill Sans', sans-serif;
+                     font-size: 17px;
+                     text-align: center;
+                 }
+                }
+            }
+            .gridItem5 {
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+                .style {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     height: 250px;
+                     width: 250px;
+                     border-radius: 50%;
+                 }
+                 p {
+                     font-family: 'Gill Sans', sans-serif;
+                     font-size: 17px;
+                     text-align: center;
+                 }
+                }
+            }
+            .gridItem6 {
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+                .style {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                     height: 250px;
+                     width: 250px;
+                     border-radius: 50%;
+                 }
+                 p {
+                     font-family: 'Gill Sans', sans-serif;
+                     font-size: 17px;
+                     text-align: center;
+                 }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $blue;
     height: 250px;
     width: 100%;
     display: flex;
