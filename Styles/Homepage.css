@@ -18,9 +18,19 @@ h3 {
   font-size: 25px;
 }
 
+h4 {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+}
+
 p {
   font-family: 'Gill Sans', sans-serif;
   font-size: 20px;
+}
+
+li {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
 }
 
 .hero {
@@ -305,8 +315,8 @@ p {
 }
 
 .products .productLeft .details {
-  width: 80%;
   height: 20%;
+  width: 80%;
   background-color: white;
   position: absolute;
   top: 90%;
@@ -318,28 +328,32 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .products .productLeft .details p {
-  margin: 0;
+  margin: 6px;
   font-size: 18px;
+  text-align: center;
+}
+
+.products .productLeft .details p:first-child {
+  font-size: 22px;
 }
 
 .products .productLeft .btn {
+  height: 20%;
+  width: 60%;
   position: absolute;
-  top: 107%;
-  left: 29%;
+  top: 105%;
+  left: 30%;
 }
 
 .products .productLeft .btn button {
-  height: 40px;
-  width: 200px;
+  height: 50%;
+  width: 60%;
   border: none;
   background-color: #8C7268;
   color: #F5F5F5;
@@ -369,32 +383,137 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .products .productRight .details p {
-  margin: 0;
+  margin: 6px;
   font-size: 18px;
 }
 
+.products .productRight .details p:first-child {
+  font-size: 22px;
+}
+
 .products .productRight .btn {
+  height: 20%;
+  width: 60%;
   position: absolute;
-  top: 107%;
-  left: 29%;
+  top: 105%;
+  left: 30%;
 }
 
 .products .productRight .btn button {
-  height: 40px;
-  width: 200px;
+  height: 50%;
+  width: 60%;
   border: none;
   background-color: #8C7268;
   color: #F5F5F5;
   font-family: 'Gill Sans', sans-serif;
   font-size: 15px;
+}
+
+footer {
+  background-color: #fceae3;
+  height: 250px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footerContainer {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footerContainer .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footerContainer .about h4 {
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+footer .footerContainer .about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footerContainer .help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footerContainer .help h4 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+footer .footerContainer .help ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footerContainer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footerContainer .contact h4 {
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+footer .footerContainer .contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footerContainer .contact ul li {
+  margin: 10px;
 }
 /*# sourceMappingURL=Homepage.css.map */

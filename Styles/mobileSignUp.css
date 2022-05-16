@@ -18,9 +18,19 @@ h3 {
   font-size: 25px;
 }
 
+h4 {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+}
+
 p {
   font-family: 'Gill Sans', sans-serif;
   font-size: 20px;
+}
+
+li {
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {
