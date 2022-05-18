@@ -1,36 +1,48 @@
+* {
+  font-family: 'Gill Sans', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 40px;
-}
-
-h2 {
-  font-family: 'Gill Sans', sans-serif;
   font-size: 30px;
 }
 
-h3 {
-  font-family: 'Gill Sans', sans-serif;
+h2 {
   font-size: 25px;
 }
 
-h4 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 18px;
-}
-
-p {
-  font-family: 'Gill Sans', sans-serif;
+h3 {
   font-size: 20px;
 }
 
-li {
-  font-family: 'Gill Sans', sans-serif;
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+li, a {
   font-size: 18px;
+}
+
+button {
+  font-size: 15px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -614,7 +626,7 @@ li {
     text-align: center;
   }
   footer {
-    background-color: #fceae3;
+    background-color: #BDCFCC;
     height: 250px;
     width: 100%;
     display: -webkit-box;

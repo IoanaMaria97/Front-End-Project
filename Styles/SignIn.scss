@@ -25,15 +25,11 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            h1 {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 40px;
+            .logo {
                 color: $milky;
                 margin: 0;
             }
             p {
-                font-family:'Gill Sans', sans-serif;
-                font-size: 20px;
                 color: $milky;
                 margin:20px 40px;
                 text-align:center;
@@ -41,8 +37,6 @@ body {
             button {
                 height: 50px;
                 width: 200px;
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
                 background-color: transparent;
                 color: $milky;
                 border: 1px solid $milky;
@@ -55,34 +49,26 @@ body {
             flex-direction: column;
             align-items:center;
             justify-content: center;
-            h2 {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 30px;
-            }
            .fillColor {
                fill: url(#MyGradient);
-           }
-           svg {
-               margin-bottom: 10px;
            }
             form { 
                 width: 50%;
                 display: flex;
                 flex-direction: column;
                 label {
-                    margin-bottom: 10px;
-                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    margin-top: 15px;
                 }
                 input {
                     height: 30px;
                 }
                 .button {
-                    margin: 20px;
+                    margin: 20px auto;
                     height: 40px;
+                    width: 60%;
                     background-color: $brown;
                     color: $milky;
-                    font-family: 'Gill Sans', sans-serif;
-                    font-size: 15px;
                     text-transform: uppercase;
                     box-shadow: 5px 5px 5px 5px $grey;
                     border: none;
@@ -90,12 +76,11 @@ body {
     
             }
             p {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
-                margin: 10px;
+                margin: 0;
                 a {
                     text-decoration: none;
                     color: $black;
+                    font-size: 15px;
                 }
             }
         }

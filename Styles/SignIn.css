@@ -1,36 +1,48 @@
+* {
+  font-family: 'Gill Sans', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 40px;
-}
-
-h2 {
-  font-family: 'Gill Sans', sans-serif;
   font-size: 30px;
 }
 
-h3 {
-  font-family: 'Gill Sans', sans-serif;
+h2 {
   font-size: 25px;
 }
 
-h4 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 18px;
-}
-
-p {
-  font-family: 'Gill Sans', sans-serif;
+h3 {
   font-size: 20px;
 }
 
-li {
-  font-family: 'Gill Sans', sans-serif;
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+li, a {
   font-size: 18px;
+}
+
+button {
+  font-size: 15px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 30px 0;
 }
 
 body {
@@ -74,16 +86,12 @@ body .container .left {
           align-items: center;
 }
 
-body .container .left h1 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 40px;
+body .container .left .logo {
   color: #F5F5F5;
   margin: 0;
 }
 
 body .container .left p {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 20px;
   color: #F5F5F5;
   margin: 20px 40px;
   text-align: center;
@@ -92,8 +100,6 @@ body .container .left p {
 body .container .left button {
   height: 50px;
   width: 200px;
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 15px;
   background-color: transparent;
   color: #F5F5F5;
   border: 1px solid #F5F5F5;
@@ -117,17 +123,8 @@ body .container .right {
           justify-content: center;
 }
 
-body .container .right h2 {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 30px;
-}
-
 body .container .right .fillColor {
   fill: url(#MyGradient);
-}
-
-body .container .right svg {
-  margin-bottom: 10px;
 }
 
 body .container .right form {
@@ -142,8 +139,8 @@ body .container .right form {
 }
 
 body .container .right form label {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 body .container .right form input {
@@ -151,12 +148,11 @@ body .container .right form input {
 }
 
 body .container .right form .button {
-  margin: 20px;
+  margin: 20px auto;
   height: 40px;
+  width: 60%;
   background-color: #8C7268;
   color: #F5F5F5;
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 15px;
   text-transform: uppercase;
   -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
           box-shadow: 5px 5px 5px 5px #b9b8b8;
@@ -164,13 +160,12 @@ body .container .right form .button {
 }
 
 body .container .right p {
-  font-family: 'Gill Sans', sans-serif;
-  font-size: 15px;
-  margin: 10px;
+  margin: 0;
 }
 
 body .container .right p a {
   text-decoration: none;
   color: black;
+  font-size: 15px;
 }
 /*# sourceMappingURL=SignIn.css.map */

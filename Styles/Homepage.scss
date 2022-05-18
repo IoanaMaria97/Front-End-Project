@@ -2,14 +2,14 @@
 @import "spacing";
 @import "base";
 
-.hero{
+.hero {
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.3) 100%
         ), url("../Img/coffee7.jpg"); 
     background-size: cover;
-    height: 680px;
+    height: 700px;
     display: flex;
     justify-content: center;
     .container {
@@ -17,69 +17,78 @@
         width: 80%;
         header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             color: $milky;
-            nav {
-                ul {
-                    list-style: none;
-                    display: flex;
-                    width: 380px;
-                    padding: 0;
-                    .li {
+            height: 20%;
+            .nav {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                nav {
+                    ul {
+                        list-style: none;
                         display: flex;
-                        justify-content: flex-end;
-                        width:100%;
-                        svg {
-                            fill: $milky;
-                        }
-                        li {
-                            a {
-                                text-decoration: none;
-                                font-family:'Gill Sans', sans-serif;
-                                color: $milky;
-                                font-size: 17px;
-                                margin-left: 10px;
+                        width: 380px;
+                        padding: 0;
+                        .li {
+                            display: flex;
+                            justify-content: flex-end;
+                            width:100%;
+                            svg {
+                                fill: $milky;
+                            }
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    color: $milky;
+                                    margin-left: 10px;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-        .category {
-            color: $milky;
-            nav {
-                width: 100%;
-                ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
+            .category {
+                color: $milky;
+                nav {
                     width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    li {
-                        a {
-                            text-decoration: none;
-                            font-family:'Gill Sans', sans-serif;
-                            color: $milky;
-                            font-size: 17px;
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        li {
+                            a {
+                                text-decoration: none;
+                                color: $milky;
+                            }
                         }
                     }
                 }
+    
             }
-
+            
         }
+
         .quote {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             color: $milky;
-            padding: 100px 200px;
+            height: 50%;
             p {
                 text-align: center;
+                margin: 0 10%;
             }
         }
         .search {
             display: flex;
             justify-content: center;
+            height: 30%;
             input {
                 width: 40%;
                 height: 50px;
@@ -90,6 +99,7 @@
                 background-color: transparent;
                 border: none;
                 margin-left: 15px;
+                height: 50px;
                 .fill {
                     fill: $milky;
                 }
@@ -100,23 +110,23 @@
 
 .bestSeller {
     background-color: $blue;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 120px;
-    h3 {
-        margin-bottom: 70px;
-        font-size: 35px;
+    
+    h1 {
+        margin: 60px;
     }
     .containerCards {
         width: 80%;
+        height: 70%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         .card {
-            height: 450px;
-            width: 280px;
+            height: 90%;
+            width: 25%;
             border: 1px solid $grey;
             background-color: $white;
             box-shadow: 5px 5px 5px 5px $grey;
@@ -124,174 +134,183 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            img {
-                height: 250px;
-                width: 250px;
+            .imgProduct {
+                height: 50%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    height: 100%;
+                    width: 80%;
+                }
             }
             .nameProduct {
+                height: 35%;
+                width: 100%;
                 p:nth-child(1) {
                     font-size: 30px;
-                    margin: 5px;
+                    margin: 0;
                 }
                 p:nth-child(2) {
                     font-size:20px;
-                    margin:0;
+                    margin:10px;
                 }
                 p:nth-child(3) {
-                    font-size: 16px;
+                    font-size: 13px;
                     margin: 0;
                 }
             }
             .button {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
+                height: 15%;
+                width: 100%;    
                 button {
-                    height: 70px;
+                    height: 100%;
                     width: 100%;
                     border: none;
                     background-color: $brown;
                     color: $milky;
-                    font-family: 'Gill Sans', sans-serif;
-                    font-size: 18px;
                 }
             }
         }
     }
 }
 
-.middle {
+.middleContainer {
     background-color: $nude;
-    height: 600px;
-    position: relative;
-    .square {
-        background-color: $darkNude;
-        opacity: 0.4;
-        height: 60%;
-        width: 50%;
-        position: absolute;
-        top:20%;
-        left: 25%;
-    }
-    .info {
-        position: absolute;
-        width: 30%;
-        top: 33%;
-        left: 12%;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        p:nth-child(1) {
-            font-size: 25px;
-        }
-        p:nth-child(2) {
-            text-align: center;
-            font-size: 18px;
-        }
-
-    }
-    .photo {
-        height: 100%;
-        img {
-            height: 80%;
-            width: 40%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    .middle {
+        width: 80%;
+        position: relative;
+        .square {
+            background-color: $darkNude;
+            opacity: 0.4;
+            height: 40%;
+            width: 50%;
             position: absolute;
-            left: 50%;
-            top: 10%;
+            top: 30%;
+            left: 25%;
+        }
+        .info {
+            position: absolute;
+            height: 40%;
+            width: 40%;
+            top: 35%;
+            left: 5%;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            p {
+                text-align: center;
+                font-size: 18px;
+            }
+    
+        }
+        .photo {
+            img {
+                height: 60%;
+                width: 50%;
+                position: absolute;
+                left: 50%;
+                top: 20%;
+            }
         }
     }
 }
 
-.products {
+.productsContainer {
     background-color: $blue;
-    height: 600px;
+    height: 650px;
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 80px;
-    .productLeft {
-        height: 80%;
-        width: 35%;
-        background-image: url("../Img/coffee10.jpg");
-        background-size: cover;
-        position: relative;
-        .details {
-            height: 20%;
-            width: 80%;
-            background-color: white;
-            position: absolute;
-            top: 90%;
-            left: 10%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            p {
-                margin: 6px;
-                font-size: 18px;
-                text-align: center;
+    justify-content: center;
+    .products {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .productLeft {
+            height: 60%;
+            width: 45%;
+            background-image: url("../Img/coffee10.jpg");
+            background-size: cover;
+            position: relative;
+            .details {
+                height: 25%;
+                width: 80%;
+                background-color: white;
+                position: absolute;
+                top: 90%;
+                left: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                h3 {
+                    margin: 10px;
+                }
             }
-            p:first-child {
-                font-size: 22px;
-            }
-        }
-        .btn {
-            height: 20%;
-            width: 60%;
-            position: absolute;
-            top: 105%;
-            left: 30%;
-            button {
-                height: 50%;
+            .btn {
+                height: 20%;
                 width: 60%;
-                border: none;
-                background-color: $brown;
-                color: $milky;
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
+                position: absolute;
+                top: 110%;
+                left: 30%;
+                button {
+                    height: 50%;
+                    width: 60%;
+                    border: none;
+                    background-color: $brown;
+                    color: $milky;
+                }
             }
+    
         }
-
-    }
-    .productRight {
-        height: 80%;
-        width: 35%;
-        background-image: url("../Img/coffee5.jpg");
-        background-size: cover;
-        position: relative;
-        .details {
-            width: 80%;
-            height: 20%;
-            background-color: white;
-            position: absolute;
-            top: 90%;
-            left: 10%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            p {
-                margin: 6px;
-                font-size: 18px;
+        .productRight {
+            height: 60%;
+            width: 45%;
+            background-image: url("../Img/coffee5.jpg");
+            background-size: cover;
+            position: relative;
+            .details {
+                height: 25%;
+                width: 80%;
+                background-color: white;
+                position: absolute;
+                top: 90%;
+                left: 10%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                h4 {
+                    margin: 10px;
+                }
             }
-            p:first-child {
-                font-size: 22px;
-            }
-        }
-        .btn {
-            height: 20%;
-            width: 60%;
-            position: absolute;
-            top: 105%;
-            left: 30%;
-            button {
-                height: 50%;
+            .btn {
+                height: 20%;
                 width: 60%;
-                border: none;
-                background-color: $brown;
-                color: $milky;
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
+                position: absolute;
+                top: 110%;
+                left: 30%;
+                button {
+                    height: 50%;
+                    width: 60%;
+                    border: none;
+                    background-color: $brown;
+                    color: $milky;
+                }
             }
         }
-
     }
 }
 
@@ -308,12 +327,6 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 40px;
-        .title {
-            h5 {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 30px;
-            }
-        }
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -458,9 +471,11 @@ footer {
         .about {
             display: flex;
             flex-direction: column;
-            h4 {
+            p {
                 margin: 0px;
                 padding-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
             }
             ul {
                 list-style: none;
@@ -471,9 +486,11 @@ footer {
         .help {
             display: flex;
             flex-direction: column;
-            h4 {
+            p {
                 margin: 0;
                 padding-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
             }
             ul {
                 list-style: none;
@@ -485,9 +502,11 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            h4 {
+            p {
                 margin: 0px;
                 padding-bottom: 10px;
+                text-transform: uppercase;
+                font-weight: bold;
             }
             ul {
                 list-style: none;

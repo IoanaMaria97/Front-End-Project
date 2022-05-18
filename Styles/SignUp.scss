@@ -25,15 +25,11 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            h1 {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 40px;
+            .logo {
                 color: $milky;
                 margin: 0;
             }
             p {
-                font-family:'Gill Sans', sans-serif;
-                font-size: 20px;
                 color: $milky;
                 margin:20px 40px;
                 text-align:center;
@@ -41,8 +37,6 @@ body {
             button {
                 height: 50px;
                 width: 200px;
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
                 background-color: transparent;
                 color: $milky;
                 border: 1px solid $milky;
@@ -55,10 +49,6 @@ body {
             flex-direction: column;
             align-items:center;
             justify-content: center;
-            h2 {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 30px;
-            }
             form {
                 height: 300px;
                 width: 90%;
@@ -79,7 +69,7 @@ body {
                        width: 92.5%;
                    }
                    label {
-                       margin-bottom: 5px;
+                       margin-bottom: 10px;
                    }
 
                 }
@@ -117,8 +107,6 @@ body {
                         height: 40px;
                         background-color: $brown;
                         color: $milky;
-                        font-family: 'Gill Sans', sans-serif;
-                        font-size: 15px;
                         text-transform: uppercase;
                         box-shadow: 5px 5px 5px 5px $grey;
                         border: none;
@@ -127,12 +115,11 @@ body {
                 
             }
             p {
-                font-family: 'Gill Sans', sans-serif;
-                font-size: 15px;
-                margin: 10px;
+                margin: 5px;
                 a {
                     text-decoration: none;
                     color: $black;
+                    font-size: 15px;
                 }
             }
         }
