@@ -321,18 +321,18 @@ button {
   background-color: #cea898;
   opacity: 0.4;
   height: 40%;
-  width: 50%;
+  width: 60%;
   position: absolute;
   top: 30%;
-  left: 25%;
+  left: 20%;
 }
 
 .middleContainer .middle .info {
   position: absolute;
   height: 40%;
   width: 40%;
-  top: 35%;
-  left: 5%;
+  top: 30%;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,19 +343,25 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .middleContainer .middle .info p {
   text-align: center;
   font-size: 18px;
+  padding: 0 20px;
 }
 
 .middleContainer .middle .photo img {
-  height: 60%;
-  width: 50%;
+  height: 70%;
+  width: 60%;
   position: absolute;
-  left: 50%;
-  top: 20%;
+  top: 15%;
+  left: 40%;
+  -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
+          box-shadow: 5px 5px 5px 5px #b9b8b8;
 }
 
 .productsContainer {
@@ -395,7 +401,7 @@ button {
   width: 80%;
   background-color: white;
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -416,23 +422,21 @@ button {
 }
 
 .productsContainer .products .productLeft .details h3 {
-  margin: 10px;
-}
-
-.productsContainer .products .productLeft .btn {
-  height: 20%;
-  width: 60%;
-  position: absolute;
-  top: 110%;
-  left: 30%;
+  margin: 5px;
 }
 
 .productsContainer .products .productLeft .btn button {
-  height: 50%;
-  width: 60%;
+  height: 15%;
+  width: 50%;
+  position: absolute;
+  top: 104%;
+  left: 25%;
   border: none;
   background-color: #8C7268;
   color: #F5F5F5;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
+          box-shadow: 5px 5px 5px 5px #b9b8b8;
 }
 
 .productsContainer .products .productRight {
@@ -448,7 +452,7 @@ button {
   width: 80%;
   background-color: white;
   position: absolute;
-  top: 90%;
+  top: 87%;
   left: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,23 +473,21 @@ button {
 }
 
 .productsContainer .products .productRight .details h4 {
-  margin: 10px;
-}
-
-.productsContainer .products .productRight .btn {
-  height: 20%;
-  width: 60%;
-  position: absolute;
-  top: 110%;
-  left: 30%;
+  margin: 5px;
 }
 
 .productsContainer .products .productRight .btn button {
-  height: 50%;
-  width: 60%;
+  height: 15%;
+  width: 50%;
+  position: absolute;
+  top: 104%;
+  left: 25%;
   border: none;
   background-color: #8C7268;
   color: #F5F5F5;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
+          box-shadow: 5px 5px 5px 5px #b9b8b8;
 }
 
 .brightIdea {
@@ -779,7 +781,34 @@ footer .footerContainer {
           justify-content: space-between;
 }
 
-footer .footerContainer .about {
+footer .footerContainer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35%;
+}
+
+footer .footerContainer .others {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footerContainer .others .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,20 +818,20 @@ footer .footerContainer .about {
           flex-direction: column;
 }
 
-footer .footerContainer .about p {
+footer .footerContainer .others .about p {
   margin: 0px;
   padding-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-footer .footerContainer .about ul {
+footer .footerContainer .others .about ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-footer .footerContainer .help {
+footer .footerContainer .others .help {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -812,20 +841,20 @@ footer .footerContainer .help {
           flex-direction: column;
 }
 
-footer .footerContainer .help p {
+footer .footerContainer .others .help p {
   margin: 0;
   padding-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-footer .footerContainer .help ul {
+footer .footerContainer .others .help ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-footer .footerContainer .contact {
+footer .footerContainer .others .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -838,14 +867,25 @@ footer .footerContainer .contact {
           align-items: center;
 }
 
-footer .footerContainer .contact p {
+footer .footerContainer .others .contact p {
   margin: 0px;
   padding-bottom: 10px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-footer .footerContainer .contact ul {
+footer .footerContainer .others .contact .social {
+  display: none;
+}
+
+footer .footerContainer .others .contact .social p {
+  font-size: 18px;
+  text-transform: none;
+  font-weight: normal;
+  padding-bottom: 0;
+}
+
+footer .footerContainer .others .contact ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -854,7 +894,7 @@ footer .footerContainer .contact ul {
   display: flex;
 }
 
-footer .footerContainer .contact ul li {
+footer .footerContainer .others .contact ul li {
   margin: 10px;
 }
 /*# sourceMappingURL=Homepage.css.map */
