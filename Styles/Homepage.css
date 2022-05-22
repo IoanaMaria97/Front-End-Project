@@ -141,9 +141,45 @@ button {
           justify-content: space-between;
 }
 
+.hero .container header .category nav ul li {
+  position: relative;
+  width: 100%;
+}
+
 .hero .container header .category nav ul li a {
   text-decoration: none;
   color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+}
+
+.hero .container header .category nav ul li a:hover {
+  font-size: 22px;
+}
+
+.hero .container header .category nav ul li ul {
+  display: none;
+}
+
+.hero .container header .category nav ul li ul li a {
+  margin-bottom: 0;
+}
+
+.hero .container header .category nav ul li:hover ul {
+  display: block;
+  position: absolute;
 }
 
 .hero .container .quote {

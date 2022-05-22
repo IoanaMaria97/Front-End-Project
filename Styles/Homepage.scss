@@ -61,9 +61,31 @@
                         display: flex;
                         justify-content: space-between;
                         li {
+                            position: relative;
+                            width: 100%;
                             a {
                                 text-decoration: none;
                                 color: $milky;
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 5px;
+                                &:hover {
+                                    font-size: 22px;
+                                }
+                            }
+                            ul {
+                                display: none;
+                                li {
+                                    a {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            &:hover ul {
+                                display: block;
+                                position: absolute;
                             }
                         }
                     }
