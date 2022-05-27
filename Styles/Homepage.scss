@@ -50,6 +50,7 @@
                 }
             }
             .category {
+                display: block;
                 color: $milky;
                 nav {
                     width: 100%;
@@ -91,6 +92,9 @@
                     }
                 }
     
+            }
+            .category-mobile {
+                display: none;
             }
             
         }
@@ -147,8 +151,8 @@
         flex-direction: row;
         justify-content: space-evenly;
         .card {
-            height: 90%;
-            width: 25%;
+            height: 400px;
+            width: 250px;
             border: 1px solid $grey;
             background-color: $white;
             box-shadow: 5px 5px 5px 5px $grey;

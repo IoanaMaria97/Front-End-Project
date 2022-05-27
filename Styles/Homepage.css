@@ -121,6 +121,7 @@ button {
 }
 
 .hero .container header .category {
+  display: block;
   color: #F5F5F5;
 }
 
@@ -180,6 +181,10 @@ button {
 .hero .container header .category nav ul li:hover ul {
   display: block;
   position: absolute;
+}
+
+.hero .container header .category-mobile {
+  display: none;
 }
 
 .hero .container .quote {
@@ -268,8 +273,8 @@ button {
 }
 
 .bestSeller .containerCards .card {
-  height: 90%;
-  width: 25%;
+  height: 400px;
+  width: 250px;
   border: 1px solid #b9b8b8;
   background-color: white;
   -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
