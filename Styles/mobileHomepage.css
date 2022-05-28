@@ -145,10 +145,10 @@ button {
     visibility: hidden;
     position: fixed;
     top: 0;
-    left: -800px;
-    width: 100%;
+    right: -600px;
+    width: 40%;
     height: 400px;
-    background-color: #fceae3;
+    background-color: #F5F5F5;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 0px 10px;
@@ -183,10 +183,10 @@ button {
     visibility: hidden;
     position: fixed;
     top: 0;
-    left: -800px;
+    right: -600px;
     width: 40%;
     height: 400px;
-    background-color: #fceae3;
+    background-color: #F5F5F5;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 0px 10px;
@@ -213,23 +213,23 @@ button {
   }
   .hero .container header .category-mobile #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
   .hero .container header .category-mobile #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
   .hero .container header .category-mobile #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
   .hero .container header .category-mobile #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
   .hero .container header .category-mobile #hamburger-input:checked + #hamburger-menu .sidebar-menu {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
   .hero .container .quote {
     width: 100%;
@@ -314,8 +314,8 @@ button {
             align-items: center;
   }
   .bestSeller .containerCards .card {
-    height: 25%;
-    width: 35%;
+    height: 250px;
+    width: 160px;
     border: 1px solid #b9b8b8;
     background-color: white;
     -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
@@ -346,7 +346,7 @@ button {
   }
   .bestSeller .containerCards .card .imgProduct img {
     height: 100%;
-    width: 50%;
+    width: 80%;
   }
   .bestSeller .containerCards .card .nameProduct {
     height: 35%;
@@ -377,7 +377,7 @@ button {
   }
   .middleContainer {
     background-color: #fceae3;
-    height: 650px;
+    height: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -386,10 +386,11 @@ button {
             justify-content: center;
   }
   .middleContainer .middle {
-    width: 90%;
+    width: 80%;
     position: relative;
   }
   .middleContainer .middle .square {
+    display: none;
     background-color: #cea898;
     opacity: 0.4;
     height: 40%;
@@ -401,8 +402,8 @@ button {
   .middleContainer .middle .info {
     position: absolute;
     height: 40%;
-    width: 40%;
-    top: 30%;
+    width: 100%;
+    top: 0;
     left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -420,21 +421,21 @@ button {
   }
   .middleContainer .middle .info p {
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     padding: 0 20px;
   }
   .middleContainer .middle .photo img {
-    height: 70%;
-    width: 60%;
+    height: 200px;
+    width: 300px;
     position: absolute;
-    top: 15%;
-    left: 40%;
+    top: 230px;
+    left: calc(50% - 150px);
     -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
             box-shadow: 5px 5px 5px 5px #b9b8b8;
   }
   .productsContainer {
     background-color: #BDCFCC;
-    height: 650px;
+    height: 800px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -447,16 +448,20 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .productsContainer .products .productLeft {
-    height: 60%;
-    width: 45%;
+    height: 200px;
+    width: 300px;
     background-image: url("../Img/coffee10.jpg");
     background-size: cover;
     position: relative;
@@ -481,11 +486,12 @@ button {
   }
   .productsContainer .products .productLeft .details p {
     margin: 0;
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
   }
   .productsContainer .products .productLeft .details h3 {
-    margin: 5px;
+    margin: 0;
+    font-size: 15px;
   }
   .productsContainer .products .productLeft .btn button {
     height: 15%;
@@ -499,10 +505,11 @@ button {
     text-transform: uppercase;
     -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
             box-shadow: 5px 5px 5px 5px #b9b8b8;
+    font-size: 12px;
   }
   .productsContainer .products .productRight {
-    height: 60%;
-    width: 45%;
+    height: 200px;
+    width: 300px;
     background-image: url("../Img/coffee5.jpg");
     background-size: cover;
     position: relative;
@@ -527,11 +534,12 @@ button {
   }
   .productsContainer .products .productRight .details p {
     margin: 0;
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
   }
   .productsContainer .products .productRight .details h4 {
-    margin: 5px;
+    margin: 0;
+    font-size: 15px;
   }
   .productsContainer .products .productRight .btn button {
     height: 15%;
@@ -545,6 +553,7 @@ button {
     text-transform: uppercase;
     -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
             box-shadow: 5px 5px 5px 5px #b9b8b8;
+    font-size: 12px;
   }
   .brightIdea {
     background-color: #fceae3;

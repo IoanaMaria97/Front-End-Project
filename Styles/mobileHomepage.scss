@@ -89,16 +89,16 @@
                             visibility: hidden;
                             position: fixed;
                             top: 0;
-                            left: -800px;
-                            width: 100%;
+                            right: -600px;
+                            width: 40%;
                             height: 400px;
-                            background-color: $nude;
+                            background-color: $milky;
                             transition: 0.3s;
                             padding: 0px 10px;
                             box-sizing: border-box;
                             z-index: 2;
                             p {
-                                color: black;
+                                color: $black;
                                 font-size: 20px;
                                 font-weight: bold;
                                 }
@@ -114,17 +114,17 @@
                                         display: none;
                                         }
                                     .category-menu {
-                                        color: black;
+                                        color: $black;
                                         font-size: 13px;
                                         text-decoration: none;
                                         .sidebar-category {
                                                 visibility: hidden;
                                                 position: fixed;
                                                 top: 0;
-                                                left: -800px;
+                                                right: -600px;
                                                 width: 40%;
                                                 height: 400px;
-                                                background-color: $nude;
+                                                background-color: $milky;
                                                 transition: 0.3s;
                                                 padding: 0px 10px;
                                                 box-sizing: border-box;
@@ -150,22 +150,22 @@
                                           }
                                     #category2-input:checked + .category-menu .sidebar-category {
                                         visibility: visible;
-                                        left: 0;
+                                        right: 0;
                                               }
                                               
                                     #category3-input:checked + .category-menu .sidebar-category {
                                         visibility: visible;
-                                        left: 0;
+                                        right: 0;
                                               }
                                               
                                     #category4-input:checked + .category-menu .sidebar-category {
                                         visibility: visible;
-                                        left: 0;
+                                        right: 0;
                                               }
                                               
                                     #category5-input:checked + .category-menu .sidebar-category {
                                         visibility: visible;
-                                        left: 0;
+                                        right: 0;
                                               }
     
                                     }
@@ -174,7 +174,7 @@
                           }
                     #hamburger-input:checked + #hamburger-menu .sidebar-menu {
                         visibility: visible;
-                        left: 0;
+                        right: 0;
                           }
                 }
             }
@@ -235,8 +235,8 @@
             justify-content: flex-start;
             align-items: center;
             .card {
-                height: 25%;
-                width: 35%;
+                height: 250px;
+                width: 160px;
                 border: 1px solid $grey;
                 background-color: $white;
                 box-shadow: 5px 5px 5px 5px $grey;
@@ -253,7 +253,7 @@
                     justify-content: center;
                     img {
                         height: 100%;
-                        width: 50%;
+                        width: 80%;
                     }
                 }
                 .nameProduct {
@@ -289,13 +289,14 @@
     
     .middleContainer {
         background-color: $nude;
-        height: 650px;
+        height: 500px;
         display: flex;
         justify-content: center;
         .middle {
-            width: 90%;
+            width: 80%;
             position: relative;
             .square {
+                display: none;
                 background-color: $darkNude;
                 opacity: 0.4;
                 height: 40%;
@@ -307,8 +308,8 @@
             .info {
                 position: absolute;
                 height: 40%;
-                width: 40%;
-                top: 30%;
+                width: 100%;
+                top: 0;
                 left: 0;
                 display: flex;
                 flex-direction:column;
@@ -316,18 +317,18 @@
                 justify-content: center;
                 p {
                     text-align: center;
-                    font-size: 18px;
+                    font-size: 15px;
                     padding: 0 20px;
                 }
         
             }
             .photo {
                 img {
-                    height: 70%;
-                    width: 60%;
+                    height: 200px;
+                    width: 300px;
                     position: absolute;
-                    top: 15%;
-                    left: 40%;
+                    top: 230px;
+                    left: calc(50% - 150px);
                     box-shadow: 5px 5px 5px 5px $grey;
                 }
             }
@@ -336,17 +337,18 @@
     
     .productsContainer {
         background-color: $blue;
-        height: 650px;
+        height: 800px;
         display: flex;
         justify-content: center;
         .products {
             width: 90%;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: space-evenly;
             align-items: center;
             .productLeft {
-                height: 60%;
-                width: 45%;
+                height: 200px;
+                width: 300px;
                 background-image: url("../Img/coffee10.jpg");
                 background-size: cover;
                 position: relative;
@@ -362,11 +364,12 @@
                     align-items: center;
                     p {
                         margin: 0;
-                        font-size: 18px;
+                        font-size: 13px;
                         text-align: center;
                     }
                     h3 {
-                        margin: 5px;
+                        margin: 0;
+                        font-size: 15px;
                     }
                 }
                 .btn {
@@ -381,13 +384,14 @@
                         color: $milky;
                         text-transform: uppercase;
                         box-shadow: 5px 5px 5px 5px $grey;
+                        font-size: 12px;
                     }
                 }
         
             }
             .productRight {
-                height: 60%;
-                width: 45%;
+                height: 200px;
+                width: 300px;
                 background-image: url("../Img/coffee5.jpg");
                 background-size: cover;
                 position: relative;
@@ -403,11 +407,12 @@
                     align-items: center;
                     p {
                         margin: 0;
-                        font-size: 18px;
+                        font-size: 13px;
                         text-align: center;
                     }
                     h4 {
-                        margin: 5px;
+                        margin: 0;
+                        font-size: 15px;
                     }
                 }
                 .btn {
@@ -422,6 +427,7 @@
                         color: $milky;
                         text-transform: uppercase;
                         box-shadow: 5px 5px 5px 5px $grey;
+                        font-size: 12px;
                     }
                 }
         
