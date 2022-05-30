@@ -44,4 +44,204 @@ button {
   font-weight: bold;
   margin: 30px 0;
 }
+
+header {
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #BDCFCC;
+}
+
+header .container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .container .nav nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 380px;
+  padding: 0;
+}
+
+header .container .nav nav ul .li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+
+header .container .nav nav ul .li svg {
+  fill: black;
+}
+
+header .container .nav nav ul .li li a {
+  text-decoration: none;
+  color: black;
+  margin-left: 10px;
+}
+
+header .container .category {
+  display: block;
+  color: black;
+}
+
+header .container .category nav {
+  width: 100%;
+}
+
+header .container .category nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #BDCFCC;
+}
+
+header .container .category nav ul li {
+  position: relative;
+  width: 100%;
+}
+
+header .container .category nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+  -webkit-box-shadow: 2px 0 0 0 #b9b8b8;
+          box-shadow: 2px 0 0 0 #b9b8b8;
+}
+
+header .container .category nav ul li a:hover {
+  font-size: 20px;
+}
+
+header .container .category nav ul li ul {
+  position: absolute;
+  top: 21px;
+  left: 0;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #BDCFCC;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+
+header .container .category nav ul li ul li {
+  margin: 0;
+}
+
+header .container .category nav ul li ul li a {
+  margin-bottom: 0;
+}
+
+header .container .category nav ul li ul li a:hover {
+  font-size: 20px;
+}
+
+header .container .category nav ul li:hover ul {
+  display: block;
+  background-color: #BDCFCC;
+  -webkit-box-shadow: 2px 2px 0 0 #b9b8b8;
+          box-shadow: 2px 2px 0 0 #b9b8b8;
+}
+
+header .container .category-mobile {
+  display: none;
+}
+
+.productsSection {
+  background-color: #fceae3;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productsSection .container {
+  margin-top: 50px;
+  width: 80%;
+  background-color: #BDCFCC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.productsSection .container .filter {
+  height: 400px;
+  width: 300px;
+  background-color: #F5F5F5;
+}
+
+.productsSection .container .products {
+  height: 800px;
+  width: 800px;
+  background-color: #F5F5F5;
+}
 /*# sourceMappingURL=ProductsList.css.map */

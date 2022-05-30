@@ -2,13 +2,167 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../Styles/ProductsList.css">
-    <link rel="stylesheet" href="../Styles/mobileProductsList.css" media="screen and (max-width: 768px)">
+    <!-- <link rel="stylesheet" href="../Styles/mobileProductsList.css" media="screen and (max-width: 768px)"> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProductsList</title>
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <div class="nav">
+                <div class="logo">CoffeeShop</div>
+                <nav>
+                    <ul>
+                        <div class="li">
+                            <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg>
+                            <li><a href="#">Your cart</a></li>
+                        </div>
+                        <div class="li">
+                            <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 22c-3.123 0-5.914-1.441-7.749-3.69.259-.588.783-.995 1.867-1.246 2.244-.518 4.459-.981 3.393-2.945-3.155-5.82-.899-9.119 2.489-9.119 3.322 0 5.634 3.177 2.489 9.119-1.035 1.952 1.1 2.416 3.393 2.945 1.082.25 1.61.655 1.871 1.241-1.836 2.253-4.628 3.695-7.753 3.695z"/></svg>
+                            <li><a href="#">Register</a></li></div>
+                        <div class="li">
+                            <svg class=" fill" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 22h-20v-7h2v5h16v-16h-16v5h-2v-7h20v20zm-13-11v-4l6 5-6 5v-4h-11v-2h11z"/></svg>
+                            <li><a href="#">Login</a></li></div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="category">
+                <nav>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Basic Coffee</a>
+                            <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Signature Coffee</a>
+                            <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Flavored Coffee</a>
+                            <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Non-Coffee</a>
+                            <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- next div is for mobile -->
+            <!-- inspiration : https://alvarotrigo.com/blog/hamburger-menu-css-responsive/-->
+            <div class="category-mobile">
+                <input type="checkbox" id="hamburger-input" />
+                <label id="hamburger-menu" for="hamburger-input">
+                    <nav class="sidebar-menu">
+                        <p>Menu</p>
+
+                        <ul>
+                        <li>
+                            <label class="category-menu" for="category1-input">Home</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="category2-input" />
+                            <label class="category-menu" for="category2-input"
+                            >Basic Coffee
+                                <nav class="sidebar-category">
+                                    <p>Basic Coffee</p>
+                                    <ul>
+                                    <li><a href="#">Expresso</a></li>
+                                    <li><a href="#">Cappuccino</a></li>
+                                    <li><a href="#">Caffee Latte</a></li>
+                                    <li><a href="#">Caramel Macchiato</a></li>
+                                    <li><a href="#">Expresso Macchiato</a></li>
+                                    </ul>
+                                </nav>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="category3-input" />
+                            <label class="category-menu" for="category3-input"
+                            >Signature Coffee
+                            <nav class="sidebar-category">
+                                <p>Signature Coffee</p>
+                                <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                                </ul>
+                            </nav>
+                            </label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="category4-input" />
+                            <label class="category-menu" for="category4-input"
+                            >Flavored Coffee
+                            <nav class="sidebar-category">
+                                <p>Flavored Coffee</p>
+                                <ul>
+                                <li><a href="#">Expresso</a></li>
+                                <li><a href="#">Cappuccino</a></li>
+                                <li><a href="#">Caffee Latte</a></li>
+                                <li><a href="#">Caramel Macchiato</a></li>
+                                <li><a href="#">Expresso Macchiato</a></li>
+                                </ul>
+                            </nav>
+                        </label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="category5-input" />
+                        <label class="category-menu" for="category5-input"
+                        >Non-Coffee
+                        <nav class="sidebar-category">
+                            <p>Non-Coffee</p>
+                            <ul>
+                            <li><a href="#">Expresso</a></li>
+                            <li><a href="#">Cappuccino</a></li>
+                            <li><a href="#">Caffee Latte</a></li>
+                            <li><a href="#">Caramel Macchiato</a></li>
+                            <li><a href="#">Expresso Macchiato</a></li>
+                            </ul>
+                        </nav>
+                        </label>
+                    </li>
+                    </ul>
+                </nav>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <section class="productsSection">
+        <div class="container">
+            <div class="filter"></div>
+            <div class="products"></div>
+        </div>
+    </section>
 </body>
 </html>

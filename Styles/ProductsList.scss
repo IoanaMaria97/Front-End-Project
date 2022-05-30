@@ -2,3 +2,134 @@
 @import "spacing";
 @import "base";
 
+header {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    background-color: $blue;
+    .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        .nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            nav {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    width: 380px;
+                    padding: 0;
+                    .li {
+                        display: flex;
+                        justify-content: flex-end;
+                        width:100%;
+                        svg {
+                            fill: $black;
+                        }
+                        li {
+                            a {
+                                text-decoration: none;
+                                color: $black;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .category {
+            display: block;
+            color: $black;
+            nav {
+                width: 100%;
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: $blue;
+                    li {
+                        position: relative;
+                        width: 100%;
+                        a {
+                            text-decoration: none;
+                            color: $black;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 5px;
+                            box-shadow: 2px 0 0 0 $grey;
+                            &:hover {
+                                font-size: 20px;
+                            }
+                            
+                        }
+                        ul {
+                            position: absolute;
+                            top: 21px;
+                            left: 0;
+                            height: 120px;
+                            display: flex;
+                            flex-direction: column;
+                            background-color: $blue;
+                            transition: 0.3s;
+                            display: none;
+                            li {
+                                margin: 0;
+                                a {
+                                    margin-bottom: 0;
+                                    &:hover {
+                                        font-size: 20px;
+                                    }
+                                }
+                                
+                            }
+                        }
+                        &:hover ul {
+                            display: block;
+                            background-color: $blue;
+                            box-shadow: 2px 2px 0 0 $grey;
+                        }
+                    }
+                }
+            }
+
+        }
+        .category-mobile {
+            display: none;
+        }
+    }
+}
+
+.productsSection {
+    background-color: $nude;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    .container {
+        margin-top: 50px;
+        width: 80%;
+        background-color: $blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .filter {
+            height: 400px;
+            width: 300px;
+            background-color: $milky;
+        }
+        .products {
+            height: 800px;
+            width: 800px;
+            background-color: $milky;
+        }
+    }
+}
+
+
