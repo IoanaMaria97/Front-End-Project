@@ -207,7 +207,7 @@ header .container .category-mobile {
 }
 
 .productsSection {
-  background-color: #fceae3;
+  background-color: #F5F5F5;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -248,7 +248,6 @@ header .container .category-mobile {
 
 .productsSection .container .filter .styleList .styleElement {
   margin: 15px auto;
-  background-color: #BDCFCC;
   padding: 10px;
   font-size: 18px;
 }
