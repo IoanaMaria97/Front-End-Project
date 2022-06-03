@@ -2,147 +2,237 @@
 @import "spacing";
 @import "base";
 
-.hero {
-    background-image: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.3) 100%
-        ), url("../Img/coffee7.jpg"); 
-    background-size: cover;
-    height: 700px;
+header {
+    height: 110px;
     display: flex;
     justify-content: center;
+    background-color: $blue;
     .container {
-        position: relative;
         width: 80%;
-        header {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .nav {
             display: flex;
-            flex-direction: column;
-            color: $milky;
-            height: 20%;
-            .nav {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                nav {
-                    ul {
-                        list-style: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            nav {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 400px;
+                    padding: 0;
+                    .li {
                         display: flex;
-                        width: 380px;
-                        padding: 0;
-                        .li {
-                            display: flex;
-                            justify-content: flex-end;
-                            width:100%;
-                            svg {
-                                fill: $milky;
-                            }
-                            li {
-                                a {
-                                    text-decoration: none;
-                                    color: $milky;
-                                    margin-left: 10px;
-                                }
-                            }
+                        flex-direction: row;
+                        svg {
+                            fill: $black;
                         }
-                    }
-                }
-            }
-            .category {
-                display: block;
-                color: $milky;
-                nav {
-                    width: 100%;
-                    ul {
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
                         li {
-                            position: relative;
-                            width: 100%;
                             a {
                                 text-decoration: none;
-                                color: $milky;
-                                display: flex;
-                                flex-direction: row;
-                                align-items: center;
-                                justify-content: center;
-                                margin-bottom: 5px;
-                                &:hover {
-                                    font-size: 22px;
-                                }
-                            }
-                            ul {
-                                display: none;
-                                li {
-                                    a {
-                                        margin-bottom: 0;
-                                    }
-                                }
-                            }
-                            &:hover ul {
-                                display: block;
-                                position: absolute;
+                                color: $black;
+                                margin-left: 10px;
+                               
                             }
                         }
                     }
                 }
-    
             }
-            .category-mobile {
+        }
+        .category {
+            #hamburger-input {
                 display: none;
+                position: relative;
             }
-            
-        }
-
-        .quote {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: $milky;
-            height: 50%;
-            p {
-                text-align: center;
-                margin: 0 10%;
-            }
-        }
-        .search {
-            display: flex;
-            justify-content: center;
-            height: 30%;
-            input {
-                width: 40%;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.4);
-                border: 1px solid $milky;
-            }
-            button {
-                background-color: transparent;
-                border: none;
-                margin-left: 15px;
-                height: 50px;
-                .fill {
-                    fill: $milky;
+            #hamburger-menu {
+                position: absolute;
+                top:55px;
+                left: 45%;
+                p {
+                    font-weight: bold;
+                    font-size: 18px;
                 }
-            }
+                .sidebar-menu {
+                    visibility: hidden;
+                    position: fixed;
+                    top: 0;
+                    right: -600px;
+                    width: 20%;
+                    height: 100%;
+                    background-image: linear-gradient(180deg, $milky, $blue);
+                    transition: 0.3s;
+                    padding: 0px 10px;
+                    box-sizing: border-box;
+                    z-index: 2;
+                    padding: 0 25px;
+                    p {
+                        color: $black;
+                        font-weight: bold;
+                        font-size: 25px;
+                        }
+                    ul {
+                        padding-left: 0;
+                        li {
+                            list-style-type: none;
+                            line-height: 35px;
+                            #category2-input,
+                            #category3-input,
+                            #category4-input,
+                            #category5-input {
+                                display: none;
+                                }
+                            .category-menu {
+                                color: $black;
+                                text-decoration: none;
+                                .sidebar-category {
+                                        visibility: hidden;
+                                        position: fixed;
+                                        top: 0;
+                                        right: -600px;
+                                        width: 20%;
+                                        height: 100%;
+                                        background-image: linear-gradient(180deg, $milky, $blue);
+                                        transition: 0.3s;
+                                        padding: 0px 10px;
+                                        box-sizing: border-box;
+                                        z-index: 2;
+                                        padding: 0 25px;
+                                        p {
+                                            color: black;
+                                            font-size: 25px;
+                                            font-weight: bold;
+                                          }
+                                        ul {
+                                            padding-left: 0px;
+                                            li {
+                                                list-style-type: none;
+                                                line-height: 35px;
+                                                a {
+                                                    color: black;
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                          }
+                                      }
+                                  }
+                            #category2-input:checked + .category-menu .sidebar-category {
+                                visibility: visible;
+                                right: 0;
+                                      }
+                                      
+                            #category3-input:checked + .category-menu .sidebar-category {
+                                visibility: visible;
+                                right: 0;
+                                      }
+                                      
+                            #category4-input:checked + .category-menu .sidebar-category {
+                                visibility: visible;
+                                right: 0;
+                                      }
+                                      
+                            #category5-input:checked + .category-menu .sidebar-category {
+                                visibility: visible;
+                                right: 0;
+                                      }
+
+                            }
+                        }
+                      }
+                  }
+            #hamburger-input:checked + #hamburger-menu .sidebar-menu {
+                visibility: visible;
+                right: 0;
+                  }
         }
     }
 }
 
-.bestSeller {
-    background-color: $blue;
+.coffeeLovers {
+    background-color: $milky;
     height: 650px;
+    display: flex;
+    justify-content: center;
+    .containerCoffeeLovers {
+        width: 80%;
+        position: relative;
+        .square {
+            background-color: $blue;
+            opacity: 0.4;
+            height: 40%;
+            width: 70%;
+            position: absolute;
+            top: 30%;
+            left: 15%;
+        }
+        .info {
+            position: absolute;
+            height: 50%;
+            width: 30%;
+            top: 25%;
+            left: 0;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: center;
+            p {
+                text-align: center;
+                font-size: 18px;
+                padding: 0 15px;
+            }
+    
+        }
+        .video {
+            position: absolute;
+            left: 30%;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            .videoSecond {
+                 height: 100%;
+                 width: 70%;
+            }
+        }
+        .search {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 43%;
+                left: 20%;
+                height: 100%;
+                width: 100%;
+                input {
+                    width: 35%;
+                    height: 8%;
+                    background-color: rgba($milky, 0.5);
+                    border: none;
+                    font-size: 18px;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                    margin-left: 10px;
+                    height: 10%;
+                    .fill {
+                        fill: $black;
+                    }
+                }
+            }
+        
+    }
+}
+
+.bestSeller {
+    background-image: linear-gradient($milky, $milky, rgba($blue, 0.7));
+    height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    h1 {
-        margin: 60px;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 80px;
     }
     .containerCards {
         width: 80%;
@@ -174,21 +264,21 @@
             .nameProduct {
                 height: 35%;
                 width: 100%;
-                p:nth-child(1) {
-                    font-size: 30px;
+                p:first-child {
+                    font-size: 25px;
                     margin: 0;
                 }
                 p:nth-child(2) {
-                    font-size:20px;
-                    margin:10px;
+                    font-size:18px;
+                    margin:0;
                 }
-                p:nth-child(3) {
-                    font-size: 13px;
-                    margin: 0;
+                p:last-child {
+                    font-size: 30px;
+                    margin: 15px;
                 }
             }
             .button {
-                height: 15%;
+                height: 20%;
                 width: 100%;    
                 button {
                     height: 100%;
@@ -196,65 +286,21 @@
                     border: none;
                     background-color: $brown;
                     color: $milky;
+                    .fill {
+                        fill: $milky;
+                    }
                 }
             }
         }
     }
 }
 
-.middleContainer {
-    background-color: $nude;
+.products {
+    background-color: rgba($blue, 0.7);
     height: 650px;
     display: flex;
     justify-content: center;
-    .middle {
-        width: 80%;
-        position: relative;
-        .square {
-            background-color: $darkNude;
-            opacity: 0.4;
-            height: 40%;
-            width: 60%;
-            position: absolute;
-            top: 30%;
-            left: 20%;
-        }
-        .info {
-            position: absolute;
-            height: 40%;
-            width: 40%;
-            top: 30%;
-            left: 0;
-            display: flex;
-            flex-direction:column;
-            align-items: center;
-            justify-content: center;
-            p {
-                text-align: center;
-                font-size: 18px;
-                padding: 0 20px;
-            }
-    
-        }
-        .photo {
-            img {
-                height: 70%;
-                width: 60%;
-                position: absolute;
-                top: 15%;
-                left: 40%;
-                box-shadow: 5px 5px 5px 5px $grey;
-            }
-        }
-    }
-}
-
-.productsContainer {
-    background-color: $blue;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    .products {
+    .containerProducts {
         width: 80%;
         display: flex;
         justify-content: space-between;
@@ -345,7 +391,7 @@
 }
 
 .brightIdea {
-    background-color: $nude;
+    background-image: linear-gradient(rgba($blue, 0.7), $milky, $milky);
     height: 950px;
     width: 100%;
     display: flex;
@@ -357,6 +403,12 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 40px;
+        .title {
+            h5 {
+                margin-top: 40px;
+                margin-bottom: 70px;
+            }
+        }
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);

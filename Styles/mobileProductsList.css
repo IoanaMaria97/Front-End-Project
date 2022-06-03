@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h4 {
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 p {
@@ -45,10 +45,17 @@ button {
   margin: 30px 0;
 }
 
+figcaption {
+  font-size: 18px;
+}
+
+span {
+  font-size: 18px;
+}
+
 @media screen and (max-width: 768px) {
   header {
-    height: 140px;
-    width: 100%;
+    height: 150px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -59,7 +66,6 @@ button {
   }
   header .container {
     width: 100%;
-    height: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -67,6 +73,7 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
   }
   header .container .nav {
     display: -webkit-box;
@@ -79,9 +86,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .container .nav .logo {
     font-size: 30px;
@@ -92,19 +99,20 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 250px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 300px;
     padding: 0;
   }
   header .container .nav nav ul .li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   header .container .nav nav ul .li svg {
     fill: black;
@@ -112,39 +120,33 @@ button {
   header .container .nav nav ul .li li a {
     text-decoration: none;
     color: black;
-    font-size: 13px;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
   }
-  header .container .category {
-    display: none;
-  }
-  header .container .category-mobile {
-    display: block;
-  }
-  header .container .category-mobile #hamburger-input {
+  header .container .category #hamburger-input {
     display: none;
     position: relative;
   }
-  header .container .category-mobile #hamburger-menu {
+  header .container .category #hamburger-menu {
     position: absolute;
-    top: 40px;
-    left: 85%;
-    width: 15px;
-    height: 15px;
-    border: none;
-    padding: 0px;
-    margin: 0px;
-    background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(20%, black), color-stop(20%, #BDCFCC), color-stop(40%, #BDCFCC), color-stop(40%, black), color-stop(60%, black), color-stop(60%, #BDCFCC), color-stop(80%, #BDCFCC), color-stop(80%, black), to(black));
-    background: linear-gradient(to bottom, black, black 20%, #BDCFCC 20%, #BDCFCC 40%, black 40%, black 60%, #BDCFCC 60%, #BDCFCC 80%, black 80%, black 100%);
+    top: 105px;
+    left: calc(50% - 20px);
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu {
+  header .container .category #hamburger-menu p {
+    font-weight: bold;
+    font-size: 15px;
+    width: 20px;
+  }
+  header .container .category #hamburger-menu .sidebar-menu {
     visibility: hidden;
     position: fixed;
     top: 0;
     right: -600px;
-    width: 40%;
+    width: 45%;
     height: 100%;
-    background-color: #F5F5F5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
+    background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 0px 10px;
@@ -152,37 +154,38 @@ button {
             box-sizing: border-box;
     z-index: 2;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu p {
+  header .container .category #hamburger-menu .sidebar-menu p {
     color: black;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 18px;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul {
+  header .container .category #hamburger-menu .sidebar-menu ul {
     padding-left: 0;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li {
+  header .container .category #hamburger-menu .sidebar-menu ul li {
     list-style-type: none;
     line-height: 25px;
+    font-size: 15px;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category2-input,
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category3-input,
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category4-input,
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category5-input {
+  header .container .category #hamburger-menu .sidebar-menu ul li #category2-input,
+  header .container .category #hamburger-menu .sidebar-menu ul li #category3-input,
+  header .container .category #hamburger-menu .sidebar-menu ul li #category4-input,
+  header .container .category #hamburger-menu .sidebar-menu ul li #category5-input {
     display: none;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu {
     color: black;
-    font-size: 13px;
     text-decoration: none;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category {
     visibility: hidden;
     position: fixed;
     top: 0;
     right: -600px;
-    width: 40%;
+    width: 45%;
     height: 100%;
-    background-color: #F5F5F5;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
+    background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     padding: 0px 10px;
@@ -190,45 +193,45 @@ button {
             box-sizing: border-box;
     z-index: 2;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category p {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category p {
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul {
     padding-left: 0px;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li {
     list-style-type: none;
     line-height: 25px;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li a {
+  header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li a {
     color: black;
-    font-size: 13px;
     text-decoration: none;
+    font-size: 15px;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category-mobile #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category-mobile #hamburger-input:checked + #hamburger-menu .sidebar-menu {
+  header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-menu {
     visibility: visible;
     right: 0;
   }
   .productsSection {
-    background-color: #fceae3;
+    background-color: #F5F5F5;
     height: 100%;
     width: 100%;
     display: -webkit-box;
@@ -269,7 +272,6 @@ button {
   }
   .productsSection .container .filter .styleList .styleElement {
     margin: 15px auto;
-    background-color: #BDCFCC;
     padding: 10px;
     font-size: 13px;
   }

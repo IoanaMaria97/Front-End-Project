@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h4 {
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 p {
@@ -45,8 +45,16 @@ button {
   margin: 30px 0;
 }
 
+figcaption {
+  font-size: 18px;
+}
+
+span {
+  font-size: 18px;
+}
+
 header {
-  height: 160px;
+  height: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +73,7 @@ header .container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 header .container .nav {
@@ -88,7 +97,10 @@ header .container .nav nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 380px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 400px;
   padding: 0;
 }
 
@@ -96,10 +108,10 @@ header .container .nav nav ul .li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 header .container .nav nav ul .li svg {
@@ -112,98 +124,128 @@ header .container .nav nav ul .li li a {
   margin-left: 10px;
 }
 
-header .container .category {
-  display: block;
-  color: black;
-}
-
-header .container .category nav {
-  width: 100%;
-}
-
-header .container .category nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #BDCFCC;
-}
-
-header .container .category nav ul li {
+header .container .category #hamburger-input {
+  display: none;
   position: relative;
-  width: 100%;
 }
 
-header .container .category nav ul li a {
-  text-decoration: none;
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 5px;
-  -webkit-box-shadow: 2px 0 0 0 #b9b8b8;
-          box-shadow: 2px 0 0 0 #b9b8b8;
-}
-
-header .container .category nav ul li a:hover {
-  font-size: 20px;
-}
-
-header .container .category nav ul li ul {
+header .container .category #hamburger-menu {
   position: absolute;
-  top: 21px;
-  left: 0;
-  height: 120px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #BDCFCC;
+  top: 55px;
+  left: 45%;
+}
+
+header .container .category #hamburger-menu p {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header .container .category #hamburger-menu .sidebar-menu {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 20%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
+  background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  padding: 0px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  padding: 0 25px;
+}
+
+header .container .category #hamburger-menu .sidebar-menu p {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul {
+  padding-left: 0;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li {
+  list-style-type: none;
+  line-height: 35px;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li #category2-input,
+header .container .category #hamburger-menu .sidebar-menu ul li #category3-input,
+header .container .category #hamburger-menu .sidebar-menu ul li #category4-input,
+header .container .category #hamburger-menu .sidebar-menu ul li #category5-input {
   display: none;
 }
 
-header .container .category nav ul li ul li {
-  margin: 0;
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu {
+  color: black;
+  text-decoration: none;
 }
 
-header .container .category nav ul li ul li a {
-  margin-bottom: 0;
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: -600px;
+  width: 20%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
+  background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 0px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  padding: 0 25px;
 }
 
-header .container .category nav ul li ul li a:hover {
-  font-size: 20px;
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category p {
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
 }
 
-header .container .category nav ul li:hover ul {
-  display: block;
-  background-color: #BDCFCC;
-  -webkit-box-shadow: 2px 2px 0 0 #b9b8b8;
-          box-shadow: 2px 2px 0 0 #b9b8b8;
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul {
+  padding-left: 0px;
 }
 
-header .container .category-mobile {
-  display: none;
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li {
+  list-style-type: none;
+  line-height: 35px;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .sidebar-category ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
+  visibility: visible;
+  right: 0;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
+  visibility: visible;
+  right: 0;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
+  visibility: visible;
+  right: 0;
+}
+
+header .container .category #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
+  visibility: visible;
+  right: 0;
+}
+
+header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-menu {
+  visibility: visible;
+  right: 0;
 }
 
 .productsSection {

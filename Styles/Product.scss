@@ -69,10 +69,12 @@ header {
             }
             #hamburger-menu {
                 position: absolute;
-                top:80px;
-                left: calc(50% - 10px);
-                height: 20px;
-                width: 20px;
+                top:55px;
+                left: 45%;
+                p {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
                 .sidebar-menu {
                     visibility: hidden;
                     position: fixed;
@@ -182,7 +184,6 @@ header {
         .leftSide {
             width: 70%;
             height: 100%;
-            // inspiration source : https://codepen.io/siiron/pen/QWwLoMy
             .slider {
                 .containerSlider {
                     max-width: 1044px;
@@ -401,6 +402,7 @@ header {
                                 font-size: 18px;
                                 display: block;
                                 margin: 5px 0;
+                                background-color: $milky;
                             }
                             input[value="Send review"] {
                                 height: 50px;

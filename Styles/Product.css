@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 h2 {
@@ -24,7 +24,7 @@ h4 {
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 p {
@@ -43,6 +43,14 @@ button {
   font-size: 40px;
   font-weight: bold;
   margin: 30px 0;
+}
+
+figcaption {
+  font-size: 18px;
+}
+
+span {
+  font-size: 18px;
 }
 
 header {
@@ -123,10 +131,13 @@ header .container .category #hamburger-input {
 
 header .container .category #hamburger-menu {
   position: absolute;
-  top: 80px;
-  left: calc(50% - 10px);
-  height: 20px;
-  width: 20px;
+  top: 55px;
+  left: 45%;
+}
+
+header .container .category #hamburger-menu p {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 header .container .category #hamburger-menu .sidebar-menu {
@@ -574,6 +585,7 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   font-size: 18px;
   display: block;
   margin: 5px 0;
+  background-color: #F5F5F5;
 }
 
 .product .containerProduct .leftSide .details .review form fieldset input[value="Send review"] {
