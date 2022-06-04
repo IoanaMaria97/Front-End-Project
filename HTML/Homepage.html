@@ -116,7 +116,8 @@
         </div>
     </header>
 
-    <section class="coffeeLovers">
+    <!-- design inspiration: https://www.blissworld.com -->
+    <section class="coffeeLovers"> 
         <div class="containerCoffeeLovers">
             <div class="square"></div>
             <div class="info">
@@ -125,11 +126,10 @@
                     a good night’s sleep. Coffee solves all
                     these problems in one delightful little cup.</p>
             </div>
-            <div class="video">
-                <video autoplay muted loop class="videoSecond">
-                    <source src="../Img/coffee_video_3.mp4" type="video/mp4" />
-                </video>
-            </div>
+            <video autoplay muted loop class="video">
+                <source src="../Img/coffee_video_3.mp4" type="video/mp4" />
+            </video>
+            
             <div class="search">
                 <!--TODO: Make the search bar functional-->
                 <input type="text" placeholder="Search here...">
@@ -137,6 +137,8 @@
                     <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
                 </button>
             </div>
+
+
         </div>
     </section>
 
@@ -145,16 +147,24 @@
         <h2>Best Sellers</h2>
         <!-- SlidesShow Carousel with js -->
         <div class="containerCards">
-
+            <!-- Flip card inspiration : https://www.w3schools.com/howto/howto_css_flip_card.asp -->
             <div class="card">
-                <div class="imgProduct">
-                    <img src="../Img/coffee_item.jpeg" alt="coffeeItem">
-                </div>
-                <div class="nameProduct">
-                    <p>Coffee</p>
-                    <p>Cappuccino</p>
-                    <p>29.99$</p>
-                </div>
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                      <div class="flip_card_front">
+                        <img
+                          src="../Img/coffee_item_7.jpeg"
+                          alt="coffeeItem"
+                        />
+                      </div>
+                      <div class="flip_card_back">
+                        <p>Signatured Coffee</p>
+                        <p>Cappuccino</p>
+                        <p>29.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                
                 <div class="button">
                     <button>
                         <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
@@ -163,14 +173,22 @@
             </div>
 
             <div class="card">
-                <div class="imgProduct">
-                    <img src="../Img/coffee_item.jpeg" alt="coffeeItem">
-                </div>
-                <div class="nameProduct">
-                    <p>Coffee</p>
-                    <p>Cappuccino</p>
-                    <p>29.99$</p>
-                </div>
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                      <div class="flip_card_front">
+                        <img
+                          src="../Img/coffee_item_8.jpeg"
+                          alt="coffeeItem"
+                        />
+                      </div>
+                      <div class="flip_card_back">
+                        <p>Signatured Coffee</p>
+                        <p>Cappuccino</p>
+                        <p>29.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                
                 <div class="button">
                     <button>
                         <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
@@ -179,14 +197,22 @@
             </div>
 
             <div class="card">
-                <div class="imgProduct">
-                    <img src="../Img/coffee_item.jpeg" alt="coffeeItem">
-                </div>
-                <div class="nameProduct">
-                    <p>Coffee</p>
-                    <p>Cappuccino</p>
-                    <p>29.99$</p>
-                </div>
+                <div class="flip_card">
+                    <div class="flip_card_inner">
+                      <div class="flip_card_front">
+                        <img
+                          src="../Img/coffee_item_9.jpeg"
+                          alt="coffeeItem"
+                        />
+                      </div>
+                      <div class="flip_card_back">
+                        <p>Signatured Coffee</p>
+                        <p>Cappuccino</p>
+                        <p>29.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                
                 <div class="button">
                     <button>
                         <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
@@ -197,6 +223,7 @@
         </div>
     </section>
 
+    <!-- design inspiration: https://www.blissworld.com -->
     <section class="products">
         <div class="containerProducts">
             <div class="productLeft">

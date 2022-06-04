@@ -3,11 +3,11 @@
 @import "base";
 
 body {
-    background-color: $blue;
+    background-color: rgba($blue, 0.7);
     .container {
         height: 64%;
         width: 80%;
-        box-shadow: 5px 5px 5px 5px $grey;
+        box-shadow: 0px 10px 30px 5px $darkGrey;
         position: absolute;
         top: 18%;
         left: 10%;
@@ -44,7 +44,7 @@ body {
         }
         .right {
             width: 50%;
-            background-color: $white;
+            background-color: $milky;
             display: flex;
             flex-direction: column;
             align-items:center;
@@ -62,6 +62,8 @@ body {
                 }
                 input {
                     height: 30px;
+                    background-color: $milky;
+                    border: 1px solid $black;
                 }
                 .button {
                     margin: 20px auto;
@@ -72,6 +74,7 @@ body {
                     text-transform: uppercase;
                     box-shadow: 5px 5px 5px 5px $grey;
                     border: none;
+                    cursor: pointer;
                 }
     
             }
