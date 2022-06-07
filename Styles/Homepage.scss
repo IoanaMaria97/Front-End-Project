@@ -245,7 +245,7 @@ header {
             width: 280px;
             border: 1px solid $grey;
             background-color: $milky;
-            box-shadow: 0px 10px 20px 0px $grey;
+            box-shadow: 0px 10px 20px 0px $darkGrey;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -313,7 +313,7 @@ header {
                     border: none;
                     background-color: $brown;
                     color: $milky;
-                    box-shadow: 0px 10px 20px 0px $grey;
+                    box-shadow: 0px 10px 20px 0px $darkGrey;
                     border-radius: 5%;
                     cursor: pointer;
                     .fill {
@@ -371,7 +371,7 @@ header {
                     background-color: $brown;
                     color: $milky;
                     text-transform: uppercase;
-                    box-shadow: 0px 10px 20px 0px $grey;
+                    box-shadow: 0px 10px 20px 0px $darkGrey;
                     cursor: pointer;
                 }
             }
@@ -413,7 +413,7 @@ header {
                     background-color: $brown;
                     color: $milky;
                     text-transform: uppercase;
-                    box-shadow: 0px 10px 20px 0px $grey;
+                    box-shadow: 0px 10px 20px 0px $darkGrey;
                     cursor: pointer;
                 }
             }

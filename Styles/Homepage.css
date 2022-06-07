@@ -388,8 +388,8 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   width: 280px;
   border: 1px solid #b9b8b8;
   background-color: #F5F5F5;
-  -webkit-box-shadow: 0px 10px 20px 0px #b9b8b8;
-          box-shadow: 0px 10px 20px 0px #b9b8b8;
+  -webkit-box-shadow: 0px 10px 20px 0px #646464;
+          box-shadow: 0px 10px 20px 0px #646464;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,8 +494,8 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   border: none;
   background-color: #8C7268;
   color: #F5F5F5;
-  -webkit-box-shadow: 0px 10px 20px 0px #b9b8b8;
-          box-shadow: 0px 10px 20px 0px #b9b8b8;
+  -webkit-box-shadow: 0px 10px 20px 0px #646464;
+          box-shadow: 0px 10px 20px 0px #646464;
   border-radius: 5%;
   cursor: pointer;
 }
@@ -575,8 +575,8 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   background-color: #8C7268;
   color: #F5F5F5;
   text-transform: uppercase;
-  -webkit-box-shadow: 0px 10px 20px 0px #b9b8b8;
-          box-shadow: 0px 10px 20px 0px #b9b8b8;
+  -webkit-box-shadow: 0px 10px 20px 0px #646464;
+          box-shadow: 0px 10px 20px 0px #646464;
   cursor: pointer;
 }
 
@@ -627,8 +627,8 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   background-color: #8C7268;
   color: #F5F5F5;
   text-transform: uppercase;
-  -webkit-box-shadow: 0px 10px 20px 0px #b9b8b8;
-          box-shadow: 0px 10px 20px 0px #b9b8b8;
+  -webkit-box-shadow: 0px 10px 20px 0px #646464;
+          box-shadow: 0px 10px 20px 0px #646464;
   cursor: pointer;
 }
 

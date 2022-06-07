@@ -60,8 +60,8 @@ body {
 body .container {
   height: 64%;
   width: 80%;
-  -webkit-box-shadow: 0px 10px 30px 0px #505050;
-          box-shadow: 0px 10px 30px 0px #505050;
+  -webkit-box-shadow: 0px 10px 30px 0px #646464;
+          box-shadow: 0px 10px 30px 0px #646464;
   position: absolute;
   top: 18%;
   left: 10%;
