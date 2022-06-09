@@ -28,7 +28,7 @@ h5 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 li, a {
@@ -36,7 +36,7 @@ li, a {
 }
 
 button {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .logo {
@@ -51,6 +51,44 @@ figcaption {
 
 span {
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  li, a {
+    font-size: 14px;
+  }
+  button {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  figcaption {
+    font-size: 13px;
+  }
+  span {
+    font-size: 12px;
+  }
 }
 
 body {

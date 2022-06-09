@@ -28,7 +28,7 @@ h5 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 li, a {
@@ -36,7 +36,7 @@ li, a {
 }
 
 button {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .logo {
@@ -53,8 +53,46 @@ span {
   font-size: 18px;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  li, a {
+    font-size: 14px;
+  }
+  button {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  figcaption {
+    font-size: 13px;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+
 header {
-  height: 110px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,7 +169,7 @@ header .container .category #hamburger-input {
 
 header .container .category #hamburger-menu {
   position: absolute;
-  top: 55px;
+  top: 65px;
   left: 45%;
 }
 
@@ -177,10 +215,10 @@ header .container .category #hamburger-menu .sidebar-menu ul li label {
   cursor: pointer;
 }
 
-header .container .category #hamburger-menu .sidebar-menu ul li #category2-input,
-header .container .category #hamburger-menu .sidebar-menu ul li #category3-input,
-header .container .category #hamburger-menu .sidebar-menu ul li #category4-input,
-header .container .category #hamburger-menu .sidebar-menu ul li #category5-input {
+header .container .category #hamburger-menu .sidebar-menu ul li #basicCoffeeInput,
+header .container .category #hamburger-menu .sidebar-menu ul li #signatureCoffeeInput,
+header .container .category #hamburger-menu .sidebar-menu ul li #flavoredCoffeeInput,
+header .container .category #hamburger-menu .sidebar-menu ul li #nonCoffeeInput {
   display: none;
 }
 
@@ -228,22 +266,22 @@ header .container .category #hamburger-menu .sidebar-menu ul li .category-menu .
   cursor: pointer;
 }
 
-header .container .category #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
+header .container .category #hamburger-menu .sidebar-menu ul li #basicCoffeeInput:checked + .category-menu .sidebar-category {
   visibility: visible;
   right: 0;
 }
 
-header .container .category #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
+header .container .category #hamburger-menu .sidebar-menu ul li #signatureCoffeeInput:checked + .category-menu .sidebar-category {
   visibility: visible;
   right: 0;
 }
 
-header .container .category #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
+header .container .category #hamburger-menu .sidebar-menu ul li #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
   visibility: visible;
   right: 0;
 }
 
-header .container .category #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
+header .container .category #hamburger-menu .sidebar-menu ul li #nonCoffeeInput:checked + .category-menu .sidebar-category {
   visibility: visible;
   right: 0;
 }
@@ -278,15 +316,15 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 50px auto;
+  margin: 50px 0;
 }
 
 .productsSection .container .filter {
-  height: 23%;
+  height: 20%;
   width: 25%;
   background-color: #F5F5F5;
-  -webkit-box-shadow: 0 15px 15px 0 #646464;
-          box-shadow: 0 15px 15px 0 #646464;
+  -webkit-box-shadow: 0 10px 20px 0 #646464;
+          box-shadow: 0 10px 20px 0 #646464;
 }
 
 .productsSection .container .filter .styleList {
@@ -346,22 +384,21 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
 
 .productsSection .container .products {
   height: 100%;
-  width: 75%;
+  width: 70%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
-  grid-gap: 25px;
-  margin-left: 50px;
+  grid-gap: 30px;
 }
 
 .productsSection .container .products .card {
   height: 100%;
   width: 90%;
-  -webkit-box-shadow: 0 15px 15px 0 #646464;
-          box-shadow: 0 15px 15px 0 #646464;
+  -webkit-box-shadow: 0 10px 20px 0 #646464;
+          box-shadow: 0 10px 20px 0 #646464;
   background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -376,8 +413,9 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
 }
 
 .productsSection .container .products .card img {
-  height: 50%;
-  width: 100%;
+  height: 40%;
+  width: 80%;
+  margin: 20px;
 }
 
 .productsSection .container .products .card p {
@@ -393,7 +431,7 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
 }
 
 .productsSection .container .products .card .price {
-  margin: 10px;
+  margin-top: 10px;
   font-size: 25px;
 }
 
@@ -406,9 +444,7 @@ header .container .category #hamburger-input:checked + #hamburger-menu .sidebar-
   cursor: pointer;
   background-color: #8C7268;
   color: white;
-  text-transform: uppercase;
-  font-size: 13px;
-  margin: 20px 20px 40px 20px;
+  margin: 20px;
 }
 
 footer {

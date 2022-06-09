@@ -1,5 +1,4 @@
 @import "colors";
-@import "spacing";
 @import "base";
 @mixin aspect-ratio($width, $height) {
     position: relative;
@@ -22,8 +21,8 @@
     }
   }
 
-  header {
-    height: 110px;
+header {
+    height: 120px;
     display: flex;
     justify-content: center;
     background-color: $blue;
@@ -69,7 +68,7 @@
             }
             #hamburger-menu {
                 position: absolute;
-                top:55px;
+                top: 65px;
                 left: 45%;
                 p {
                     font-weight: bold;
@@ -101,10 +100,10 @@
                             label {
                                 cursor: pointer;
                             }
-                            #category2-input,
-                            #category3-input,
-                            #category4-input,
-                            #category5-input {
+                            #basicCoffeeInput,
+                            #signatureCoffeeInput,
+                            #flavoredCoffeeInput,
+                            #nonCoffeeInput {
                                 display: none;
                                 }
                             .category-menu {
@@ -142,22 +141,22 @@
                                           }
                                       }
                                   }
-                            #category2-input:checked + .category-menu .sidebar-category {
+                            #basicCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category3-input:checked + .category-menu .sidebar-category {
+                            #signatureCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category4-input:checked + .category-menu .sidebar-category {
+                            #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category5-input:checked + .category-menu .sidebar-category {
+                            #nonCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
@@ -361,6 +360,9 @@
                 height: 100%;
                 .description {
                     margin-bottom: 50px;
+                    h1 {
+                        font-size: 25px;
+                    }
                     p {
                         text-align:justify;
                     }
@@ -416,7 +418,7 @@
                                 background-color: $brown;
                                 color: $milky;
                                 border: none;
-                                box-shadow: 0px 10px 10px 0px $darkGrey;
+                                box-shadow: 0px 15px 15px 0px $grey;
                                 cursor: pointer;
                             }
                         }
@@ -450,6 +452,7 @@
                         }
                         &:nth-of-type(2) {
                             font-size: 20px;
+                            margin-top: 10px;
                         }
                         &:last-of-type {
                             font-size: 30px;
@@ -478,8 +481,7 @@
                     width: 60%;
                     border: none;
                     background-color: $brown;
-                    font-size: 14px;
-                    text-transform: uppercase;
+                    font-size: 18px;
                     box-shadow: 0px 20px 20px 0px $grey;
                     margin-bottom: 30px;
                     color: $milky;

@@ -1,10 +1,9 @@
 @import "colors";
-@import "spacing";
 @import "base";
 
 @media screen and (max-width: 768px) {
     header {
-        height: 150px;
+        height: 130px;
         display: flex;
         justify-content: center;
         background-color: $blue;
@@ -18,10 +17,6 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                .logo {
-                    font-size: 30px;
-                    margin-bottom: 0;
-                }
                 nav {
                     ul {
                         list-style: none;
@@ -55,12 +50,12 @@
                 }
                 #hamburger-menu {
                     position: absolute;
-                    top: 105px;
+                    top: 85px;
                     left: calc(50% - 20px);
                     p {
                         font-weight: bold;
-                        font-size: 15px;
                         width: 20px;
+                        font-size: 14px;
                     }
                     .sidebar-menu {
                         visibility: hidden;
@@ -68,6 +63,7 @@
                         top: 0;
                         right: -600px;
                         width: 45%;
+                        max-width: 250px;
                         height: 100%;
                         background-image: linear-gradient(180deg, $milky, $blue);
                         transition: 0.3s;
@@ -85,10 +81,10 @@
                                 list-style-type: none;
                                 line-height: 25px;
                                 font-size: 15px;
-                                #category2-input,
-                                #category3-input,
-                                #category4-input,
-                                #category5-input {
+                                #basicCoffeeInput,
+                                #signatureCoffeeInput,
+                                #flavoredCoffeeInput,
+                                #nonCoffeeInput {
                                     display: none;
                                     }
                                 .category-menu {
@@ -100,6 +96,7 @@
                                             top: 0;
                                             right: -600px;
                                             width: 45%;
+                                            max-width: 250px;
                                             height: 100%;
                                             background-image: linear-gradient(180deg, $milky, $blue);
                                             transition: 0.3s;
@@ -125,22 +122,22 @@
                                               }
                                           }
                                       }
-                                #category2-input:checked + .category-menu .sidebar-category {
+                                #basicCoffeeInput:checked + .category-menu .sidebar-category {
                                     visibility: visible;
                                     right: 0;
                                           }
                                           
-                                #category3-input:checked + .category-menu .sidebar-category {
+                                #signatureCoffeeInput:checked + .category-menu .sidebar-category {
                                     visibility: visible;
                                     right: 0;
                                           }
                                           
-                                #category4-input:checked + .category-menu .sidebar-category {
+                                #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
                                     visibility: visible;
                                     right: 0;
                                           }
                                           
-                                #category5-input:checked + .category-menu .sidebar-category {
+                                #nonCoffeeInput:checked + .category-menu .sidebar-category {
                                     visibility: visible;
                                     right: 0;
                                           }
@@ -156,7 +153,6 @@
             }
         }
     }
-    
     .productsSection {
         background-color: $milky;
         height: 100%;
@@ -164,41 +160,45 @@
         display: flex;
         justify-content: center;
         .container {
-            margin: 50px auto;
-            width: 80%;
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin: 50px 0;
             .filter {
-                height: 10%;
-                width: 250px;
+                width: 80%;
+                max-width: 250px;
                 background-color: $milky;
-                box-shadow: 5px 5px 5px 5px $grey;
-                margin-bottom: 40px;
+                box-shadow: 0 10px 20px 0 $darkGrey;
+                margin-bottom: 50px;
                 .styleList {
                     padding: 0;
                     .styleElement {
                         margin: 15px auto;
                         padding: 10px;
-                        font-size: 13px;
+                        font-size: 14px;
                     }
                     li {
                         list-style-type: none;
-                        font-size: 13px;
                         #filterBrand {
                             display: none;
                         }
                         #filterCategory {
                             display: none;
                         }
+                        #filterCoffeeTypes {
+                            display: none;
+                        }
                         #filterStrength {
                             display: none;
                         }
                         label {
+                            cursor: pointer;
                             .sidebar {
                                 display: none;
+                                cursor: auto;
                             }
                         }
                         #filterBrand:checked + .filterLabel .sidebar {
@@ -207,7 +207,9 @@
                         #filterCategory:checked + .filterLabel .sidebar {
                             display: block;
                           }
-                          
+                        #filterCoffeeTypes:checked + .filterLabel .sidebar {
+                            display: block;
+                          } 
                         #filterStrength:checked + .filterLabel .sidebar {
                             display: block;
                           }
@@ -215,23 +217,52 @@
                 }
             }
             .products {
-                height: 90%;
                 width: 100%;
+                max-width: 230px;
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 1fr);
-                grid-gap: 5px;
+                grid-gap: 50px;
                 .card {
-                    height: 250px;
-                    width: 160px;
-                    margin: 10px auto;
-                    box-shadow: 5px 5px 5px 5px $grey;
+                    height: 100%;
+                    width: 100%;
+                    box-shadow: 0 10px 20px 0 $darkGrey;
                     background-color: $milky;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img {
+                        height: 40%;
+                        width: 70%;
+                        margin: 20px;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                    .category {
+                        font-size: 18px;
+                    }
+                    .subcategory {
+                        font-size: 14px;
+                    }
+                    .price {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+                    button {
+                        height: 50px;
+                        width: 140px;
+                        box-shadow: 0 20px 30px 0 $grey;
+                        border: none;
+                        cursor: pointer;
+                        background-color: $brown;
+                        color: white;
+                        margin: 20px;
+                    }
                 }
             }
         }
     }
-    
     footer {
         background-color: $blue;
         height: 220px;
@@ -240,7 +271,8 @@
         justify-content: center;
         align-items: center;
         .footerContainer {
-            width: 90%;
+            width: 100%;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -286,7 +318,7 @@
                         padding-bottom: 10px;
                         text-transform: uppercase;
                         font-weight: bold;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
                     ul {
                         list-style: none;
@@ -300,13 +332,13 @@
                 .contact {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
                     p {
                         margin: 0px;
                         padding-bottom: 10px;
                         text-transform: uppercase;
                         font-weight: bold;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
                     .social {
                         display: block;

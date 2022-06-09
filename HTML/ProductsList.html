@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../Styles/ProductsList.css">
+    <link rel="stylesheet" href="../Styles/responsiveProductsList.css" media="screen and (min-width: 769px) and (max-width: 1435px)">
     <link rel="stylesheet" href="../Styles/mobileProductsList.css" media="screen and (max-width: 768px)">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,12 +39,12 @@
 
                     <ul>
                     <li>
-                        <label class="category-menu" for="category1-input">Home</label>
+                        <label class="category-menu" for="homeInput">Home</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="category2-input" />
-                        <label class="category-menu" for="category2-input"
+                        <input type="checkbox" id="basicCoffeeInput" />
+                        <label class="category-menu" for="basicCoffeeInput"
                         >Basic Coffee
                             <nav class="sidebar-category">
                                 <p>Basic Coffee</p>
@@ -53,14 +54,15 @@
                                 <li><a href="#">Caffee Latte</a></li>
                                 <li><a href="#">Caramel Macchiato</a></li>
                                 <li><a href="#">Expresso Macchiato</a></li>
+                                <li><a href="#">Shop all</a></li>
                                 </ul>
                             </nav>
                         </label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="category3-input" />
-                        <label class="category-menu" for="category3-input"
+                        <input type="checkbox" id="signatureCoffeeInput" />
+                        <label class="category-menu" for="signatureCoffeeInput"
                         >Signature Coffee
                         <nav class="sidebar-category">
                             <p>Signature Coffee</p>
@@ -70,14 +72,15 @@
                             <li><a href="#">Caffee Latte</a></li>
                             <li><a href="#">Caramel Macchiato</a></li>
                             <li><a href="#">Expresso Macchiato</a></li>
+                            <li><a href="#">Shop all</a></li>
                             </ul>
                         </nav>
                         </label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="category4-input" />
-                        <label class="category-menu" for="category4-input"
+                        <input type="checkbox" id="flavoredCoffeeInput" />
+                        <label class="category-menu" for="flavoredCoffeeInput"
                         >Flavored Coffee
                         <nav class="sidebar-category">
                             <p>Flavored Coffee</p>
@@ -87,14 +90,15 @@
                             <li><a href="#">Caffee Latte</a></li>
                             <li><a href="#">Caramel Macchiato</a></li>
                             <li><a href="#">Expresso Macchiato</a></li>
+                            <li><a href="#">Shop all</a></li>
                             </ul>
                         </nav>
                     </label>
                 </li>
 
                 <li>
-                    <input type="checkbox" id="category5-input" />
-                    <label class="category-menu" for="category5-input"
+                    <input type="checkbox" id="nonCoffeeInput" />
+                    <label class="category-menu" for="nonCoffeeInput"
                     >Non-Coffee
                     <nav class="sidebar-category">
                         <p>Non-Coffee</p>
@@ -104,9 +108,13 @@
                         <li><a href="#">Caffee Latte</a></li>
                         <li><a href="#">Caramel Macchiato</a></li>
                         <li><a href="#">Expresso Macchiato</a></li>
+                        <li><a href="#">Shop all</a></li>
                         </ul>
                     </nav>
                     </label>
+                </li>
+                <li>
+                    <label class="category-menu" for="shopAllInput">Shop All</label>
                 </li>
                 </ul>
             </nav>
@@ -277,7 +285,7 @@
             </div>
             <div class="products"> <!-- display: grid -> 6 products (3 X 2)-->
                 <div class="card">
-                  <img src="../Img/coffee_item_2.jpg" alt="coffeeItem">
+                  <img src="../Img/coffee_item_7.jpeg" alt="coffeeItem">
                   <p class="category">Basic Coffee</p>
                   <p class="subcategory">Expresso</p>
                   <p class="price">19.99$</p>

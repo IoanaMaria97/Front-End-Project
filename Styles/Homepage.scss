@@ -1,9 +1,8 @@
 @import "colors";
-@import "spacing";
 @import "base";
 
 header {
-    height: 110px;
+    height: 120px;
     display: flex;
     justify-content: center;
     background-color: $blue;
@@ -49,7 +48,7 @@ header {
             }
             #hamburger-menu {
                 position: absolute;
-                top:55px;
+                top: 65px;
                 left: 45%;
                 p {
                     font-weight: bold;
@@ -75,16 +74,17 @@ header {
                         }
                     ul {
                         padding-left: 0;
+                        width: 100%;
                         li {
                             list-style-type: none;
                             line-height: 30px;
                             label {
                                 cursor: pointer;
                             }
-                            #category2-input,
-                            #category3-input,
-                            #category4-input,
-                            #category5-input {
+                            #basicCoffeeInput,
+                            #signatureCoffeeInput,
+                            #flavoredCoffeeInput,
+                            #nonCoffeeInput {
                                 display: none;
                                 }
                             .category-menu {
@@ -122,22 +122,22 @@ header {
                                           }
                                       }
                                   }
-                            #category2-input:checked + .category-menu .sidebar-category {
+                            #basicCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category3-input:checked + .category-menu .sidebar-category {
+                            #signatureCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category4-input:checked + .category-menu .sidebar-category {
+                            #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
                                       
-                            #category5-input:checked + .category-menu .sidebar-category {
+                            #nonCoffeeInput:checked + .category-menu .sidebar-category {
                                 visibility: visible;
                                 right: 0;
                                       }
@@ -335,10 +335,9 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .productLeft {
+        .productCart {
             height: 60%;
             width: 45%;
-            background-image: url("../Img/coffee10.jpg");
             background-size: cover;
             position: relative;
             .details {
@@ -351,13 +350,13 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                p {
+                .productTitle {
+                    margin: 5px;
+                }
+                .productParag {
                     margin: 0;
                     font-size: 18px;
                     text-align: center;
-                }
-                h3 {
-                    margin: 5px;
                 }
             }
             .btn {
@@ -370,54 +369,16 @@ header {
                     border: none;
                     background-color: $brown;
                     color: $milky;
-                    text-transform: uppercase;
                     box-shadow: 0px 10px 20px 0px $darkGrey;
                     cursor: pointer;
                 }
             }
-    
         }
-        .productRight {
-            height: 60%;
-            width: 45%;
+        .productImgLeft {
+            background-image: url("../Img/coffee10.jpg");
+        }
+        .productImgRight {
             background-image: url("../Img/coffee5.jpg");
-            background-size: cover;
-            position: relative;
-            .details {
-                height: 25%;
-                width: 80%;
-                background-color: white;
-                position: absolute;
-                top: 87%;
-                left: 10%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                p {
-                    margin: 0;
-                    font-size: 18px;
-                    text-align: center;
-                }
-                h4 {
-                    margin: 5px;
-                }
-            }
-            .btn {
-                button {
-                    height: 15%;
-                    width: 50%;
-                    position: absolute;
-                    top: 104%;
-                    left: 25%;
-                    border: none;
-                    background-color: $brown;
-                    color: $milky;
-                    text-transform: uppercase;
-                    box-shadow: 0px 10px 20px 0px $darkGrey;
-                    cursor: pointer;
-                }
-            }
-    
         }
     }
 }
@@ -446,129 +407,26 @@ header {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             grid-gap: 50px;
-            .gridItem1 {
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
-               .style {
+            .style {
                    display: flex;
                    flex-direction: column;
                    justify-content: center;
                    align-items: center;
-                   img {
-                    height: 250px;
-                    width: 250px;
-                    border-radius: 50%;
-                }
-                p {
-                    font-family: 'Gill Sans', sans-serif;
-                    font-size: 17px;
-                    text-align: center;
-                }
+                   .gridImg {
+                        height: 250px;
+                        width: 250px;
+                        border-radius: 50%;
+                    }
+                    .gridParag {
+                        font-family: 'Gill Sans', sans-serif;
+                        font-size: 17px;
+                        text-align: center;
+                    }
                }
             }
-            .gridItem2 {
-                grid-column: 2 / 3;
-                grid-row: 1 / 2;
-                .style {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                     height: 250px;
-                     width: 250px;
-                     border-radius: 50%;
-                 }
-                 p {
-                     font-family: 'Gill Sans', sans-serif;
-                     font-size: 17px;
-                     text-align: center;
-                 }
-                }
-            }
-            .gridItem3 {
-                grid-column: 3 / 4;
-                grid-row: 1 / 2;
-                .style {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                     height: 250px;
-                     width: 250px;
-                     border-radius: 50%;
-                 }
-                 p {
-                     font-family: 'Gill Sans', sans-serif;
-                     font-size: 17px;
-                     text-align: center;
-                 }
-                }
-            }
-            .gridItem4 {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-                .style {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                     height: 250px;
-                     width: 250px;
-                     border-radius: 50%;
-                 }
-                 p {
-                     font-family: 'Gill Sans', sans-serif;
-                     font-size: 17px;
-                     text-align: center;
-                 }
-                }
-            }
-            .gridItem5 {
-                grid-column: 2 / 3;
-                grid-row: 2 / 3;
-                .style {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                     height: 250px;
-                     width: 250px;
-                     border-radius: 50%;
-                 }
-                 p {
-                     font-family: 'Gill Sans', sans-serif;
-                     font-size: 17px;
-                     text-align: center;
-                 }
-                }
-            }
-            .gridItem6 {
-                grid-column: 3 / 4;
-                grid-row: 2 / 3;
-                .style {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    img {
-                     height: 250px;
-                     width: 250px;
-                     border-radius: 50%;
-                 }
-                 p {
-                     font-family: 'Gill Sans', sans-serif;
-                     font-size: 17px;
-                     text-align: center;
-                 }
-                }
-            }
+          
         }
     }
-}
 
 footer {
     background-color: $blue;

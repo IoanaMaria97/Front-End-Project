@@ -28,7 +28,7 @@ h5 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 li, a {
@@ -36,7 +36,7 @@ li, a {
 }
 
 button {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .logo {
@@ -54,8 +54,46 @@ span {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  li, a {
+    font-size: 14px;
+  }
+  button {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  figcaption {
+    font-size: 13px;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   header {
-    height: 150px;
+    height: 130px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -89,10 +127,6 @@ span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  header .container .nav .logo {
-    font-size: 30px;
-    margin-bottom: 0;
   }
   header .container .nav nav ul {
     list-style: none;
@@ -130,13 +164,13 @@ span {
   }
   header .container .category #hamburger-menu {
     position: absolute;
-    top: 105px;
+    top: 85px;
     left: calc(50% - 20px);
   }
   header .container .category #hamburger-menu p {
     font-weight: bold;
-    font-size: 15px;
     width: 20px;
+    font-size: 14px;
   }
   header .container .category #hamburger-menu .sidebar-menu {
     visibility: hidden;
@@ -144,6 +178,7 @@ span {
     top: 0;
     right: -600px;
     width: 45%;
+    max-width: 250px;
     height: 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
     background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
@@ -167,10 +202,10 @@ span {
     line-height: 25px;
     font-size: 15px;
   }
-  header .container .category #hamburger-menu .sidebar-menu ul li #category2-input,
-  header .container .category #hamburger-menu .sidebar-menu ul li #category3-input,
-  header .container .category #hamburger-menu .sidebar-menu ul li #category4-input,
-  header .container .category #hamburger-menu .sidebar-menu ul li #category5-input {
+  header .container .category #hamburger-menu .sidebar-menu ul li #basicCoffeeInput,
+  header .container .category #hamburger-menu .sidebar-menu ul li #signatureCoffeeInput,
+  header .container .category #hamburger-menu .sidebar-menu ul li #flavoredCoffeeInput,
+  header .container .category #hamburger-menu .sidebar-menu ul li #nonCoffeeInput {
     display: none;
   }
   header .container .category #hamburger-menu .sidebar-menu ul li .category-menu {
@@ -183,6 +218,7 @@ span {
     top: 0;
     right: -600px;
     width: 45%;
+    max-width: 250px;
     height: 100%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(#BDCFCC));
     background-image: linear-gradient(180deg, #F5F5F5, #BDCFCC);
@@ -210,19 +246,19 @@ span {
     text-decoration: none;
     font-size: 15px;
   }
-  header .container .category #hamburger-menu .sidebar-menu ul li #category2-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #basicCoffeeInput:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category #hamburger-menu .sidebar-menu ul li #category3-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #signatureCoffeeInput:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category #hamburger-menu .sidebar-menu ul li #category4-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
-  header .container .category #hamburger-menu .sidebar-menu ul li #category5-input:checked + .category-menu .sidebar-category {
+  header .container .category #hamburger-menu .sidebar-menu ul li #nonCoffeeInput:checked + .category-menu .sidebar-category {
     visibility: visible;
     right: 0;
   }
@@ -394,20 +430,13 @@ span {
   .product .containerProduct .leftSide .slider .containerSlider .carousel .carousel__slides .carousel__slide figcaption {
     -ms-flex-item-align: end;
         align-self: flex-end;
-    padding: 10px 10px 0 10px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: 20%;
+    padding: 0 10px;
+    width: 30%;
     min-width: 50px;
-    font-size: 15px;
-  }
-  .product .containerProduct .leftSide .slider .containerSlider .carousel .carousel__slides .carousel__slide figcaption p {
-    font-size: 15px;
+    text-align: left;
   }
   .product .containerProduct .leftSide .slider .containerSlider .carousel .carousel__slides .carousel__slide .credit {
-    margin-top: 1rem;
-    color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
     display: block;
   }
   .product .containerProduct .leftSide .slider .containerSlider .carousel .carousel__slides .carousel__slide.scrollable {
@@ -480,7 +509,6 @@ span {
   }
   .product .containerProduct .leftSide .details .description p {
     text-align: justify;
-    font-size: 15px;
   }
   .product .containerProduct .leftSide .details .review {
     margin-bottom: 50px;
@@ -491,9 +519,6 @@ span {
   .product .containerProduct .leftSide .details .review form fieldset legend {
     font-size: 20px;
     font-weight: bold;
-  }
-  .product .containerProduct .leftSide .details .review form fieldset p {
-    font-size: 15px;
   }
   .product .containerProduct .leftSide .details .review form fieldset .rating {
     display: -webkit-box;
@@ -513,9 +538,9 @@ span {
   .product .containerProduct .leftSide .details .review form fieldset .rating label {
     position: relative;
     width: 40px;
-    font-size: 25px;
     color: black;
     cursor: pointer;
+    font-size: 20px;
   }
   .product .containerProduct .leftSide .details .review form fieldset .rating > label::before {
     content: "\2605";
@@ -533,8 +558,8 @@ span {
     opacity: 0.3;
   }
   .product .containerProduct .leftSide .details .review form fieldset label, .product .containerProduct .leftSide .details .review form fieldset input, .product .containerProduct .leftSide .details .review form fieldset textarea {
-    font-size: 15px;
     display: block;
+    font-size: 14px;
     margin: 5px 0;
     background-color: #F5F5F5;
     width: 200px;
@@ -543,21 +568,23 @@ span {
     height: 40px;
     width: 100px;
     margin-top: 15px;
-    background-color: #BDCFCC;
+    background-color: #8C7268;
+    color: #F5F5F5;
     border: none;
-    -webkit-box-shadow: 3px 3px 3px 3px #b9b8b8;
-            box-shadow: 3px 3px 3px 3px #b9b8b8;
+    -webkit-box-shadow: 0px 20px 20px 0px #b9b8b8;
+            box-shadow: 0px 20px 20px 0px #b9b8b8;
   }
   .product .containerProduct .rightSide {
-    width: 200px;
+    width: 70%;
+    max-width: 250px;
     height: 100%;
   }
   .product .containerProduct .rightSide .box {
     margin: 50px auto;
     width: 100%;
-    height: 150px;
-    -webkit-box-shadow: 5px 5px 5px 5px #b9b8b8;
-            box-shadow: 5px 5px 5px 5px #b9b8b8;
+    height: 100%;
+    -webkit-box-shadow: 0px 10px 20px 0px #646464;
+            box-shadow: 0px 10px 20px 0px #646464;
     background-color: #F5F5F5;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -566,16 +593,41 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .product .containerProduct .rightSide .box p {
+  .product .containerProduct .rightSide .box .type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .product .containerProduct .rightSide .box .type p {
+    margin: 0;
+  }
+  .product .containerProduct .rightSide .box .type p:first-of-type {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .product .containerProduct .rightSide .box .type p:nth-of-type(2) {
+    font-size: 15px;
+  }
+  .product .containerProduct .rightSide .box .type p:last-of-type {
     font-size: 20px;
-    margin-bottom: 0;
+    margin-top: 20px;
   }
   .product .containerProduct .rightSide .box .containerBox {
     display: -webkit-box;
@@ -587,23 +639,30 @@ span {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 25px;
   }
   .product .containerProduct .rightSide .box .containerBox p {
     margin: 0 20px;
     font-size: 20px;
   }
   .product .containerProduct .rightSide .box .containerBox button {
-    width: 35px;
+    width: 40px;
     height: 25px;
-    font-size: 18px;
+    font-size: 15px;
+    cursor: pointer;
   }
-  .product .containerProduct .rightSide .box button {
-    height: 50px;
-    width: 100%;
-    border: 1px solid #b9b8b8;
-    background-color: #BDCFCC;
-    font-size: 13px;
+  .product .containerProduct .rightSide .box .cart {
+    height: 40px;
+    width: 50%;
+    border: none;
+    background-color: #8C7268;
+    font-size: 12px;
     text-transform: uppercase;
+    -webkit-box-shadow: 0px 20px 20px 0px #b9b8b8;
+            box-shadow: 0px 20px 20px 0px #b9b8b8;
+    margin-bottom: 30px;
+    color: #F5F5F5;
+    cursor: pointer;
   }
   footer {
     background-color: #BDCFCC;
@@ -620,7 +679,8 @@ span {
             align-items: center;
   }
   footer .footerContainer {
-    width: 90%;
+    width: 100%;
+    max-width: 600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -702,7 +762,7 @@ span {
     padding-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
   }
   footer .footerContainer .others .help ul {
     list-style: none;
@@ -720,16 +780,16 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   footer .footerContainer .others .contact p {
     margin: 0px;
     padding-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 13px;
   }
   footer .footerContainer .others .contact .social {
     display: block;

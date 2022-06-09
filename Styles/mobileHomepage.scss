@@ -1,587 +1,444 @@
 @import "colors";
-@import "spacing";
 @import "base";
 
 @media screen and (max-width: 768px) {
-    .hero {
-        background-image: linear-gradient(
-        0deg,
-        $nude 0%,
-        $nude 100%
-        );
-        height: 400px;
+    header {
+        height: 130px;
         display: flex;
         justify-content: center;
+        background-color: $blue;
         .container {
-            position: relative;
             width: 100%;
-            header {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .nav {
                 display: flex;
                 flex-direction: column;
-                color: $black;
-                height: 100px;
-                .nav {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-between;
-                    .logo {
-                        font-size: 30px;
-                        margin-bottom: 0;
-                    }
-                    nav {
-                        ul {
-                            list-style: none;
+                align-items: center;
+                justify-content: center;
+                nav {
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        width: 300px;
+                        padding: 0;
+                        .li {
                             display: flex;
-                            width: 250px;
-                            padding: 0;
-                            .li {
-                                display: flex;
-                                justify-content: space-evenly;
-                                align-items: center;
-                                svg {
-                                    fill: $black;
-                                }
-                                li {
-                                    a {
-                                        text-decoration: none;
-                                        color: $black;
-                                        font-size: 13px;
-                                        margin-left: 5px;
-                                    }
+                            flex-direction: row;
+                            svg {
+                                fill: $black;
+                            }
+                            li {
+                                a {
+                                    text-decoration: none;
+                                    color: $black;
+                                    margin-left: 10px;
+                                    margin-right: 10px;
+                                   font-size: 15px;
                                 }
                             }
                         }
                     }
                 }
-                .category {
+            }
+            .category {
+                #hamburger-input {
                     display: none;
+                    position: relative;
                 }
-                .category-mobile {
-                    display: block;
-                    #hamburger-input {
-                        display: none;
-                        position: relative;
+                #hamburger-menu {
+                    position: absolute;
+                    top: 85px;
+                    left: calc(50% - 20px);
+                    p {
+                        font-weight: bold;
+                        width: 20px;
+                        font-size: 14px;
                     }
-                    #hamburger-menu {
-                        position: absolute;
-                        top: 40px;
-                        left: 85%;
-                        width: 15px;
-                        height: 15px;
-                        border: none;
-                        padding: 0px;
-                        margin: 0px;
-                        background: linear-gradient(
-                            to bottom,
-                            $black,
-                            $black 20%,
-                            $nude 20%,
-                            $nude 40%,
-                            $black 40%,
-                            $black 60%,
-                            $nude 60%,
-                            $nude 80%,
-                            $black 80%,
-                            $black 100%
-                            );
-                        .sidebar-menu {
-                            visibility: hidden;
-                            position: fixed;
-                            top: 0;
-                            right: -600px;
-                            width: 40%;
-                            height: 100%;
-                            background-color: $milky;
-                            transition: 0.3s;
-                            padding: 0px 10px;
-                            box-sizing: border-box;
-                            z-index: 2;
-                            p {
-                                color: $black;
-                                font-size: 20px;
-                                font-weight: bold;
-                                }
-                            ul {
-                                padding-left: 0;
-                                li {
-                                    list-style-type: none;
-                                    line-height: 25px;
-                                    #category2-input,
-                                    #category3-input,
-                                    #category4-input,
-                                    #category5-input {
-                                        display: none;
-                                        }
-                                    .category-menu {
-                                        color: $black;
-                                        font-size: 13px;
-                                        text-decoration: none;
-                                        .sidebar-category {
-                                                visibility: hidden;
-                                                position: fixed;
-                                                top: 0;
-                                                right: -600px;
-                                                width: 40%;
-                                                height: 100%;
-                                                background-color: $milky;
-                                                transition: 0.3s;
-                                                padding: 0px 10px;
-                                                box-sizing: border-box;
-                                                z-index: 2;
-                                                p {
-                                                    color: black;
-                                                    font-size: 20px;
-                                                    font-weight: bold;
-                                                  }
-                                                ul {
-                                                    padding-left: 0px;
-                                                    li {
-                                                        list-style-type: none;
-                                                        line-height: 25px;
-                                                        a {
-                                                            color: black;
-                                                            font-size: 13px;
-                                                            text-decoration: none;
-                                                        }
+                    .sidebar-menu {
+                        visibility: hidden;
+                        position: fixed;
+                        top: 0;
+                        right: -600px;
+                        width: 45%;
+                        max-width: 250px;
+                        height: 100%;
+                        background-image: linear-gradient(180deg, $milky, $blue);
+                        transition: 0.3s;
+                        padding: 0px 10px;
+                        box-sizing: border-box;
+                        z-index: 2;
+                        p {
+                            color: $black;
+                            font-weight: bold;
+                            font-size: 18px;
+                            }
+                        ul {
+                            padding-left: 0;
+                            li {
+                                list-style-type: none;
+                                line-height: 25px;
+                                font-size: 15px;
+                                #basicCoffeeInput,
+                                #signatureCoffeeInput,
+                                #flavoredCoffeeInput,
+                                #nonCoffeeInput {
+                                    display: none;
+                                    }
+                                .category-menu {
+                                    color: $black;
+                                    text-decoration: none;
+                                    .sidebar-category {
+                                            visibility: hidden;
+                                            position: fixed;
+                                            top: 0;
+                                            right: -600px;
+                                            width: 45%;
+                                            max-width: 250px;
+                                            height: 100%;
+                                            background-image: linear-gradient(180deg, $milky, $blue);
+                                            transition: 0.3s;
+                                            padding: 0px 10px;
+                                            box-sizing: border-box;
+                                            z-index: 2;
+                                            p {
+                                                color: black;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                              }
+                                            ul {
+                                                padding-left: 0px;
+                                                li {
+                                                    list-style-type: none;
+                                                    line-height: 25px;
+                                                    a {
+                                                        color: black;
+                                                        text-decoration: none;
+                                                        font-size: 15px;
                                                     }
-                                                  }
+                                                }
                                               }
                                           }
-                                    #category2-input:checked + .category-menu .sidebar-category {
-                                        visibility: visible;
-                                        right: 0;
-                                              }
-                                              
-                                    #category3-input:checked + .category-menu .sidebar-category {
-                                        visibility: visible;
-                                        right: 0;
-                                              }
-                                              
-                                    #category4-input:checked + .category-menu .sidebar-category {
-                                        visibility: visible;
-                                        right: 0;
-                                              }
-                                              
-                                    #category5-input:checked + .category-menu .sidebar-category {
-                                        visibility: visible;
-                                        right: 0;
-                                              }
+                                      }
+                                #basicCoffeeInput:checked + .category-menu .sidebar-category {
+                                    visibility: visible;
+                                    right: 0;
+                                          }
+                                          
+                                #signatureCoffeeInput:checked + .category-menu .sidebar-category {
+                                    visibility: visible;
+                                    right: 0;
+                                          }
+                                          
+                                #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
+                                    visibility: visible;
+                                    right: 0;
+                                          }
+                                          
+                                #nonCoffeeInput:checked + .category-menu .sidebar-category {
+                                    visibility: visible;
+                                    right: 0;
+                                          }
     
-                                    }
                                 }
-                              }
+                            }
                           }
-                    #hamburger-input:checked + #hamburger-menu .sidebar-menu {
-                        visibility: visible;
-                        right: 0;
-                          }
-                }
-            }
-            .quote {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: $black;
-                height: 210px;
-                p {
-                    text-align: center;
-                    margin: auto 10px;
-                    font-size: 15px;
-                }
-            }
-            .search {
-                display: flex;
-                justify-content: center;
-                height: 90px;
-                input {
-                    width: 40%;
-                    height: 40px;
-                    background-color: rgba(0, 0, 0, 0.4);
-                    border: 1px solid $black;
-                }
-                button {
-                    background-color: transparent;
-                    border: none;
-                    margin-left: 15px;
-                    height: 40px;
-                    .fill {
-                        fill: $black;
-                    }
-                }
+                      }
+                #hamburger-input:checked + #hamburger-menu .sidebar-menu {
+                    visibility: visible;
+                    right: 0;
+                      }
             }
         }
     }
     
-    
-    .bestSeller {
-        background-color: $blue;
-        height: 950px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        h1 {
-            margin: 30px;
-            font-size: 25px;
-        }
-        .containerCards {
-            width: 90%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            .card {
-                height: 250px;
-                width: 160px;
-                border: 1px solid $grey;
-                background-color: $white;
-                box-shadow: 5px 5px 5px 5px $grey;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                margin-bottom: 30px;
-                .imgProduct {
-                    height: 50%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    img {
-                        height: 100%;
-                        width: 80%;
-                    }
-                }
-                .nameProduct {
-                    height: 35%;
-                    width: 100%;
-                    p:nth-child(1) {
-                        font-size: 20px;
-                        margin: 0;
-                    }
-                    p:nth-child(2) {
-                        font-size:15px;
-                        margin:5px;
-                    }
-                    p:nth-child(3) {
-                        font-size: 10px;
-                        margin: 0;
-                    }
-                }
-                .button {
-                    height: 15%;
-                    width: 100%;    
-                    button {
-                        height: 100%;
-                        width: 100%;
-                        border: none;
-                        background-color: $brown;
-                        color: $milky;
-                    }
-                }
-            }
-        }
-    }
-    
-    .middleContainer {
-        background-color: $nude;
-        height: 500px;
+    .coffeeLovers {
+        background-color: $milky;
+        height: 450px;
         display: flex;
         justify-content: center;
-        .middle {
+        .containerCoffeeLovers {
             width: 80%;
-            position: relative;
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             .square {
                 display: none;
-                background-color: $darkNude;
+                background-color: $blue;
                 opacity: 0.4;
                 height: 40%;
-                width: 60%;
+                width: 70%;
                 position: absolute;
                 top: 30%;
-                left: 20%;
+                left: 15%;
             }
             .info {
-                position: absolute;
-                height: 40%;
-                width: 100%;
+                position: static;
+                height: 30%;
+                width: 95%;
+                max-width: 250px;
                 top: 0;
                 left: 0;
                 display: flex;
                 flex-direction:column;
                 align-items: center;
                 justify-content: center;
+                margin: 0;
+                padding: 20px;
                 p {
                     text-align: center;
-                    font-size: 15px;
-                    padding: 0 20px;
+                    font-size: 14px;
+                    padding: 0 0;
                 }
         
             }
-            .photo {
-                img {
-                    height: 200px;
-                    width: 300px;
-                    position: absolute;
-                    top: 230px;
-                    left: calc(50% - 150px);
-                    box-shadow: 5px 5px 5px 5px $grey;
+            .video {
+                width: 90%;
+                max-width: 370px;
+                height: 50%;
+                position: static;
+                top: 0;
+                left: 0;
+            }
+            .search {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: static;
+                top: 0;
+                left: 0;
+                height: 7%;
+                width: 90%;
+                max-width: 370px;
+                input {
+                    height: 100%;
+                    background-color: rgba($black, 0.3);
+                    border: none;
+                    font-size: 14px;
+                }
+                button {
+                    background-color: transparent;
+                    border: none;
+                    margin-left: 10px;
+                    height: 35px;
+                    cursor: pointer;
+                    .fill {
+                        fill: $black;
+                    }
                 }
             }
+            
         }
     }
     
-    .productsContainer {
-        background-color: $blue;
-        height: 800px;
+    .bestSeller {
+        background-image: linear-gradient($milky, $milky, rgba($blue, 0.7));
+        height: 100%;
         display: flex;
-        justify-content: center;
-        .products {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            .productLeft {
-                height: 200px;
-                width: 300px;
-                background-image: url("../Img/coffee10.jpg");
-                background-size: cover;
-                position: relative;
-                .details {
-                    height: 25%;
-                    width: 80%;
-                    background-color: white;
-                    position: absolute;
-                    top: 87%;
-                    left: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    p {
-                        margin: 0;
-                        font-size: 13px;
-                        text-align: center;
-                    }
-                    h3 {
-                        margin: 0;
-                        font-size: 15px;
-                    }
-                }
-                .btn {
-                    button {
-                        height: 15%;
-                        width: 50%;
-                        position: absolute;
-                        top: 104%;
-                        left: 25%;
-                        border: none;
-                        background-color: $brown;
-                        color: $milky;
-                        text-transform: uppercase;
-                        box-shadow: 5px 5px 5px 5px $grey;
-                        font-size: 12px;
-                    }
-                }
-        
-            }
-            .productRight {
-                height: 200px;
-                width: 300px;
-                background-image: url("../Img/coffee5.jpg");
-                background-size: cover;
-                position: relative;
-                .details {
-                    height: 25%;
-                    width: 80%;
-                    background-color: white;
-                    position: absolute;
-                    top: 87%;
-                    left: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    p {
-                        margin: 0;
-                        font-size: 13px;
-                        text-align: center;
-                    }
-                    h4 {
-                        margin: 0;
-                        font-size: 15px;
-                    }
-                }
-                .btn {
-                    button {
-                        height: 15%;
-                        width: 50%;
-                        position: absolute;
-                        top: 104%;
-                        left: 25%;
-                        border: none;
-                        background-color: $brown;
-                        color: $milky;
-                        text-transform: uppercase;
-                        box-shadow: 5px 5px 5px 5px $grey;
-                        font-size: 12px;
-                    }
-                }
-        
-            }
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
         }
-    }
-    
-    .brightIdea {
-        background-color: $nude;
-        height: 990px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        .containerIdea {
+        .containerCards {
             width: 90%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-bottom: 15px;
+            .card {
+                height: 250px;
+                width: 150px;
+                border: 1px solid $grey;
+                background-color: $milky;
+                box-shadow: 0px 10px 20px 0px $darkGrey;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                border-radius: 5%;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 30px 0;
+                .flip_card {
+                    height: 50%;
+                    width: 100%;
+                    perspective: 1000px; // 3D effect
+                    .flip_card_inner {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        transition: transform 0.6s;
+                        transform-style: preserve-3d;
+                        .flip_card_front {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            img {
+                                border-radius: 5%;
+                                height: 100%;
+                                width: 80%;
+                              }
+                        }
+                        .flip_card_back {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            backface-visibility: hidden;
+                            transform: rotateY(180deg);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            p {
+                                margin: 0;
+                                &:first-of-type {
+                                    margin: 5px;
+                                }
+                                &:nth-child(2) {
+                                    font-size: 15px;
+                                }
+                                &:last-of-type {
+                                    margin: 15px;
+                                    font-size: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .flip_card:hover .flip_card_inner {
+                    transform: rotateY(180deg);
+                  }
+                .button {
+                    height: 15%;
+                    width: 60%; 
+                    margin: 20px auto;   
+                    button {
+                        height: 100%;
+                        width: 100%;
+                        border: none;
+                        background-color: $brown;
+                        color: $milky;
+                        box-shadow: 0px 10px 20px 0px $darkGrey;
+                        border-radius: 5%;
+                        cursor: pointer;
+                        .fill {
+                            fill: $milky;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .products {
+        background-color: rgba($blue, 0.7);
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        .containerProducts {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            .productCart {
+                height: 35%;
+                width: 80%;
+                max-width: 400px;
+                background-size: cover;
+                position: relative;
+                margin-bottom: 50px;
+                .details {
+                    height: 25%;
+                    width: 80%;
+                    background-color: white;
+                    position: absolute;
+                    top: 87%;
+                    left: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .productTitle {
+                        margin: 5px;
+                        font-size: 17px;
+                    }
+                    .productParag {
+                        margin: 0;
+                        font-size: 14px;
+                        text-align: center;
+                    }
+                }
+                .btn {
+                    button {
+                        height: 15%;
+                        width: 50%;
+                        position: absolute;
+                        top: 104%;
+                        left: 25%;
+                        border: none;
+                        background-color: $brown;
+                        color: $milky;
+                        box-shadow: 0px 10px 20px 0px $darkGrey;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .productImgLeft {
+                background-image: url("../Img/coffee10.jpg");
+            }
+            .productImgRight {
+                background-image: url("../Img/coffee5.jpg");
+            }
+        }
+    }
+    
+    .brightIdea {
+        background-image: linear-gradient(rgba($blue, 0.7), $milky, $milky);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .containerIdea {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
             .title {
-                height: 7%;
                 h5 {
-                    font-size: 25px;
-                    margin: 20px;
+                    margin-top: 0;
+                    margin-bottom: 30px;
                 }
             }
             .grid {
-                height: 93%;
                 display: grid;
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 1fr);
                 grid-gap: 10px;
-                .gridItem1 {
-                    grid-column: 1 / 2;
-                    grid-row: 1 / 2;
-                   .style {
+                .style {
                        display: flex;
                        flex-direction: column;
                        justify-content: center;
                        align-items: center;
-                       img {
-                        height: 70px;
-                        width: 70px;
-                        border-radius: 50%;
-                    }
-                    p {
-                        font-family: 'Gill Sans', sans-serif;
-                        font-size: 13px;
-                        text-align: center;
-                    }
+                       .gridImg {
+                            height: 150px;
+                            width: 150px;
+                            border-radius: 50%;
+                        }
+                        .gridParag {
+                            font-family: 'Gill Sans', sans-serif;
+                            font-size: 14px;
+                            text-align: center;
+                        }
                    }
                 }
-                .gridItem2 {
-                    grid-column: 1 / 2;
-                    grid-row: 2 / 3;
-                    .style {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                         height: 70px;
-                         width: 70px;
-                         border-radius: 50%;
-                     }
-                     p {
-                         font-family: 'Gill Sans', sans-serif;
-                         font-size: 13px;
-                         text-align: center;
-                     }
-                    }
-                }
-                .gridItem3 {
-                    grid-column: 1 / 2;
-                    grid-row: 3 / 4;
-                    .style {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                         height: 70px;
-                         width: 70px;
-                         border-radius: 50%;
-                     }
-                     p {
-                         font-family: 'Gill Sans', sans-serif;
-                         font-size: 13px;
-                         text-align: center;
-                     }
-                    }
-                }
-                .gridItem4 {
-                    grid-column: 1 / 2;
-                    grid-row: 4 / 5;
-                    .style {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                         height: 70px;
-                         width: 70px;
-                         border-radius: 50%;
-                     }
-                     p {
-                         font-family: 'Gill Sans', sans-serif;
-                         font-size: 13px;
-                         text-align: center;
-                     }
-                    }
-                }
-                .gridItem5 {
-                    grid-column: 1 / 2;
-                    grid-row: 5 / 6;
-                    .style {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                         height: 70px;
-                         width: 70px;
-                         border-radius: 50%;
-                     }
-                     p {
-                         font-family: 'Gill Sans', sans-serif;
-                         font-size: 13px;
-                         text-align: center;
-                     }
-                    }
-                }
-                .gridItem6 {
-                    grid-column: 1 / 2;
-                    grid-row: 6 / 7;
-                    .style {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        img {
-                         height: 70px;
-                         width: 70px;
-                         border-radius: 50%;
-                     }
-                     p {
-                         font-family: 'Gill Sans', sans-serif;
-                         font-size: 13px;
-                         text-align: center;
-                     }
-                    }
-                }
-            }
         }
     }
     
@@ -593,7 +450,8 @@
         justify-content: center;
         align-items: center;
         .footerContainer {
-            width: 90%;
+            width: 100%;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -639,7 +497,7 @@
                         padding-bottom: 10px;
                         text-transform: uppercase;
                         font-weight: bold;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
                     ul {
                         list-style: none;
@@ -653,13 +511,13 @@
                 .contact {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-start;
                     p {
                         margin: 0px;
                         padding-bottom: 10px;
                         text-transform: uppercase;
                         font-weight: bold;
-                        font-size: 15px;
+                        font-size: 13px;
                     }
                     .social {
                         display: block;
