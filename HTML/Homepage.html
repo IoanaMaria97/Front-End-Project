@@ -9,7 +9,6 @@
     <title>Homepage</title>
 </head>
 <body>
-
     <header>
         <div class="container">
             <div class="nav">
@@ -31,95 +30,70 @@
             </div>
             <!-- inspiration source : https://alvarotrigo.com/blog/hamburger-menu-css-responsive/-->
             <div class="category">
-                <input type="checkbox" id="hamburger-input" />
-                <label id="hamburger-menu" for="hamburger-input"> 
-                    <p>Menu</p>     
-                    <nav class="sidebar-menu">
-                        <p>Menu</p>
-
-                        <ul>
-                        <li>
-                            <label class="category-menu" for="homeInput">Home</label>
-                        </li>
-
-                        <li>
-                            <input type="checkbox" id="basicCoffeeInput" />
-                            <label class="category-menu" for="basicCoffeeInput"
-                            >Basic Coffee
-                                <nav class="sidebar-category">
-                                    <p>Basic Coffee</p>
-                                    <ul>
-                                    <li><a href="#">Expresso</a></li>
-                                    <li><a href="#">Cappuccino</a></li>
-                                    <li><a href="#">Caffee Latte</a></li>
-                                    <li><a href="#">Caramel Macchiato</a></li>
-                                    <li><a href="#">Expresso Macchiato</a></li>
-                                    <li><a href="#">Shop all</a></li>
-                                    </ul>
-                                </nav>
-                            </label>
-                        </li>
-
-                        <li>
-                            <input type="checkbox" id="signatureCoffeeInput" />
-                            <label class="category-menu" for="signatureCoffeeInput"
-                            >Signature Coffee
-                            <nav class="sidebar-category">
-                                <p>Signature Coffee</p>
-                                <ul>
-                                <li><a href="#">Expresso</a></li>
-                                <li><a href="#">Cappuccino</a></li>
-                                <li><a href="#">Caffee Latte</a></li>
-                                <li><a href="#">Caramel Macchiato</a></li>
-                                <li><a href="#">Expresso Macchiato</a></li>
-                                <li><a href="#">Shop all</a></li>
-                                </ul>
-                            </nav>
-                            </label>
-                        </li>
-
-                        <li>
-                            <input type="checkbox" id="flavoredCoffeeInput" />
-                            <label class="category-menu" for="flavoredCoffeeInput"
-                            >Flavored Coffee
-                            <nav class="sidebar-category">
-                                <p>Flavored Coffee</p>
-                                <ul>
-                                <li><a href="#">Expresso</a></li>
-                                <li><a href="#">Cappuccino</a></li>
-                                <li><a href="#">Caffee Latte</a></li>
-                                <li><a href="#">Caramel Macchiato</a></li>
-                                <li><a href="#">Expresso Macchiato</a></li>
-                                <li><a href="#">Shop all</a></li>
-                                </ul>
-                            </nav>
-                        </label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="nonCoffeeInput" />
-                        <label class="category-menu" for="nonCoffeeInput"
-                        >Non-Coffee
-                        <nav class="sidebar-category">
-                            <p>Non-Coffee</p>
-                            <ul>
-                            <li><a href="#">Expresso</a></li>
-                            <li><a href="#">Cappuccino</a></li>
-                            <li><a href="#">Caffee Latte</a></li>
-                            <li><a href="#">Caramel Macchiato</a></li>
-                            <li><a href="#">Expresso Macchiato</a></li>
-                            <li><a href="#">Shop all</a></li>
-                            </ul>
-                        </nav>
-                        </label>
-                    </li>
-                    <li>
-                        <label class="category-menu" for="shopAllInput">Shop All</label>
-                    </li>
-                    </ul>
-                </nav>
-                </label>
+                <span class="menu" onclick="openFirstNav()">Menu</span>
+                <div id="firstSidenav" class="first_sidenav">
+                    <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
+                    <a href="#">Home</a>
+                    <a href="#">
+                        Basic Coffee
+                        <p class="inline" onclick="secondNav(btn1)">&plus;</p>
+                    </a>
+                    <div id="secondSidenav1" class="second_sidenav">
+                        <a href="#">Expresso</a>
+                        <a href="#">Cappuccino</a>
+                        <a href="#">Caffee Latte</a>
+                    </div>
+                    <a href="#">
+                        Signature Coffee
+                        <p class="inline" onclick="secondNav(btn2)">&plus;</p>
+                    </a>
+                    <div id="secondSidenav2" class="second_sidenav">
+                        <a href="#">Expresso</a>
+                        <a href="#">Cappuccino</a>
+                        <a href="#">Caffee Latte</a>
+                    </div>
+                    <a href="#">
+                        Flavored Coffee
+                        <p class="inline" onclick="secondNav(btn3)">&plus;</p>
+                    </a>
+                    <div id="secondSidenav3" class="second_sidenav">
+                        <a href="#">Expresso</a>
+                        <a href="#">Cappuccino</a>
+                        <a href="#">Caffee Latte</a>
+                    </div>
+                    <a href="#">
+                        Non-Coffee
+                        <p class="inline" onclick="secondNav(btn4)">&plus;</p>
+                    </a>
+                    <div id="secondSidenav4" class="second_sidenav">
+                        <a href="#">Expresso</a>
+                        <a href="#">Cappuccino</a>
+                        <a href="#">Caffee Lattee</a>
+                    </div>
+                </div>
             </div>
+            <script>
+                function openFirstNav() {
+                    document.getElementById("firstSidenav").style.width = "300px";
+                }
+
+                function closeFirstNav() {
+                    document.getElementById("firstSidenav").style.width = "0";
+                }
+
+                let btn1 = document.getElementById("secondSidenav1");
+                let btn2 = document.getElementById("secondSidenav2");
+                let btn3 = document.getElementById("secondSidenav3");
+                let btn4 = document.getElementById("secondSidenav4");
+
+                function secondNav(button) {
+                    if (button.style.display === "block") {
+                        button.style.display = "none";
+                    } else {
+                        button.style.display = "block";
+                    }
+                }
+            </script>
         </div>
     </header>
 
@@ -353,6 +327,5 @@
 
         </div>
     </footer>
-    
 </body>
 </html>

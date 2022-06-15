@@ -10,6 +10,7 @@
     <title>ProductsList</title>
 </head>
 <body>
+
   <header>
     <div class="container">
         <div class="nav">
@@ -31,276 +32,214 @@
         </div>
         <!-- inspiration source : https://alvarotrigo.com/blog/hamburger-menu-css-responsive/-->
         <div class="category">
-            <input type="checkbox" id="hamburger-input" />
-            <label id="hamburger-menu" for="hamburger-input"> 
-                <p>Menu</p>     
-                <nav class="sidebar-menu">
-                    <p>Menu</p>
-
-                    <ul>
-                    <li>
-                        <label class="category-menu" for="homeInput">Home</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="basicCoffeeInput" />
-                        <label class="category-menu" for="basicCoffeeInput"
-                        >Basic Coffee
-                            <nav class="sidebar-category">
-                                <p>Basic Coffee</p>
-                                <ul>
-                                <li><a href="#">Expresso</a></li>
-                                <li><a href="#">Cappuccino</a></li>
-                                <li><a href="#">Caffee Latte</a></li>
-                                <li><a href="#">Caramel Macchiato</a></li>
-                                <li><a href="#">Expresso Macchiato</a></li>
-                                <li><a href="#">Shop all</a></li>
-                                </ul>
-                            </nav>
-                        </label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="signatureCoffeeInput" />
-                        <label class="category-menu" for="signatureCoffeeInput"
-                        >Signature Coffee
-                        <nav class="sidebar-category">
-                            <p>Signature Coffee</p>
-                            <ul>
-                            <li><a href="#">Expresso</a></li>
-                            <li><a href="#">Cappuccino</a></li>
-                            <li><a href="#">Caffee Latte</a></li>
-                            <li><a href="#">Caramel Macchiato</a></li>
-                            <li><a href="#">Expresso Macchiato</a></li>
-                            <li><a href="#">Shop all</a></li>
-                            </ul>
-                        </nav>
-                        </label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="flavoredCoffeeInput" />
-                        <label class="category-menu" for="flavoredCoffeeInput"
-                        >Flavored Coffee
-                        <nav class="sidebar-category">
-                            <p>Flavored Coffee</p>
-                            <ul>
-                            <li><a href="#">Expresso</a></li>
-                            <li><a href="#">Cappuccino</a></li>
-                            <li><a href="#">Caffee Latte</a></li>
-                            <li><a href="#">Caramel Macchiato</a></li>
-                            <li><a href="#">Expresso Macchiato</a></li>
-                            <li><a href="#">Shop all</a></li>
-                            </ul>
-                        </nav>
-                    </label>
-                </li>
-
-                <li>
-                    <input type="checkbox" id="nonCoffeeInput" />
-                    <label class="category-menu" for="nonCoffeeInput"
-                    >Non-Coffee
-                    <nav class="sidebar-category">
-                        <p>Non-Coffee</p>
-                        <ul>
-                        <li><a href="#">Expresso</a></li>
-                        <li><a href="#">Cappuccino</a></li>
-                        <li><a href="#">Caffee Latte</a></li>
-                        <li><a href="#">Caramel Macchiato</a></li>
-                        <li><a href="#">Expresso Macchiato</a></li>
-                        <li><a href="#">Shop all</a></li>
-                        </ul>
-                    </nav>
-                    </label>
-                </li>
-                <li>
-                    <label class="category-menu" for="shopAllInput">Shop All</label>
-                </li>
-                </ul>
-            </nav>
-            </label>
+            <span class="menu" onclick="openFirstNav()">Menu</span>
+            <div id="firstSidenav" class="first_sidenav">
+                <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">
+                    Basic Coffee
+                    <p class="inline" onclick="secondNav(btn1)">&plus;</p>
+                </a>
+                <div id="secondSidenav1" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Signature Coffee
+                    <p class="inline" onclick="secondNav(btn2)">&plus;</p>
+                </a>
+                <div id="secondSidenav2" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Flavored Coffee
+                    <p class="inline" onclick="secondNav(btn3)">&plus;</p>
+                </a>
+                <div id="secondSidenav3" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Non-Coffee
+                    <p class="inline" onclick="secondNav(btn4)">&plus;</p>
+                </a>
+                <div id="secondSidenav4" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Lattee</a>
+                </div>
+            </div>
         </div>
+        <script>
+            function openFirstNav() {
+                document.getElementById("firstSidenav").style.width = "300px";
+            }
+
+            function closeFirstNav() {
+                document.getElementById("firstSidenav").style.width = "0";
+            }
+
+            let btn1 = document.getElementById("secondSidenav1");
+            let btn2 = document.getElementById("secondSidenav2");
+            let btn3 = document.getElementById("secondSidenav3");
+            let btn4 = document.getElementById("secondSidenav4");
+
+            function secondNav(button) {
+                if (button.style.display === "block") {
+                    button.style.display = "none";
+                } else {
+                    button.style.display = "block";
+                }
+            }
+        </script>
     </div>
   </header>
 
-    <section class="productsSection">
-        <div class="container">
-            <div class="filter">
-                <ul class="styleList">
-                    <li class="styleElement">
-                      <input type="checkbox" id="filterBrand" />
-                      <label class="filterLabel" for="filterBrand"
-                        >Brand
-                        <nav class="sidebar">
-                          <ul>
-                            <li>
-                              <input type="checkbox" id="filterBrand1" />
-                              <label for="filterBrand1">
-                                Nescafe
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterBrand2" />
-                              <label for="filterBrand2">
-                                Lavazza
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterBrand3" />
-                              <label for="filterBrand3">
-                                Starbucks
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterBrand4" />
-                              <label for="filterBrand4">
-                                Costa
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterBrand5" />
-                              <label for="filterBrand5">
-                                McCafe
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterBrand6" />
-                              <label for="filterBrand6">
-                                Illy
-                              </label>
-                            </li>
-                          </ul>
-                        </nav>
-                      </label>
-                    </li>
-                    <li class="styleElement">
-                      <input type="checkbox" id="filterCategory" />
-                      <label class="filterLabel" for="filterCategory"
-                        >Category
-                        <nav class="sidebar">
-                          <ul>
-                            <li>
-                              <input type="checkbox" id="filterCategory1" />
-                              <label for="filterCategory1">
-                                Basic Coffee
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCategory2" />
-                              <label for="filterCategory2">
-                                Signature Coffee
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCategory3" />
-                              <label for="filterCategory3">
-                                Flavored Coffee
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCategory4" />
-                              <label for="filterCategory4">
-                                Non-Coffee
-                              </label>
-                            </li>
-                          </ul>
-                        </nav>
-                      </label>
-                    </li>
-                    <li class="styleElement">
-                      <input type="checkbox" id="filterCoffeeTypes" />
-                      <label class="filterLabel" for="filterCoffeeTypes"
-                        >Coffee Types
-                        <nav class="sidebar">
-                          <ul>
-                            <li>
-                              <input type="checkbox" id="filterCoffeeTypes1" />
-                              <label for="filterCoffeeTypes1">
-                                Expresso
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCoffeeTypes2" />
-                              <label for="filterCoffeeTypes2">
-                                Cappuccino
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCoffeeTypes3" />
-                              <label for="filterCoffeeTypes3">
-                                Caffee Latte
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCoffeeTypes4" />
-                              <label for="filterCoffeeTypes4">
-                                Caramel Macchiato 
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterCoffeeTypes5" />
-                              <label for="filterCoffeeTypes5">
-                                Expresso Machiato
-                              </label>
-                            </li>
-                          </ul>
-                        </nav>
-                      </label>
-                    </li>
-                    <li class="styleElement">
-                      <input type="checkbox" id="filterStrength" />
-                      <label class="filterLabel" for="filterStrength"
-                        >Strength
-                        <nav class="sidebar">
-                          <ul>
-                            <li>
-                              <input type="checkbox" id="filterStrength1" />
-                              <label for="filterStrength1">
-                                Light to Medium Roast
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterStrength2" />
-                              <label for="filterStrength2">
-                                Medium Roast
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterStrength3" />
-                              <label for="filterStrength3">
-                                Medium to Dark Roast
-                              </label>
-                            </li>
-                            <li>
-                              <input type="checkbox" id="filterStrength4" />
-                              <label for="filterStrength4">
-                                Dark Roast
-                              </label>
-                            </li>
-                          </ul>
-                        </nav>
-                      </label>
-                    </li>
-                  </ul>
-            </div>
-            <div class="products"> <!-- display: grid -> 6 products (3 X 2)-->
-                <div class="card">
-                  <img src="../Img/coffee_item_7.jpeg" alt="coffeeItem">
-                  <p class="category">Basic Coffee</p>
-                  <p class="subcategory">Expresso</p>
-                  <p class="price">19.99$</p>
-                  <button>Add to cart</button>
-                </div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
-            </div>
-        </div>
-    </section>
+  <section class="productsSection">
+    <div class="search">
+      <input type="text" placeholder="Search here...">
+      <button>
+        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+      </button>
+    </div>
+    <div class="container">
+      <div class="filter">
 
-    <footer>
+        <ul class="filterContainer1">
+
+          <li class="filterElements">Brand
+            <span onclick="filtrare(filterBrand)">&plus;</span>
+          </li>
+          <ul class="filterContainer2" id="filterBrand">
+            <li>
+              <input type="checkbox" id="filterBrand1" />
+              <label for="filterBrand1">Nescafe</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterBrand2" />
+              <label for="filterBrand2">Lavazza</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterBrand3" />
+              <label for="filterBrand3">Starbucks</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterBrand4" />
+              <label for="filterBrand4">Costa</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterBrand5" />
+              <label for="filterBrand5">McCafe</label>
+            </li>
+          </ul>
+
+          <li class="filterElements">Category
+            <span onclick="filtrare(filterCategory)">&plus;</span>
+          </li>
+          <ul class="filterContainer2" id="filterCategory">
+            <li>
+              <input type="checkbox" id="filterCategory1" />
+              <label for="filterCategory1">Basic Coffee</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterCategory2" />
+              <label for="filterCategory2">Signature Coffee</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterCategory3" />
+              <label for="filterCategory3">Flavored Coffee</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterCategory4" />
+              <label for="filterCategory4">Non-Coffee</label>
+            </li>
+          </ul>
+
+          <li class="filterElements">Coffee Types
+            <span onclick="filtrare(filterTypes)">&plus;</span>
+          </li>
+          <ul class="filterContainer2" id="filterTypes">
+            <li>
+              <input type="checkbox" id="filterTypes1" />
+              <label for="filterTypes1">Expresso</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterTypes2" />
+              <label for="filterTypes2">Cappuccino</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterTypes3" />
+              <label for="filterTypes3">Caffee Latte</label>
+            </li>
+          </ul>
+
+          <li class="filterElements">Strength
+            <span onclick="filtrare(filterStrength)">&plus;</span>
+          </li>
+          <ul class="filterContainer2" id="filterStrength">
+            <li>
+              <input type="checkbox" id="filterStrength1" />
+              <label for="filterStrength1">Light to Medium Roast</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterStrength2" />
+              <label for="filterStrength2">Medium Roast</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterStrength3" />
+              <label for="filterStrength3">Medium to Dark Roast</label>
+            </li>
+            <li>
+              <input type="checkbox" id="filterStrength4" />
+              <label for="filterStrength4">Dark Roast</label>
+            </li>
+          </ul>
+          
+          <script>
+            let filterBrand = document.getElementById("filterBrand");
+            let filterCategory = document.getElementById("filterCategory");
+            let filterStrength = document.getElementById("filterStrength");
+
+            function filtrare(filtru) {
+              if (filtru.style.display === "block") {
+                        filtru.style.display = "none";
+                    } else {
+                        filtru.style.display = "block";
+                    }
+            }
+          </script>
+
+        </ul>
+      </div>
+      <div class="rightSide">
+        <div class="sort"></div>
+        <div class="products">
+          <div class="product">
+            <img src="../Img/coffee_item_6.jpeg" alt="product">
+            <div class="details">
+              <p class="category">Expresso</p>
+              <p class="price">29.99$</p>
+            </div>
+            <div class="cart">
+              <button class="btn1">view details</button>
+              <button class="btn2">add to cart</button>
+            </div>
+          </div>
+          <div class="product"></div>
+          <div class="product"></div>
+          <div class="product"></div>
+          <div class="product"></div>
+          <div class="product"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
         <div class="footerContainer">
 
             <div class="logo">CoffeeShop</div>
@@ -354,6 +293,7 @@
            </div>
 
         </div>
-    </footer>
+  </footer>
+  
 </body>
 </html>

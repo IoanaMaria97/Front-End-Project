@@ -11,6 +11,7 @@ header {
         display: flex;
         flex-direction: column;
         position: relative;
+        padding: 20px;
         .nav {
             display: flex;
             flex-direction: row;
@@ -42,223 +43,184 @@ header {
             }
         }
         .category {
-            #hamburger-input {
-                display: none;
-                position: relative;
+            .menu {
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                margin-bottom: 10px;
+                font-weight: bold;
             }
-            #hamburger-menu {
-                position: absolute;
-                top: 65px;
-                left: 45%;
-                p {
-                    font-weight: bold;
+            .first_sidenav {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 0;
+                transition: 0.5s;
+                z-index: 1;
+                background-image: linear-gradient(180deg, $milky, $blue);
+                padding-top: 35px;
+                overflow: scroll;
+                height: 100%;
+                a {
+                    display: block;
+                    transition: 0.1s;
+                    text-decoration: none;
+                    color: $black;
                     font-size: 18px;
-                    cursor: pointer;
-                }
-                .sidebar-menu {
-                    visibility: hidden;
-                    position: fixed;
-                    top: 0;
-                    right: -600px;
-                    width: 20%;
-                    height: 100%;
-                    background-image: linear-gradient(180deg, $milky, $blue);
-                    transition: 0.3s;
-                    padding: 0px 20px;
-                    box-sizing: border-box;
-                    z-index: 2;
-                    p {
-                        color: $black;
-                        font-weight: bold;
-                        font-size: 25px;
-                        }
-                    ul {
-                        padding-left: 0;
-                        li {
-                            list-style-type: none;
-                            line-height: 30px;
-                            label {
-                                cursor: pointer;
-                            }
-                            #basicCoffeeInput,
-                            #signatureCoffeeInput,
-                            #flavoredCoffeeInput,
-                            #nonCoffeeInput {
-                                display: none;
-                                }
-                            .category-menu {
-                                color: $black;
-                                text-decoration: none;
-                                .sidebar-category {
-                                        visibility: hidden;
-                                        position: fixed;
-                                        top: 0;
-                                        right: -600px;
-                                        width: 20%;
-                                        height: 100%;
-                                        background-image: linear-gradient(180deg, $milky, $blue);
-                                        transition: 0.3s;
-                                        padding: 0px 20px;
-                                        box-sizing: border-box;
-                                        z-index: 2;
-                                        cursor: auto;
-                                        p {
-                                            color: black;
-                                            font-size: 25px;
-                                            font-weight: bold;
-                                          }
-                                        ul {
-                                            padding-left: 0px;
-                                            li {
-                                                list-style-type: none;
-                                                line-height: 30px;
-                                                a {
-                                                    color: black;
-                                                    text-decoration: none;
-                                                    cursor: pointer;
-                                                }
-                                            }
-                                          }
-                                      }
-                                  }
-                            #basicCoffeeInput:checked + .category-menu .sidebar-category {
-                                visibility: visible;
-                                right: 0;
-                                      }
-                                      
-                            #signatureCoffeeInput:checked + .category-menu .sidebar-category {
-                                visibility: visible;
-                                right: 0;
-                                      }
-                                      
-                            #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
-                                visibility: visible;
-                                right: 0;
-                                      }
-                                      
-                            #nonCoffeeInput:checked + .category-menu .sidebar-category {
-                                visibility: visible;
-                                right: 0;
-                                      }
-
-                            }
-                        }
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    position: relative;
+                    .inline {
+                        margin: 0;
+                        position: absolute;
+                        right: 0;
+                        display: inline;
+                        font-size: 20px;
+                        padding-right: 25px;
                       }
                   }
-            #hamburger-input:checked + #hamburger-menu .sidebar-menu {
-                visibility: visible;
-                right: 0;
+                .closeBtn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 30px;
+                    padding-right: 20px;
+                    padding-top: 10px;
                   }
+                .second_sidenav {
+                    display: none;
+                    margin-left: 50px;
+                    a {
+                        font-size: 17px;
+                        padding-top: 10px;
+                      }
+                  }
+              }
         }
     }
 }
 
 .productsSection {
     background-color: $milky;
-    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    height: 100%;
+    .search {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input {
+            width: 500px;
+            height: 50px;
+            background-color: rgba($black, 0.2);
+            border: none;
+            font-size: 18px;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            margin-left: 10px;
+            height: 50px;
+            cursor: pointer;
+            .fill {
+                fill: $black;
+            }
+        }
+    }
     .container {
-        width: 80%;
+        width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 50px 0;
+        justify-content: space-evenly;
+        padding-bottom: 50px;
         .filter {
-            height: 20%;
-            width: 25%;
-            background-color: $milky;
-            box-shadow: 0 10px 20px 0 $darkGrey;
-            .styleList {
+            width: 20%;
+            min-width: 280px;
+            height: 100%;
+            box-shadow: 0 15px 15px 0 $darkGrey;
+            padding: 10px;
+            .filterContainer1 {
+                list-style: none;
                 padding: 0;
-                .styleElement {
-                    margin: 15px auto;
-                    padding: 10px;
-                    font-size: 18px;
+                .filterElements {
+                    position: relative;
+                    margin: 20px;
                 }
-                li {
-                    list-style-type: none;
-                    #filterBrand {
-                        display: none;
+                span {
+                    position: absolute;
+                    right: 20px;
+                    cursor: pointer;
+                }
+            }
+            .filterContainer2 {
+                list-style: none;
+                display: none;
+            }
+        }
+        .rightSide {
+            width: 65%;
+            height: 100%;
+            .sort {
+                height: 170px;
+                background-color: $blue;
+                margin-bottom: 50px;
+            }
+            .products {
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 35px;
+                .product {
+                    height: 350px;
+                    width: 270px;
+                    box-shadow: 0 15px 15px 0 $darkGrey;
+                    position: relative;
+                    img {
+                        height: 220px;
+                        width: 100%;
                     }
-                    #filterCategory {
-                        display: none;
-                    }
-                    #filterCoffeeTypes {
-                        display: none;
-                    }
-                    #filterStrength {
-                        display: none;
-                    }
-                    label {
-                        cursor: pointer;
-                        .sidebar {
-                            display: none;
-                            cursor: auto;
+                    .details {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        p {
+                            margin: 0;
+                        }
+                        .category {
+                            padding: 20px;
+                        }
+                        .price {
+                            font-size: 25px;
                         }
                     }
-                    #filterBrand:checked + .filterLabel .sidebar {
-                        display: block;
-                      }
-                    #filterCategory:checked + .filterLabel .sidebar {
-                        display: block;
-                      }
-                    #filterCoffeeTypes:checked + .filterLabel .sidebar {
-                        display: block;
-                      } 
-                    #filterStrength:checked + .filterLabel .sidebar {
-                        display: block;
-                      }
-                  }
-            }
+                    .cart {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 40px;
+                        left: 25px;
+                        transition: 0.5s ease;
+                        opacity: 0;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        button {
+                            border: none;
+                            box-shadow: 0 5px 5px 0 $darkGrey;
+                            height: 50px;
+                            width: 200px;
+                            margin: 10px;
+                            background-color: $brown;
+                            color: $milky;
+                            cursor: pointer;
+                        }
+                    }
+                }
         }
-        .products {
-            height: 100%;
-            width: 70%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            grid-gap: 30px;
-            .card {
-                height: 100%;
-                width: 90%;
-                box-shadow: 0 10px 20px 0 $darkGrey;
-                background-color: $milky;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                img {
-                    height: 40%;
-                    width: 80%;
-                    margin: 20px;
-                }
-                p {
-                    margin: 0;
-                }
-                .category {
-                    font-size: 22px;
-                }
-                .subcategory {
-                    font-size: 18px;
-                }
-                .price {
-                    margin-top: 10px;
-                    font-size: 25px;
-                }
-                button {
-                    height: 50px;
-                    width: 140px;
-                    box-shadow: 0 20px 30px 0 $grey;
-                    border: none;
-                    cursor: pointer;
-                    background-color: $brown;
-                    color: white;
-                    margin: 20px;
-                }
-            }
-        }
+        }   
     }
 }
 
@@ -348,4 +310,3 @@ footer {
         }
     }
 }
-

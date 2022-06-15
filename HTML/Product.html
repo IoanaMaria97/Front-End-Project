@@ -9,7 +9,8 @@
     <title>Product</title>
 </head>
 <body>
-    <header>
+
+  <header>
     <div class="container">
         <div class="nav">
             <div class="logo">CoffeeShop</div>
@@ -30,296 +31,159 @@
         </div>
         <!-- inspiration source : https://alvarotrigo.com/blog/hamburger-menu-css-responsive/-->
         <div class="category">
-            <input type="checkbox" id="hamburger-input" />
-            <label id="hamburger-menu" for="hamburger-input"> 
-                <p>Menu</p>     
-                <nav class="sidebar-menu">
-                    <p>Menu</p>
-
-                    <ul>
-                    <li>
-                        <label class="category-menu" for="homeInput">Home</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="basicCoffeeInput" />
-                        <label class="category-menu" for="basicCoffeeInput"
-                        >Basic Coffee
-                            <nav class="sidebar-category">
-                                <p>Basic Coffee</p>
-                                <ul>
-                                <li><a href="#">Expresso</a></li>
-                                <li><a href="#">Cappuccino</a></li>
-                                <li><a href="#">Caffee Latte</a></li>
-                                <li><a href="#">Caramel Macchiato</a></li>
-                                <li><a href="#">Expresso Macchiato</a></li>
-                                <li><a href="#">Shop all</a></li>
-                                </ul>
-                            </nav>
-                        </label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="signatureCoffeeInput" />
-                        <label class="category-menu" for="signatureCoffeeInput"
-                        >Signature Coffee
-                        <nav class="sidebar-category">
-                            <p>Signature Coffee</p>
-                            <ul>
-                            <li><a href="#">Expresso</a></li>
-                            <li><a href="#">Cappuccino</a></li>
-                            <li><a href="#">Caffee Latte</a></li>
-                            <li><a href="#">Caramel Macchiato</a></li>
-                            <li><a href="#">Expresso Macchiato</a></li>
-                            <li><a href="#">Shop all</a></li>
-                            </ul>
-                        </nav>
-                        </label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="flavoredCoffeeInput" />
-                        <label class="category-menu" for="flavoredCoffeeInput"
-                        >Flavored Coffee
-                        <nav class="sidebar-category">
-                            <p>Flavored Coffee</p>
-                            <ul>
-                            <li><a href="#">Expresso</a></li>
-                            <li><a href="#">Cappuccino</a></li>
-                            <li><a href="#">Caffee Latte</a></li>
-                            <li><a href="#">Caramel Macchiato</a></li>
-                            <li><a href="#">Expresso Macchiato</a></li>
-                            <li><a href="#">Shop all</a></li>
-                            </ul>
-                        </nav>
-                    </label>
-                </li>
-
-                <li>
-                    <input type="checkbox" id="nonCoffeeInput" />
-                    <label class="category-menu" for="nonCoffeeInput"
-                    >Non-Coffee
-                    <nav class="sidebar-category">
-                        <p>Non-Coffee</p>
-                        <ul>
-                        <li><a href="#">Expresso</a></li>
-                        <li><a href="#">Cappuccino</a></li>
-                        <li><a href="#">Caffee Latte</a></li>
-                        <li><a href="#">Caramel Macchiato</a></li>
-                        <li><a href="#">Expresso Macchiato</a></li>
-                        <li><a href="#">Shop all</a></li>
-                        </ul>
-                    </nav>
-                    </label>
-                </li>
-                <li>
-                    <label class="category-menu" for="shopAllInput">Shop All</label>
-                </li>
-                </ul>
-            </nav>
-            </label>
-        </div>
-    </div>
-    </header>
-
-    <section class="product">
-        <div class="containerProduct">
-            <div class="leftSide">
-                <!-- inspiration source : https://codepen.io/siiron/pen/QWwLoMy -->
-                <section class="slider">
-                    <div class="containerSlider">
-                      <div class="carousel">
-                        <input type="radio" name="slides" checked="checked" id="slide-1" />
-                        <input type="radio" name="slides" id="slide-2" />
-                        <input type="radio" name="slides" id="slide-3" />
-                        <input type="radio" name="slides" id="slide-4" />
-                        <input type="radio" name="slides" id="slide-5" />
-                        <input type="radio" name="slides" id="slide-6" />
-                        <ul class="carousel__slides">
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_4.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_5.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_6.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_7.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_8.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                          <li class="carousel__slide">
-                            <figure>
-                              <div>
-                                <img src="../Img/coffee_item_9.jpeg" alt="" />
-                              </div>
-                              <figcaption>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                <span class="credit">CoffeeShop</span>
-                              </figcaption>
-                            </figure>
-                          </li>
-                        </ul>
-                        <ul class="carousel__thumbnails">
-                          <li>
-                            <label for="slide-1"
-                              ><img src="../Img/coffee_item_4.jpeg" alt=""
-                            /></label>
-                          </li>
-                          <li>
-                            <label for="slide-2"
-                              ><img src="../Img/coffee_item_5.jpeg" alt=""
-                            /></label>
-                          </li>
-                          <li>
-                            <label for="slide-3"
-                              ><img src="../Img/coffee_item_6.jpeg" alt=""
-                            /></label>
-                          </li>
-                          <li>
-                            <label for="slide-4"
-                              ><img src="../Img/coffee_item_7.jpeg" alt=""
-                            /></label>
-                          </li>
-                          <li>
-                            <label for="slide-5"
-                              ><img src="../Img/coffee_item_8.jpeg" alt=""
-                            /></label>
-                          </li>
-                          <li>
-                            <label for="slide-6"
-                              ><img src="../Img/coffee_item_9.jpeg" alt=""
-                            /></label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                </section>
-                
-                <section class="details">
-                    <div class="description">
-                        <h1>Description</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
-                    </div>
-                    <div class="review">
-                        <form>
-                            <fieldset>
-                                <legend>Review</legend>
-                                <p>Be the first to review this product!</p>
-                                <label>Your rating</label>
-                                <!-- Rating inspiration : https://www.foolishdeveloper.com/2022/01/5-star-rating-html-css.html -->
-                                <div class="rating">
-                                    <input type="radio" name="rating" value="5" id="5" />
-                                    <label for="5">☆</label>
-                            
-                                    <input type="radio" name="rating" value="4" id="4" />
-                                    <label for="4">☆</label>
-                            
-                                    <input type="radio" name="rating" value="3" id="3" />
-                                    <label for="3">☆</label>
-                            
-                                    <input type="radio" name="rating" value="2" id="2" />
-                                    <label for="2">☆</label>
-                            
-                                    <input type="radio" name="rating" value="1" id="1" />
-                                    <label for="1">☆</label>
-                                </div>
-
-                                <label for="name">Name</label> 
-                                <input type="text" name="nume" id="name" required/>
-
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email" required/>
-
-                                <label>Your review</label>
-                                <textarea name="instructiuni" rows="10" cols="60"></textarea>
-
-                                <input type="submit" value="Send review" />
-                            </fieldset>
-                        </form>
-                    </div>
-                </section>
-            </div>
-            <div class="rightSide">
-                <div class="box">
-                    <div class="type">
-                      <p>Basic Coffee</p>
-                      <p>Expresso</p>
-                      <p>19.99$</p>
-                    </div>
-                    <div class="containerBox">
-                        <!-- to watch: https://www.youtube.com/watch?v=8iinjYlEd7Y -->
-                        <!-- increment and decrement (html + css + js) -->
-                        <button onclick="decrement()">-</button>
-                        <p id="root"></p>
-                        <button onclick="increment()">+</button>
-                    </div>
-                    <script>
-                        var data = 0;
-                        document.getElementById("root").innerText = data;
-                        function decrement() {
-                            if(data > 0) {
-                                data = data-1;
-                            }
-                            document.getElementById("root").innerText = data;
-                        }
-                        function increment() {
-                            data = data+1;
-                            document.getElementById("root").innerText = data;
-                        }
-                    </script>
-                    <button class="cart">Add to cart</button>
+            <span class="menu" onclick="openFirstNav()">Menu</span>
+            <div id="firstSidenav" class="first_sidenav">
+                <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">
+                    Basic Coffee
+                    <p class="inline" onclick="secondNav(btn1)">&plus;</p>
+                </a>
+                <div id="secondSidenav1" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Signature Coffee
+                    <p class="inline" onclick="secondNav(btn2)">&plus;</p>
+                </a>
+                <div id="secondSidenav2" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Flavored Coffee
+                    <p class="inline" onclick="secondNav(btn3)">&plus;</p>
+                </a>
+                <div id="secondSidenav3" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Latte</a>
+                </div>
+                <a href="#">
+                    Non-Coffee
+                    <p class="inline" onclick="secondNav(btn4)">&plus;</p>
+                </a>
+                <div id="secondSidenav4" class="second_sidenav">
+                    <a href="#">Expresso</a>
+                    <a href="#">Cappuccino</a>
+                    <a href="#">Caffee Lattee</a>
                 </div>
             </div>
         </div>
-    </section>
+        <script>
+            function openFirstNav() {
+                document.getElementById("firstSidenav").style.width = "300px";
+            }
 
-    <footer>
+            function closeFirstNav() {
+                document.getElementById("firstSidenav").style.width = "0";
+            }
+
+            let btn1 = document.getElementById("secondSidenav1");
+            let btn2 = document.getElementById("secondSidenav2");
+            let btn3 = document.getElementById("secondSidenav3");
+            let btn4 = document.getElementById("secondSidenav4");
+
+            function secondNav(button) {
+                if (button.style.display === "block") {
+                    button.style.display = "none";
+                } else {
+                    button.style.display = "block";
+                }
+            }
+        </script>
+    </div>
+  </header>
+
+  <div class="search">
+    <input type="text" placeholder="Search here...">
+    <button>
+      <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+    </button>
+  </div>
+
+ <section class="middle">
+   <div class="container">
+    <div class="product">
+      <div class="images">
+        <div id="imgFirst"></div>
+        <div id="imgSmall">
+          <img id="img1" src="../Img/coffee_item_7.jpeg"/>
+          <img id="img2" src="../Img/coffee_item_8.jpeg"/>
+          <img id="img3" src="../Img/coffee_item_6.jpeg"/>
+          <img id="img4" src="../Img/coffee_item_5.jpeg"/>
+        </div>
+      </div>
+      <div class="price">
+        <p class="title">Expresso</p>
+        <p class="pret">29.99$</p>
+        <div class="containerBox">
+          <!-- to watch: https://www.youtube.com/watch?v=8iinjYlEd7Y -->
+          <!-- increment and decrement (html + css + js) -->
+          <button onclick="decrement()">-</button>
+          <p id="number"></p>
+          <button onclick="increment()">+</button>
+        </div>
+        <button class="cart">add to cart</button>
+        <div class="detailsDiv">
+          <p><a href="#descriptionItem">Description</a></p>
+          <p><a href="#reviewItem">Review</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="details">
+      <div id="descriptionItem" class="description">
+        <h1>Description</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quaerat mollitia ipsum perspiciatis modi iure eaque repudiandae fuga, quos, consectetur ex? Porro quaerat iure nemo voluptatibus officiis nobis amet unde!</p>
+      </div>
+      <div id="reviewItem" class="review">
+        <form>
+            <fieldset>
+                <legend>Review</legend>
+                <p>Be the first to review this product!</p>
+                <label>Your rating</label>
+                <!-- Rating inspiration : https://www.foolishdeveloper.com/2022/01/5-star-rating-html-css.html -->
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="5" />
+                    <label for="5">☆</label>
+            
+                    <input type="radio" name="rating" value="4" id="4" />
+                    <label for="4">☆</label>
+            
+                    <input type="radio" name="rating" value="3" id="3" />
+                    <label for="3">☆</label>
+            
+                    <input type="radio" name="rating" value="2" id="2" />
+                    <label for="2">☆</label>
+            
+                    <input type="radio" name="rating" value="1" id="1" />
+                    <label for="1">☆</label>
+                </div>
+
+                <label for="name">Name</label> 
+                <input type="text" name="nume" id="name" required/>
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required/>
+
+                <label>Your review</label>
+                <textarea name="instructiuni" rows="10" cols="60"></textarea>
+
+                <input type="submit" value="Send review" />
+            </fieldset>
+        </form>
+      </div>
+    </div>
+   </div>
+ </section> 
+
+<footer>
         <div class="footerContainer">
 
             <div class="logo">CoffeeShop</div>
@@ -373,6 +237,58 @@
            </div>
 
         </div>
-    </footer>
+</footer>
+
+<script>
+let div = document.getElementById("imgFirst");
+let img1 = document.getElementById("img1");
+let img2 = document.getElementById("img2");
+let img3 = document.getElementById("img3");
+let img4 = document.getElementById("img4");
+
+let imgBig = document.createElement("img");
+imgBig.src = img1.src;
+imgBig.style.height = "30%";
+imgBig.style.width = "80%";
+
+div.appendChild(imgBig);
+
+img1.addEventListener("click", function () {
+  imgBig.src = img1.src;
+});
+
+img2.addEventListener("click", function () {
+  imgBig.src = img2.src;
+});
+
+img3.addEventListener("click", function () {
+  imgBig.src = img3.src;
+});
+
+img4.addEventListener("click", function () {
+  imgBig.src = img4.src;
+});
+
+
+
+
+
+let data = 1;
+document.getElementById("number").textContent = data;
+  function decrement() {
+      if(data > 1) {
+          data--;;
+      }
+      document.getElementById("number").textContent = data;
+  }
+  function increment() {
+      if(data < 5) {
+        data++;
+      }
+      document.getElementById("number").textContent = data;
+  }
+
+</script>
+
 </body>
 </html>

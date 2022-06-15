@@ -3,15 +3,17 @@
 
 @media screen and (max-width: 768px) {
     header {
-        height: 130px;
+        height: 150px;
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: $blue;
         .container {
             width: 100%;
             display: flex;
             flex-direction: column;
             position: relative;
+            padding: 10px;
             .nav {
                 display: flex;
                 flex-direction: column;
@@ -44,112 +46,60 @@
                 }
             }
             .category {
-                #hamburger-input {
-                    display: none;
-                    position: relative;
+                .menu {
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    font-size: 18px;
                 }
-                #hamburger-menu {
-                    position: absolute;
-                    top: 85px;
-                    left: calc(50% - 20px);
-                    p {
-                        font-weight: bold;
-                        width: 20px;
-                        font-size: 14px;
-                    }
-                    .sidebar-menu {
-                        visibility: hidden;
-                        position: fixed;
-                        top: 0;
-                        right: -600px;
-                        width: 45%;
-                        max-width: 250px;
-                        height: 100%;
-                        background-image: linear-gradient(180deg, $milky, $blue);
-                        transition: 0.3s;
-                        padding: 0px 10px;
-                        box-sizing: border-box;
-                        z-index: 2;
-                        p {
-                            color: $black;
-                            font-weight: bold;
-                            font-size: 18px;
-                            }
-                        ul {
-                            padding-left: 0;
-                            li {
-                                list-style-type: none;
-                                line-height: 25px;
-                                font-size: 15px;
-                                #basicCoffeeInput,
-                                #signatureCoffeeInput,
-                                #flavoredCoffeeInput,
-                                #nonCoffeeInput {
-                                    display: none;
-                                    }
-                                .category-menu {
-                                    color: $black;
-                                    text-decoration: none;
-                                    .sidebar-category {
-                                            visibility: hidden;
-                                            position: fixed;
-                                            top: 0;
-                                            right: -600px;
-                                            width: 45%;
-                                            max-width: 250px;
-                                            height: 100%;
-                                            background-image: linear-gradient(180deg, $milky, $blue);
-                                            transition: 0.3s;
-                                            padding: 0px 10px;
-                                            box-sizing: border-box;
-                                            z-index: 2;
-                                            p {
-                                                color: black;
-                                                font-size: 18px;
-                                                font-weight: bold;
-                                              }
-                                            ul {
-                                                padding-left: 0px;
-                                                li {
-                                                    list-style-type: none;
-                                                    line-height: 25px;
-                                                    a {
-                                                        color: black;
-                                                        text-decoration: none;
-                                                        font-size: 15px;
-                                                    }
-                                                }
-                                              }
-                                          }
-                                      }
-                                #basicCoffeeInput:checked + .category-menu .sidebar-category {
-                                    visibility: visible;
-                                    right: 0;
-                                          }
-                                          
-                                #signatureCoffeeInput:checked + .category-menu .sidebar-category {
-                                    visibility: visible;
-                                    right: 0;
-                                          }
-                                          
-                                #flavoredCoffeeInput:checked + .category-menu .sidebar-category {
-                                    visibility: visible;
-                                    right: 0;
-                                          }
-                                          
-                                #nonCoffeeInput:checked + .category-menu .sidebar-category {
-                                    visibility: visible;
-                                    right: 0;
-                                          }
-    
-                                }
-                            }
+                .first_sidenav {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    transition: 0.5s;
+                    z-index: 1;
+                    background-image: linear-gradient(180deg, $milky, $blue);
+                    padding-top: 35px;
+                    overflow: scroll;
+                    height: 100%;
+                    a {
+                        display: block;
+                        transition: 0.1s;
+                        text-decoration: none;
+                        color: $black;
+                        font-size: 15px;
+                        padding-top: 20px;
+                        padding-left: 20px;
+                        position: relative;
+                        .inline {
+                            margin: 0;
+                            position: absolute;
+                            right: 0;
+                            display: inline;
+                            font-size: 20px;
+                            padding-right: 25px;
                           }
                       }
-                #hamburger-input:checked + #hamburger-menu .sidebar-menu {
-                    visibility: visible;
-                    right: 0;
+                    .closeBtn {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 30px;
+                        padding-right: 20px;
+                        padding-top: 10px;
                       }
+                    .second_sidenav {
+                        display: none;
+                        margin-left: 50px;
+                        a {
+                            font-size: 14px;
+                            padding-top: 10px;
+                          }
+                      }
+                  }
             }
         }
     }
