@@ -199,25 +199,25 @@ header .container .category .first_sidenav a {
   font-size: 18px;
   padding-top: 20px;
   padding-left: 20px;
-  position: relative;
+  width: 50%;
+  margin-right: 25%;
+  display: inline-block;
 }
 
-header .container .category .first_sidenav a .inline {
-  margin: 0;
-  position: absolute;
-  right: 0;
-  display: inline;
-  font-size: 20px;
-  padding-right: 25px;
+header .container .category .first_sidenav .inline {
+  padding: 5px;
+  cursor: pointer;
 }
 
 header .container .category .first_sidenav .closeBtn {
   position: absolute;
   top: 0;
   right: 0;
+  width: 25px;
   font-size: 30px;
-  padding-right: 20px;
+  padding-right: 25px;
   padding-top: 10px;
+  margin-right: 0;
 }
 
 header .container .category .first_sidenav .second_sidenav {
@@ -358,13 +358,17 @@ header .container .category .first_sidenav .second_sidenav a {
   margin-top: 30px;
 }
 
+.middle .container .product .price .title .subtitle {
+  font-size: 22px;
+}
+
 .middle .container .product .price .pret {
   margin: 0;
   font-size: 30px;
 }
 
 .middle .container .product .price .containerBox {
-  padding: 20px;
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,7 +398,7 @@ header .container .category .first_sidenav .second_sidenav a {
 }
 
 .middle .container .product .price .cart {
-  height: 55px;
+  height: 60px;
   width: 160px;
   margin-bottom: 20px;
   cursor: pointer;

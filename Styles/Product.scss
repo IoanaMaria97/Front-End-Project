@@ -1,7 +1,7 @@
 @import "colors";
 @import "base";
 
-  header {
+header {
     height: 120px;
     display: flex;
     justify-content: center;
@@ -69,24 +69,24 @@
                     font-size: 18px;
                     padding-top: 20px;
                     padding-left: 20px;
-                    position: relative;
-                    .inline {
-                        margin: 0;
-                        position: absolute;
-                        right: 0;
-                        display: inline;
-                        font-size: 20px;
-                        padding-right: 25px;
-                      }
+                    width: 50%;
+                    margin-right: 25%;
+                    display: inline-block;
                   }
+                .inline {
+                    padding: 5px;
+                    cursor: pointer;
+                }
                 .closeBtn {
                     position: absolute;
                     top: 0;
                     right: 0;
+                    width: 25px;
                     font-size: 30px;
-                    padding-right: 20px;
+                    padding-right: 25px;
                     padding-top: 10px;
-                  }
+                    margin-right: 0;
+                }
                 .second_sidenav {
                     display: none;
                     margin-left: 50px;
@@ -171,13 +171,16 @@
                 .title {
                     font-size: 22px;
                     margin-top: 30px;
+                    .subtitle {
+                        font-size: 22px;
+                    }
                 }
                 .pret {
                     margin: 0;
                     font-size: 30px;
                 }
                 .containerBox {
-                    padding: 20px;
+                    padding: 15px;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -195,7 +198,7 @@
                     }
                 }
                 .cart {
-                    height: 55px;
+                    height: 60px;
                     width: 160px;
                     margin-bottom: 20px;
                     cursor: pointer;

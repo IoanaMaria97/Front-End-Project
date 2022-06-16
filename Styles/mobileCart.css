@@ -223,255 +223,81 @@ span {
     font-size: 14px;
     padding-top: 10px;
   }
-  .search {
-    width: 100%;
-    height: 150px;
+  .checkout {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     background-color: #F5F5F5;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .search input {
-    width: 70%;
-    max-width: 400px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: none;
+  .checkout .leftSide {
+    height: 100%;
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding-bottom: 20px;
+  }
+  .checkout .leftSide h1 {
+    padding-left: 50px;
+    margin: 50px 0;
+  }
+  .checkout .leftSide .details {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .checkout .leftSide .details .title {
     font-size: 18px;
-  }
-  .search button {
-    background-color: transparent;
-    border: none;
-    margin-left: 10px;
-    height: 50px;
-    cursor: pointer;
-  }
-  .search button .fill {
-    fill: black;
-  }
-  .middle {
-    background-color: #F5F5F5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .middle .container {
-    width: 90%;
-    height: 100%;
-  }
-  .middle .container .product {
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .middle .container .product .images {
-    width: 90%;
-  }
-  .middle .container .product .images #imgFirst {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .middle .container .product .images #imgSmall {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-top: 20px;
-  }
-  .middle .container .product .images #imgSmall img {
-    width: 20%;
-    cursor: pointer;
-  }
-  .middle .container .product .price {
-    margin-top: 50px;
-    -webkit-box-shadow: 0 15px 15px 0 #646464;
-            box-shadow: 0 15px 15px 0 #646464;
-    height: 310px;
-    width: 70%;
-    max-width: 300px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .middle .container .product .price a {
-    text-decoration: none;
-    color: black;
-  }
-  .middle .container .product .price .title {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-  .middle .container .product .price .title .subtitle {
-    font-size: 15px;
-  }
-  .middle .container .product .price .pret {
-    margin: 0;
-    font-size: 20px;
-  }
-  .middle .container .product .price .containerBox {
-    padding: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .middle .container .product .price .containerBox button {
-    width: 40px;
-    height: 30px;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  .middle .container .product .price .containerBox p {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 20px;
-  }
-  .middle .container .product .price .cart {
-    height: 40px;
-    width: 130px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    background-color: #8C7268;
-    color: #F5F5F5;
-    border: none;
-    -webkit-box-shadow: 0 10px 10px 0 #b9b8b8;
-            box-shadow: 0 10px 10px 0 #b9b8b8;
-  }
-  .middle .container .product .price .detailsDiv {
-    width: 100%;
-  }
-  .middle .container .product .price .detailsDiv p {
-    border-top: 1px solid #b9b8b8;
-    height: 15px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .middle .container .details {
-    width: 100%;
-    height: 100%;
-  }
-  .middle .container .details .description {
-    margin-bottom: 50px;
-  }
-  .middle .container .details .description h1 {
-    font-size: 20px;
-  }
-  .middle .container .details .description p {
-    text-align: justify;
-  }
-  .middle .container .details .review {
-    margin-bottom: 50px;
-  }
-  .middle .container .details .review form fieldset {
-    width: 85%;
-  }
-  .middle .container .details .review form fieldset legend {
-    font-size: 20px;
+    color: #8C7268;
     font-weight: bold;
   }
-  .middle .container .details .review form fieldset .rating {
+  .checkout .leftSide .details .form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  .checkout .leftSide .details .form .section input {
+    display: block;
+    width: 90%;
+    height: 35px;
+    margin: 10px 0;
+  }
+  .checkout .leftSide .details .form .section input, .checkout .leftSide .details .form .section label {
+    background-color: #F5F5F5;
+  }
+  .checkout .leftSide .details .form .section input[type="radio"] {
+    display: inline;
+    width: 15%;
+    height: 20px;
+    margin: 0;
+  }
+  .checkout .leftSide .details .form .center {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
-  .middle .container .details .review form fieldset .rating input {
-    display: none;
-  }
-  .middle .container .details .review form fieldset .rating label {
-    position: relative;
-    width: 40px;
-    color: black;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  .middle .container .details .review form fieldset .rating > label::before {
-    content: "\2605";
-    position: absolute;
-    opacity: 0;
-  }
-  .middle .container .details .review form fieldset .rating > label:hover:before,
-  .middle .container .details .review form fieldset .rating > label:hover ~ label:before {
-    opacity: 1 !important;
-  }
-  .middle .container .details .review form fieldset .rating > input:checked ~ label:before {
-    opacity: 1;
-  }
-  .middle .container .details .review form fieldset .rating:hover > input:checked ~ label:before {
-    opacity: 0.3;
-  }
-  .middle .container .details .review form fieldset label, .middle .container .details .review form fieldset input, .middle .container .details .review form fieldset textarea {
-    display: block;
-    font-size: 14px;
-    margin: 5px 0;
-    background-color: #F5F5F5;
-    width: 200px;
-  }
-  .middle .container .details .review form fieldset input[value="Send review"] {
-    height: 40px;
-    width: 100px;
-    margin-top: 15px;
-    background-color: #8C7268;
-    color: #F5F5F5;
-    border: none;
-    -webkit-box-shadow: 0px 20px 20px 0px #b9b8b8;
-            box-shadow: 0px 20px 20px 0px #b9b8b8;
+  .checkout .rightSide {
+    height: 350px;
+    width: 90%;
+    max-width: 400px;
+    -webkit-box-shadow: 0 15px 15px 0 #646464;
+            box-shadow: 0 15px 15px 0 #646464;
+    margin-bottom: 70px;
   }
   footer {
     background-color: #BDCFCC;
@@ -619,4 +445,4 @@ span {
     margin: 10px;
   }
 }
-/*# sourceMappingURL=mobileProduct.css.map */
+/*# sourceMappingURL=mobileCart.css.map */

@@ -73,23 +73,23 @@
                         font-size: 15px;
                         padding-top: 20px;
                         padding-left: 20px;
-                        position: relative;
-                        .inline {
-                            margin: 0;
-                            position: absolute;
-                            right: 0;
-                            display: inline;
-                            font-size: 20px;
-                            padding-right: 25px;
-                          }
+                        width: 50%;
+                        margin-right: 25%;
+                        display: inline-block;
                       }
+                    .inline {
+                        padding: 5px;
+                        cursor: pointer;
+                    }
                     .closeBtn {
                         position: absolute;
                         top: 0;
                         right: 0;
+                        width: 25px;
                         font-size: 30px;
-                        padding-right: 20px;
+                        padding-right: 25px;
                         padding-top: 10px;
+                        margin-right: 0;
                       }
                     .second_sidenav {
                         display: none;
@@ -178,13 +178,16 @@
                     .title {
                         font-size: 15px;
                         margin-top: 10px;
+                        .subtitle {
+                            font-size: 15px;
+                        }
                     }
                     .pret {
                         margin: 0;
                         font-size: 20px;
                     }
                     .containerBox {
-                        padding: 05px;
+                        padding: 5px;
                         display: flex;
                         flex-direction: row;
                         justify-content: center;
@@ -204,7 +207,7 @@
                     .cart {
                         height: 40px;
                         width: 130px;
-                        margin-bottom: 20px;
+                        margin-bottom: 15px;
                         cursor: pointer;
                         background-color: $brown;
                         color: $milky;
