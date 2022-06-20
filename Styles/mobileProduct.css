@@ -73,7 +73,7 @@ span {
     font-size: 14px;
   }
   li, a {
-    font-size: 14px;
+    font-size: 12px;
   }
   button {
     font-size: 12px;
@@ -83,11 +83,8 @@ span {
     font-weight: bold;
     margin: 10px 0;
   }
-  figcaption {
-    font-size: 13px;
-  }
   span {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -117,7 +114,7 @@ span {
     position: relative;
     padding: 10px;
   }
-  header .container .nav {
+  header .container .navigation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -128,22 +125,11 @@ span {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  header .container .nav nav ul {
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 300px;
-    padding: 0;
-  }
-  header .container .nav nav ul .li {
+  header .container .navigation .navigation_items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -151,16 +137,21 @@ span {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin: 10px auto;
   }
-  header .container .nav nav ul .li svg {
-    fill: black;
-  }
-  header .container .nav nav ul .li li a {
+  header .container .navigation .navigation_items a {
     text-decoration: none;
     color: black;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-right: 10px;
-    font-size: 15px;
+    font-size: 12px;
   }
   header .container .category .menu {
     display: -webkit-box;
@@ -170,9 +161,8 @@ span {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 10px auto;
     font-weight: bold;
-    font-size: 18px;
   }
   header .container .category .first_sidenav {
     position: fixed;
@@ -194,7 +184,7 @@ span {
     transition: 0.1s;
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 20px;
     padding-left: 20px;
     width: 50%;
@@ -219,9 +209,11 @@ span {
     display: none;
     margin-left: 50px;
   }
-  header .container .category .first_sidenav .second_sidenav a {
-    font-size: 14px;
+  header .container .category .first_sidenav .second_sidenav .subCategory {
+    font-size: 12px;
     padding-top: 10px;
+    width: 65%;
+    margin-right: 20px;
   }
   .search {
     width: 100%;
@@ -341,9 +333,6 @@ span {
   .middle .container .product .price .title {
     font-size: 15px;
     margin-top: 10px;
-  }
-  .middle .container .product .price .title .subtitle {
-    font-size: 15px;
   }
   .middle .container .product .price .pret {
     margin: 0;

@@ -20,54 +20,56 @@
         <div class="right">
             <h1>Sign Up Bellow!</h1>
           <!-- TODO: When the user Sign Up, an alert will appear in Sign In that will say : "The user was created successfully!""--> 
-            <form action="SignIn.html">
+            <form action="SignIn.html" id="signUp_form">
                 <div class="firstName">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="signUp_firstName" placeholder="First Name" required>
                 </div>
 
                 <div class="lastName">
                     <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" placeholder="Last Name" required>
+                    <input type="text" id="signUp_lastName" placeholder="Last Name" required>
                 </div>
 
                 <div class="email">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="ioanamaria1997@yahoo.com" required>
+                    <input type="email" id="signUp_email" placeholder="ioanamaria1997@yahoo.com" required>
                 </div>
 
                 <div class="password">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="****" required> 
+                    <input type="password" id="signUp_password" placeholder="****" required> 
                 </div>
 
                 <div class="city">
                     <label for="city">City</label>
-                    <input type="text" id="city" placeholder="City" required/>
+                    <input type="text" id="signUp_city" placeholder="City" required/>
                 </div>
 
                 <div class="country">
                     <label for="country">Country</label>
-                    <select type="text" id="country" name="country" placeholder="Select City First" required>
-                    <option value="romania">Romania</option>
-                    <option value="italy">Italy</option>
-                    <option value="spain">Spain</option>
-                    <option value="germany">Germany</option>
-                    <option value="france">France</option>
-                    <option value="poland">Poland</option>
-                    <option value="portugal">Portugal</option>
-                    <option value="greece">Greece</option>
-                    <option value="slovakia">Slovakia</option>
+                    <select type="text" id="signUp_country" name="country" placeholder="Select City First" required>
+                    <option value="Romania">Romania</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Slovakia">Slovakia</option>
                     </select>
                 </div>
 
                 <div class="submit">
-                    <input class="button" type="submit" value="Sign Up">
+                    <input class="button" id="signUp_btn" type="submit" value="Sign Up">
                 </div>  
                 
             </form>
             <p><a href="./SignIn.html">Already have an account? Sign In!</a></p>
         </div>
     </div>
+
+    <script src="../JS/SignUp.js"></script>
 </body>
 </html>

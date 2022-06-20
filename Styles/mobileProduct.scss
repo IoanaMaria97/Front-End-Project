@@ -14,34 +14,24 @@
             flex-direction: column;
             position: relative;
             padding: 10px;
-            .nav {
+            .navigation {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
-                nav {
-                    ul {
-                        list-style: none;
-                        display: flex;
-                        justify-content: center;
-                        width: 300px;
-                        padding: 0;
-                        .li {
-                            display: flex;
-                            flex-direction: row;
-                            svg {
-                                fill: $black;
-                            }
-                            li {
-                                a {
-                                    text-decoration: none;
-                                    color: $black;
-                                    margin-left: 10px;
-                                    margin-right: 10px;
-                                   font-size: 15px;
-                                }
-                            }
-                        }
+                justify-content: space-between;
+                .navigation_items {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    margin: 10px auto;
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        margin-left: 5px;
+                        margin-right: 10px;
+                        font-size: 12px;
                     }
                 }
             }
@@ -50,9 +40,8 @@
                     display: flex;
                     justify-content: center;
                     cursor: pointer;
-                    margin-bottom: 10px;
+                    margin: 10px auto;
                     font-weight: bold;
-                    font-size: 18px;
                 }
                 .first_sidenav {
                     position: fixed;
@@ -70,7 +59,7 @@
                         transition: 0.1s;
                         text-decoration: none;
                         color: $black;
-                        font-size: 15px;
+                        font-size: 12px;
                         padding-top: 20px;
                         padding-left: 20px;
                         width: 50%;
@@ -90,16 +79,18 @@
                         padding-right: 25px;
                         padding-top: 10px;
                         margin-right: 0;
-                      }
+                    }
                     .second_sidenav {
                         display: none;
                         margin-left: 50px;
-                        a {
-                            font-size: 14px;
+                        .subCategory {
+                            font-size: 12px;
                             padding-top: 10px;
-                          }
-                      }
-                  }
+                            width: 65%;
+                            margin-right: 20px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -178,9 +169,6 @@
                     .title {
                         font-size: 15px;
                         margin-top: 10px;
-                        .subtitle {
-                            font-size: 15px;
-                        }
                     }
                     .pret {
                         margin: 0;

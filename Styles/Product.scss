@@ -12,33 +12,22 @@ header {
         flex-direction: column;
         position: relative;
         padding: 20px;
-        .nav {
+        .navigation {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            nav {
-                ul {
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-between;
-                    width: 400px;
-                    padding: 0;
-                    .li {
-                        display: flex;
-                        flex-direction: row;
-                        svg {
-                            fill: $black;
-                        }
-                        li {
-                            a {
-                                text-decoration: none;
-                                color: $black;
-                                margin-left: 10px;
-                               
-                            }
-                        }
-                    }
+            .navigation_items {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                width: 100%;
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    margin-left: 10px;
+                    margin-right: 30px;
                 }
             }
         }
@@ -90,12 +79,14 @@ header {
                 .second_sidenav {
                     display: none;
                     margin-left: 50px;
-                    a {
+                    .subCategory {
                         font-size: 17px;
                         padding-top: 10px;
-                      }
-                  }
-              }
+                        width: 65%;
+                        margin-right: 20px;
+                    }
+                }
+            }
         }
     }
 }
@@ -171,9 +162,6 @@ header {
                 .title {
                     font-size: 22px;
                     margin-top: 30px;
-                    .subtitle {
-                        font-size: 22px;
-                    }
                 }
                 .pret {
                     margin: 0;
