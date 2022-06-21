@@ -1,3 +1,99 @@
+// 1.LOCAL STORAGE PRODUCTS
+let category = ["Basic Coffee", "Signatured Coffee", "Flavored Coffee"];
+
+function generateRandomCoffeeType(type) {
+  let randomCoffeeType = Math.floor(Math.random() * type.length); // imi genereaza un nr random
+  let resultType = type[randomCoffeeType]; // generare element de pe pozitia numarului random
+  return resultType;
+}
+
+function generateRandomAvatar() {
+  let avatar = ["../Img/coffee_item_5.jpeg", "../Img/coffee_item_6.jpeg", "../Img/coffee_item_7.jpeg", "../Img/coffee_item_8.jpeg"]; // ne vom folosi de acest src generat random pentru avatarul produsului
+  let randomAvatar = Math.floor(Math.random() * avatar.length);
+  let resultAvatar = avatar[randomAvatar];
+  return resultAvatar;
+}
+
+function generateRandomBrand() {
+  let brand = ["Nescafe", "Lavazza", "Starbucks", "Costa", "McCafe"];
+  let randomBrand = Math.floor(Math.random() * brand.length);
+  let resultBrand = brand[randomBrand];
+  return resultBrand;
+}
+
+function generateRandomStrength() {
+  let strength = [
+    "Light to Medium Roast",
+    "Medium Roast",
+    "Medium to Dark Roast",
+    "Dark Roast"
+  ];
+  let randomStrength = Math.floor(Math.random() * strength.length);
+  let resultStrength = strength[randomStrength];
+  return resultStrength;
+}
+
+function generateRandomPrice() {
+  let price = ["29.99$", "15$", "19.99$", "20$", "4.99$"];
+  let randomPrice = Math.floor(Math.random() * price.length);
+  let resultPrice = price[randomPrice];
+  return resultPrice;
+}
+
+function generateRandomProducts(number) {
+  // verificam daca exista deja lista de produse, daca nu => generam una
+  if(!JSON.parse(localStorage.getItem("productsData"))) {
+    let products = []; // lista noastra de produse
+    let id = 0; // id unic pentru fiecare produs
+    for (let i = 0; i < category.length; i++) {
+      let coffeeType = [];
+      // fiecare categorie are o subcategorie diferita alocata
+      switch (i) {
+        case 0:
+          coffeeType = ["Expresso", "Cappuccino", "Coffee Latte"];
+          break;
+        case 1:
+          coffeeType = [
+            "Almond Latte",
+            "Cold Brew Coffee",
+            "Lavender Cappuccino"
+          ];
+          break;
+        case 2:
+          coffeeType = [
+            "Vanilla Latte",
+            "Caramel Macchiato",
+            "Caramel Frappucino"
+          ];
+          break;
+        default:
+          break;
+      }
+      // pentru fiecare categorie se genereaza numarul = number de produse si le alocam listei
+      for (let j = 0; j < number; j++) {
+        products.push({
+          Category: category[i],
+          CoffeeType: generateRandomCoffeeType(coffeeType),
+          Avatar: generateRandomAvatar(),
+          Brand: generateRandomBrand(),
+          Strength: generateRandomStrength(),
+          Price: generateRandomPrice(),
+          Id: id++
+        });
+      }
+    }
+    localStorage.setItem("productsData", JSON.stringify(products));
+  }
+}
+generateRandomProducts(50);
+
+// https://stackoverflow.com/questions/2443901/random-object-generator-in-javascript
+// https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+
+
+
+
+// 2.LOCAL STORAGE USERS
 let form = document.querySelector("form");
 let firstName = document.getElementById("signUp_firstName");
 let lastName = document.getElementById("signUp_lastName");
