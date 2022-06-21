@@ -159,15 +159,13 @@ header {
             }
             .products {
                 height: 100%;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(2, 1fr);
-                grid-gap: 35px;
                 .product {
+                    display: inline-block;
                     height: 350px;
                     width: 270px;
                     box-shadow: 0 15px 15px 0 $darkGrey;
                     position: relative;
+                    margin: 15px;
                     img {
                         height: 220px;
                         width: 100%;

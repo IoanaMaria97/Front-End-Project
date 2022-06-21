@@ -297,29 +297,32 @@ span {
   .productsSection .container .rightSide .sort {
     height: 170px;
     background-color: #BDCFCC;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 50px auto;
   }
   .productsSection .container .rightSide .products {
     height: 100%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: (1fr)[6];
-        grid-template-rows: repeat(6, 1fr);
-    grid-gap: 35px;
-    margin-left: calc(50% - 110px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .productsSection .container .rightSide .products .product {
+    display: inline-block;
     height: 300px;
-    width: 220px;
+    width: 230px;
     -webkit-box-shadow: 0 15px 15px 0 #646464;
             box-shadow: 0 15px 15px 0 #646464;
     position: relative;
+    margin: 30px;
   }
   .productsSection .container .rightSide .products .product img {
-    height: 200px;
+    height: 190px;
     width: 100%;
   }
   .productsSection .container .rightSide .products .product .details {
@@ -341,12 +344,10 @@ span {
     margin: 0;
   }
   .productsSection .container .rightSide .products .product .details .category {
-    font-size: 20px;
-    padding: 5px;
+    padding: 20px;
   }
   .productsSection .container .rightSide .products .product .details .price {
-    font-size: 22px;
-    padding: 10px;
+    font-size: 20px;
   }
   .productsSection .container .rightSide .products .product .cart {
     display: -webkit-box;
@@ -357,8 +358,8 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    top: 40px;
-    left: 0;
+    top: 25px;
+    left: 20px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     opacity: 0;
@@ -371,8 +372,15 @@ span {
     -webkit-box-shadow: 0 5px 5px 0 #646464;
             box-shadow: 0 5px 5px 0 #646464;
     height: 50px;
-    width: 200px;
+    width: 170px;
     margin: 10px;
+    background-color: #8C7268;
+    color: #F5F5F5;
+    cursor: pointer;
+  }
+  .productsSection .container .rightSide .products .product .cart .btn1 a {
+    color: #F5F5F5;
+    text-decoration: none;
   }
   footer {
     background-color: #BDCFCC;

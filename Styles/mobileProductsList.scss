@@ -160,23 +160,22 @@
                 .sort {
                     height: 170px;
                     background-color: $blue;
-                    margin-bottom: 50px;
-                    margin-top: 50px;
+                    margin: 50px auto;
                 }
                 .products {
                     height: 100%;
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    grid-template-rows: repeat(6, 1fr);
-                    grid-gap: 35px;
-                    margin-left: calc(50% - 110px);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     .product {
+                        display: inline-block;
                         height: 300px;
-                        width: 220px;
+                        width: 230px;
                         box-shadow: 0 15px 15px 0 $darkGrey;
                         position: relative;
+                        margin: 30px;
                         img {
-                            height: 200px;
+                            height: 190px;
                             width: 100%;
                         }
                         .details {
@@ -188,20 +187,18 @@
                                 margin: 0;
                             }
                             .category {
-                                font-size: 20px;
-                                padding: 5px;
+                                padding: 20px;
                             }
                             .price {
-                                font-size: 22px;
-                                padding: 10px;
+                                font-size: 20px;
                             }
                         }
                         .cart {
                             display: flex;
                             flex-direction: column;
                             position: absolute;
-                            top: 40px;
-                            left: 0;
+                            top: 25px;
+                            left: 20px;
                             transition: 0.5s ease;
                             opacity: 0;
                             &:hover {
@@ -211,13 +208,22 @@
                                 border: none;
                                 box-shadow: 0 5px 5px 0 $darkGrey;
                                 height: 50px;
-                                width: 200px;
+                                width: 170px;
                                 margin: 10px;
+                                background-color: $brown;
+                                color: $milky;
+                                cursor: pointer;
+                            }
+                            .btn1 {
+                                a {
+                                    color: $milky;
+                                    text-decoration: none;
+                                }
                             }
                         }
                     }
             }
-            }   
+            } 
         }
     }
     

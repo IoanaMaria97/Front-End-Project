@@ -316,21 +316,16 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 
 .productsSection .container .rightSide .products {
   height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  grid-gap: 35px;
 }
 
 .productsSection .container .rightSide .products .product {
+  display: inline-block;
   height: 350px;
   width: 270px;
   -webkit-box-shadow: 0 15px 15px 0 #646464;
           box-shadow: 0 15px 15px 0 #646464;
   position: relative;
+  margin: 15px;
 }
 
 .productsSection .container .rightSide .products .product img {
