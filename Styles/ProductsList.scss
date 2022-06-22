@@ -155,17 +155,16 @@ header {
             .sort {
                 height: 170px;
                 background-color: $blue;
-                margin-bottom: 50px;
             }
             .products {
                 height: 100%;
                 .product {
                     display: inline-block;
                     height: 350px;
-                    width: 270px;
+                    width: 250px;
                     box-shadow: 0 15px 15px 0 $darkGrey;
                     position: relative;
-                    margin: 15px;
+                    margin: 25px;
                     img {
                         height: 220px;
                         width: 100%;
@@ -190,7 +189,7 @@ header {
                         flex-direction: column;
                         position: absolute;
                         top: 40px;
-                        left: 25px;
+                        left: 15px;
                         transition: 0.5s ease;
                         opacity: 0;
                         &:hover {

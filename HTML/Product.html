@@ -30,21 +30,21 @@
                     <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
                     <a href="../HTML/Homepage.html">Home</a>
                     <a href="../HTML/ProductsList.html">Basic Coffee</a>
-                    <span class="inline" onclick="secondNav(btn1)">&plus;</span>
+                    <span id="plus1" class="inline" onclick="secondNav(btn1, plus1)">&plus;</span>
                     <div id="secondSidenav1" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Expresso</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Cappuccino</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Coffee Latte</a>
                     </div>
                     <a href="../HTML/ProductsList.html">Signature Coffee</a>
-                    <span class="inline" onclick="secondNav(btn2)">&plus;</span>
+                    <span id="plus2" class="inline" onclick="secondNav(btn2, plus2)">&plus;</span>
                     <div id="secondSidenav2" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Almond Latte</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Cold Brew Coffee</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Lavender Cappuccino</a>
                     </div>
                     <a href="../HTML/ProductsList.html">Flavored Coffee</a>
-                    <span class="inline" onclick="secondNav(btn3)">&plus;</span>
+                    <span id="plus3" class="inline" onclick="secondNav(btn3, plus3)">&plus;</span>
                     <div id="secondSidenav3" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Vanilla Latte</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Caramel Macchiato</a>
@@ -55,41 +55,49 @@
         </div>
     </header>
 
-    <div class="search">
+    <section class="search">
         <input type="text" placeholder="Search here...">
         <button>
         <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
         </button>
-    </div>
+    </section>
+
+    <section class="breadcrumbs">
+        <ul class="breadcrumbsMenu">
+            <li><a class="menuItem" href="../HTML/Homepage.html">Homepage</a></li>
+            <li><a class="menuItem" href="#">Category</a></li>
+            <li><a class="menuItem noBorder" href="#">Subcategory</a></li>
+        </ul>
+    </section>
 
     <section class="middle">
         <div class="container">
             <div class="product">
-            <div class="images">
-                <div id="imgFirst"></div>
-                <div id="imgSmall">
-                <img id="img1" src="../Img/coffee_item_7.jpeg"/>
-                <img id="img2" src="../Img/coffee_item_8.jpeg"/>
-                <img id="img3" src="../Img/coffee_item_6.jpeg"/>
-                <img id="img4" src="../Img/coffee_item_5.jpeg"/>
+                <div class="images">
+                    <div id="imgFirst"></div>
+                    <div id="imgSmall">
+                        <img id="img1" src="../Img/coffee_item_7.jpeg"/>
+                        <img id="img2" src="../Img/coffee_item_8.jpeg"/>
+                        <img id="img3" src="../Img/coffee_item_6.jpeg"/>
+                        <img id="img4" src="../Img/coffee_item_5.jpeg"/>
+                    </div>
                 </div>
-            </div>
-            <div class="price">
-                <p class="title">Basic Coffee</p>
-                <p class="pret">29.99$</p>
-                <div class="containerBox">
-                <!-- to watch: https://www.youtube.com/watch?v=8iinjYlEd7Y -->
-                <!-- increment and decrement (html + css + js) -->
-                <button onclick="decrement()">-</button>
-                <p id="number"></p>
-                <button onclick="increment()">+</button>
+                <div class="price">
+                    <p class="title">Expresso</p>
+                    <p class="pret">29.99$</p>
+                    <div class="containerBox">
+                        <!-- to watch: https://www.youtube.com/watch?v=8iinjYlEd7Y -->
+                        <!-- increment and decrement (html + css + js) -->
+                        <button onclick="decrement()">-</button>
+                        <p id="number"></p>
+                        <button onclick="increment()">+</button>
+                        </div>
+                        <button class="cart">add to cart</button>
+                        <div class="detailsDiv">
+                        <p><a href="#descriptionItem">Description</a></p>
+                        <p><a href="#reviewItem">Review</a></p>
+                    </div>
                 </div>
-                <button class="cart">add to cart</button>
-                <div class="detailsDiv">
-                <p><a href="#descriptionItem">Description</a></p>
-                <p><a href="#reviewItem">Review</a></p>
-                </div>
-            </div>
             </div>
             <div class="details">
             <div id="descriptionItem" class="description">

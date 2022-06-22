@@ -25,33 +25,33 @@
         </div>
         <!-- inspiration source : https://alvarotrigo.com/blog/hamburger-menu-css-responsive/-->
         <div class="category">
-            <span class="menu" onclick="openFirstNav()">Menu</span>
-            <div id="firstSidenav" class="first_sidenav">
-                <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
-                <a href="../HTML/Homepage.html">Home</a>
-                <a href="../HTML/ProductsList.html">Basic Coffee</a>
-                <span class="inline" onclick="secondNav(btn1)">&plus;</span>
-                <div id="secondSidenav1" class="second_sidenav">
-                    <a class="subCategory" href="../HTML/ProductsList.html">Expresso</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Cappuccino</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Coffee Latte</a>
-                </div>
-                <a href="../HTML/ProductsList.html">Signature Coffee</a>
-                <span class="inline" onclick="secondNav(btn2)">&plus;</span>
-                <div id="secondSidenav2" class="second_sidenav">
-                    <a class="subCategory" href="../HTML/ProductsList.html">Almond Latte</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Cold Brew Coffee</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Lavender Cappuccino</a>
-                </div>
-                <a href="../HTML/ProductsList.html">Flavored Coffee</a>
-                <span class="inline" onclick="secondNav(btn3)">&plus;</span>
-                <div id="secondSidenav3" class="second_sidenav">
-                    <a class="subCategory" href="../HTML/ProductsList.html">Vanilla Latte</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Caramel Macchiato</a>
-                    <a class="subCategory" href="../HTML/ProductsList.html">Caramel Frappucino</a>
-                </div>
-            </div>
-        </div>
+          <span class="menu" onclick="openFirstNav()">Menu</span>
+          <div id="firstSidenav" class="first_sidenav">
+              <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
+              <a href="../HTML/Homepage.html">Home</a>
+              <a href="../HTML/ProductsList.html">Basic Coffee</a>
+              <span id="plus1" class="inline" onclick="secondNav(btn1, plus1)">&plus;</span>
+              <div id="secondSidenav1" class="second_sidenav">
+                  <a class="subCategory" href="../HTML/ProductsList.html">Expresso</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Cappuccino</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Coffee Latte</a>
+              </div>
+              <a href="../HTML/ProductsList.html">Signature Coffee</a>
+              <span id="plus2" class="inline" onclick="secondNav(btn2, plus2)">&plus;</span>
+              <div id="secondSidenav2" class="second_sidenav">
+                  <a class="subCategory" href="../HTML/ProductsList.html">Almond Latte</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Cold Brew Coffee</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Lavender Cappuccino</a>
+              </div>
+              <a href="../HTML/ProductsList.html">Flavored Coffee</a>
+              <span id="plus3" class="inline" onclick="secondNav(btn3, plus3)">&plus;</span>
+              <div id="secondSidenav3" class="second_sidenav">
+                  <a class="subCategory" href="../HTML/ProductsList.html">Vanilla Latte</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Caramel Macchiato</a>
+                  <a class="subCategory" href="../HTML/ProductsList.html">Caramel Frappucino</a>
+              </div>
+          </div>
+      </div>
     </div>
   </header>
 
@@ -64,11 +64,9 @@
     </div>
     <div class="container">
       <div class="filter">
-
         <ul class="filterContainer1">
-
           <li class="filterElements">Brand
-            <span onclick="filtrare(filterBrand)">&plus;</span>
+            <span id="plusFilter1" onclick="filtrare(filterBrand, plusFilter1)">&plus;</span>
           </li>
           <ul class="filterContainer2" id="filterBrand">
             <li>
@@ -94,7 +92,7 @@
           </ul>
 
           <li class="filterElements">Category
-            <span onclick="filtrare(filterCategory)">&plus;</span>
+            <span id="plusFilter2" onclick="filtrare(filterCategory, plusFilter2)">&plus;</span>
           </li>
           <ul class="filterContainer2" id="filterCategory">
             <li>
@@ -116,7 +114,7 @@
           </ul>
 
           <li class="filterElements">Coffee Type
-            <span onclick="filtrare(filterTypes)">&plus;</span>
+            <span id="plusFilter3" onclick="filtrare(filterTypes, plusFilter3)">&plus;</span>
           </li>
           <ul class="filterContainer2" id="filterTypes">
             <li>
@@ -158,7 +156,7 @@
           </ul>
 
           <li class="filterElements">Strength
-            <span onclick="filtrare(filterStrength)">&plus;</span>
+            <span id="plusFilter4" onclick="filtrare(filterStrength, plusFilter4)">&plus;</span>
           </li>
           <ul class="filterContainer2" id="filterStrength">
             <li>
@@ -178,21 +176,6 @@
               <label for="filterStrength4">Dark Roast</label>
             </li>
           </ul>
-          
-          <script>
-            let filterBrand = document.getElementById("filterBrand");
-            let filterCategory = document.getElementById("filterCategory");
-            let filterStrength = document.getElementById("filterStrength");
-
-            function filtrare(filtru) {
-              if (filtru.style.display === "block") {
-                        filtru.style.display = "none";
-                    } else {
-                        filtru.style.display = "block";
-                    }
-            }
-          </script>
-
         </ul>
       </div>
       <div class="rightSide">
@@ -231,9 +214,39 @@
               <button class="btn2">add to cart</button>
             </div>
           </div>
-          <div class="product"></div>
-          <div class="product"></div>
-          <div class="product"></div>
+          <div class="product">
+            <img src="../Img/coffee_item_6.jpeg" alt="product">
+            <div class="details">
+              <p class="category">Expresso</p>
+              <p class="price">29.99$</p>
+            </div>
+            <div class="cart">
+              <button class="btn1"><a href="../HTML/Product.html">view details</a></button>
+              <button class="btn2">add to cart</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../Img/coffee_item_6.jpeg" alt="product">
+            <div class="details">
+              <p class="category">Expresso</p>
+              <p class="price">29.99$</p>
+            </div>
+            <div class="cart">
+              <button class="btn1"><a href="../HTML/Product.html">view details</a></button>
+              <button class="btn2">add to cart</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="../Img/coffee_item_6.jpeg" alt="product">
+            <div class="details">
+              <p class="category">Expresso</p>
+              <p class="price">29.99$</p>
+            </div>
+            <div class="cart">
+              <button class="btn1"><a href="../HTML/Product.html">view details</a></button>
+              <button class="btn2">add to cart</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

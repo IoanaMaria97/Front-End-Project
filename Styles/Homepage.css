@@ -347,8 +347,8 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   margin-bottom: 80px;
 }
 
-.bestSeller .containerCards {
-  width: 95%;
+.bestSeller .containerBestSeller {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,9 +361,38 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           justify-content: center;
 }
 
-.bestSeller .containerCards .card {
-  height: 420px;
-  width: 280px;
+.bestSeller .containerBestSeller .carousel {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard {
+  height: 520px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card {
+  height: 450px;
+  width: 300px;
   border: 1px solid #b9b8b8;
   background-color: #F5F5F5;
   -webkit-box-shadow: 0px 10px 20px 0px #646464;
@@ -384,14 +413,14 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   margin: 0 30px;
 }
 
-.bestSeller .containerCards .card .flip_card {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card {
   height: 50%;
   width: 100%;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -404,7 +433,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           transform-style: preserve-3d;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_front {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_front {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -412,13 +441,13 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           backface-visibility: hidden;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_front img {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_front .img {
   border-radius: 5%;
   height: 100%;
   width: 80%;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_back {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -438,35 +467,36 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           justify-content: flex-end;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_back p {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_back p {
   margin: 0;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_back p:first-of-type {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_back p:first-of-type {
   margin: 5px;
+  font-size: 22px;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_back p:nth-child(2) {
-  font-size: 15px;
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_back p:nth-child(2) {
+  font-size: 17px;
 }
 
-.bestSeller .containerCards .card .flip_card .flip_card_inner .flip_card_back p:last-of-type {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card .flip_card_inner .flip_card_back p:last-of-type {
   margin: 15px;
   font-size: 25px;
 }
 
-.bestSeller .containerCards .card .flip_card:hover .flip_card_inner {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .flip_card:hover .flip_card_inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.bestSeller .containerCards .card .button {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .btn {
   height: 15%;
   width: 60%;
   margin: 20px auto;
 }
 
-.bestSeller .containerCards .card .button button {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .btn button {
   height: 100%;
   width: 100%;
   border: none;
@@ -478,8 +508,73 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   cursor: pointer;
 }
 
-.bestSeller .containerCards .card .button button .fill {
+.bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .btn button .fill {
   fill: #F5F5F5;
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_item, .bestSeller .containerBestSeller .carousel .carousel_hidden {
+  display: none;
+}
+
+.bestSeller .containerBestSeller .carousel .item_visible {
+  display: block;
+  -webkit-animation: fadeVisibility 0.7s;
+          animation: fadeVisibility 0.7s;
+}
+
+@-webkit-keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: opacity linear;
+            transform: opacity linear;
+  }
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: opacity linear;
+            transform: opacity linear;
+  }
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 850px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 50%;
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_actions .btn_carousel {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bestSeller .containerBestSeller .carousel .carousel_actions .btn_carousel:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 .products {

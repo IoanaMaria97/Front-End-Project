@@ -175,92 +175,150 @@ header {
         margin-top: 0;
         margin-bottom: 80px;
     }
-    .containerCards {
-        width: 95%;
+    .containerBestSeller {
+        width: 80%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        .card {
-            height: 420px;
-            width: 280px;
-            border: 1px solid $grey;
-            background-color: $milky;
-            box-shadow: 0px 10px 20px 0px $darkGrey;
-            text-align: center;
+        justify-content: center; 
+        .carousel {
+            width: 100%;
+            position: relative;
             display: flex;
-            flex-direction: column;
-            border-radius: 5%;
-            display: flex;
-            justify-content: space-evenly;
-            margin: 0 30px;
-            .flip_card {
-                height: 50%;
-                width: 100%;
-                perspective: 1000px; // 3D effect
-                .flip_card_inner {
-                    position: relative;
+            justify-content: center;
+            .carousel_item {
+                .containerCard {
+                    height: 520px;
                     width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    transition: transform 0.6s;
-                    transform-style: preserve-3d;
-                    .flip_card_front {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        backface-visibility: hidden;
-                        img {
-                            border-radius: 5%;
-                            height: 100%;
-                            width: 80%;
-                          }
-                    }
-                    .flip_card_back {
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        backface-visibility: hidden;
-                        transform: rotateY(180deg);
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    .card {
+                        height: 450px;
+                        width: 300px;
+                        border: 1px solid $grey;
+                        background-color: $milky;
+                        box-shadow: 0px 10px 20px 0px $darkGrey;
+                        text-align: center;
                         display: flex;
                         flex-direction: column;
-                        justify-content: flex-end;
-                        p {
-                            margin: 0;
-                            &:first-of-type {
-                                margin: 5px;
+                        border-radius: 5%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin: 0 30px;
+                        .flip_card {
+                            height: 50%;
+                            width: 100%;
+                            perspective: 1000px; // 3D effect
+                            .flip_card_inner {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                text-align: center;
+                                transition: transform 0.6s;
+                                transform-style: preserve-3d;
+                                .flip_card_front {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    backface-visibility: hidden;
+                                    .img {
+                                        border-radius: 5%;
+                                        height: 100%;
+                                        width: 80%;
+                                      }
+                                }
+                                .flip_card_back {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    backface-visibility: hidden;
+                                    transform: rotateY(180deg);
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    p {
+                                        margin: 0;
+                                        &:first-of-type {
+                                            margin: 5px;
+                                            font-size: 22px;
+                                        }
+                                        &:nth-child(2) {
+                                            font-size: 17px;
+                                        }
+                                        &:last-of-type {
+                                            margin: 15px;
+                                            font-size: 25px;
+                                        }
+                                    }
+                                }
                             }
-                            &:nth-child(2) {
-                                font-size: 15px;
-                            }
-                            &:last-of-type {
-                                margin: 15px;
-                                font-size: 25px;
+                        }
+                        .flip_card:hover .flip_card_inner {
+                            transform: rotateY(180deg);
+                          }
+                        .btn {
+                            height: 15%;
+                            width: 60%; 
+                            margin: 20px auto;   
+                            button {
+                                height: 100%;
+                                width: 100%;
+                                border: none;
+                                background-color: $brown;
+                                color: $milky;
+                                box-shadow: 0px 10px 20px 0px $darkGrey;
+                                border-radius: 5%;
+                                cursor: pointer;
+                                .fill {
+                                    fill: $milky;
+                                }
                             }
                         }
                     }
                 }
             }
-            .flip_card:hover .flip_card_inner {
-                transform: rotateY(180deg);
+            .carousel_item, .carousel_hidden {
+                display: none;
+            }
+            .item_visible {
+                display: block;
+                animation: fadeVisibility 0.7s;
               }
-            .button {
-                height: 15%;
-                width: 60%; 
-                margin: 20px auto;   
-                button {
-                    height: 100%;
-                    width: 100%;
-                    border: none;
-                    background-color: $brown;
-                    color: $milky;
-                    box-shadow: 0px 10px 20px 0px $darkGrey;
-                    border-radius: 5%;
+            @keyframes fadeVisibility {
+                0% {
+                  opacity: 0;
+                }
+                100% {
+                  opacity: 1;
+                  transform: opacity linear;
+                }
+            }
+            .carousel_actions {
+                display: flex;
+                width: 850px;
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                .btn_carousel {
+                    border-radius: 50px;
+                    border: 0;
+                    font-weight: bold;
                     cursor: pointer;
-                    .fill {
-                        fill: $milky;
+                    width: 40px;
+                    height: 40px;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 20px;
+                    transition: 0.6s ease;
+                    transform: translateY(-50%);
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.8);
+                        color: white;
                     }
                 }
             }
+              
         }
     }
 }

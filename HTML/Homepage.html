@@ -29,21 +29,21 @@
                     <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
                     <a href="../HTML/Homepage.html">Home</a>
                     <a href="../HTML/ProductsList.html">Basic Coffee</a>
-                    <span class="inline" onclick="secondNav(btn1)">&plus;</span>
+                    <span id="plus1" class="inline" onclick="secondNav(btn1, plus1)">&plus;</span>
                     <div id="secondSidenav1" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Expresso</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Cappuccino</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Coffee Latte</a>
                     </div>
                     <a href="../HTML/ProductsList.html">Signature Coffee</a>
-                    <span class="inline" onclick="secondNav(btn2)">&plus;</span>
+                    <span id="plus2" class="inline" onclick="secondNav(btn2, plus2)">&plus;</span>
                     <div id="secondSidenav2" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Almond Latte</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Cold Brew Coffee</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Lavender Cappuccino</a>
                     </div>
                     <a href="../HTML/ProductsList.html">Flavored Coffee</a>
-                    <span class="inline" onclick="secondNav(btn3)">&plus;</span>
+                    <span id="plus3" class="inline" onclick="secondNav(btn3, plus3)">&plus;</span>
                     <div id="secondSidenav3" class="second_sidenav">
                         <a class="subCategory" href="../HTML/ProductsList.html">Vanilla Latte</a>
                         <a class="subCategory" href="../HTML/ProductsList.html">Caramel Macchiato</a>
@@ -81,80 +81,23 @@
     <section class="bestSeller">
         <h2>Best Sellers</h2>
         <!-- SlidesShow Carousel with js -->
-        <div class="containerCards">
-            <!-- Flip card inspiration : https://www.w3schools.com/howto/howto_css_flip_card.asp -->
-            <div class="card">
-                <div class="flip_card">
-                    <div class="flip_card_inner">
-                      <div class="flip_card_front">
-                        <img
-                          src="../Img/coffee_item_7.jpeg"
-                          alt="coffeeItem"
-                        />
-                      </div>
-                      <div class="flip_card_back">
-                        <p>Signatured Coffee</p>
-                        <p>Cappuccino</p>
-                        <p>29.99$</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                <div class="button">
-                    <button>
-                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
-                    </button>
+        <!-- Flip card inspiration : https://www.w3schools.com/howto/howto_css_flip_card.asp -->
+        <div class="containerBestSeller">
+            <div class="carousel">
+                <div class="carousel_item item_visible ">
+                    <div class="containerCard"></div>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="flip_card">
-                    <div class="flip_card_inner">
-                      <div class="flip_card_front">
-                        <img
-                          src="../Img/coffee_item_8.jpeg"
-                          alt="coffeeItem"
-                        />
-                      </div>
-                      <div class="flip_card_back">
-                        <p>Signatured Coffee</p>
-                        <p>Cappuccino</p>
-                        <p>29.99$</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                <div class="button">
-                    <button>
-                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
-                    </button>
+                <div class="carousel_item">
+                    <div class="containerCard"></div>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="flip_card">
-                    <div class="flip_card_inner">
-                      <div class="flip_card_front">
-                        <img
-                          src="../Img/coffee_item_9.jpeg"
-                          alt="coffeeItem"
-                        />
-                      </div>
-                      <div class="flip_card_back">
-                        <p>Signatured Coffee</p>
-                        <p>Cappuccino</p>
-                        <p>29.99$</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                <div class="button">
-                    <button>
-                        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"/></svg>
-                    </button>
+                <div class="carousel_item">
+                    <div class="containerCard"></div>
                 </div>
-            </div>
-
+                <div class="carousel_actions">
+                  <button class="btn_carousel" id="btn_prev" aria-label="Previous slide">&#10094;</button>
+                  <button class="btn_carousel" id="btn_next" aria-label="Next slide">&#10095;</button>
+                </div>
+              </div>
         </div>
     </section>
 
@@ -163,7 +106,7 @@
         <div class="containerProducts">
             <div class="productCart productImgLeft">
                 <div class="details">
-                   <h3 class="productTitle">New Coffee!</h3>
+                   <h3 class="productTitle">Signature Coffee!</h3>
                     <p class="productParag">Best experience you can have!</p>
                 </div>
                 <div class="btn">
@@ -173,7 +116,7 @@
 
             <div class="productCart productImgRight">
                 <div class="details">
-                    <h4 class="productTitle">New Coffee!</h4>
+                    <h4 class="productTitle">Flavored Coffee!</h4>
                     <p class="productParag">Best experience you can have!</p>
                 </div>
                 <div class="btn">

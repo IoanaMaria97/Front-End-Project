@@ -34,11 +34,18 @@ let btn1 = document.getElementById("secondSidenav1");
 let btn2 = document.getElementById("secondSidenav2");
 let btn3 = document.getElementById("secondSidenav3");
 
-function secondNav(element) {
+let plus1 = document.getElementById("plus1");
+let plus2 = document.getElementById("plus2");
+let plus3 = document.getElementById("plus3");
+
+
+function secondNav(element, plus) {
     if (element.style.display === "block") {
         element.style.display = "none";
+        plus.textContent = "+";
     } else {
         element.style.display = "block";
+        plus.textContent = "-";
     }
 }
 

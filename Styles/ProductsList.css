@@ -311,7 +311,6 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .productsSection .container .rightSide .sort {
   height: 170px;
   background-color: #BDCFCC;
-  margin-bottom: 50px;
 }
 
 .productsSection .container .rightSide .products {
@@ -321,11 +320,11 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .productsSection .container .rightSide .products .product {
   display: inline-block;
   height: 350px;
-  width: 270px;
+  width: 250px;
   -webkit-box-shadow: 0 15px 15px 0 #646464;
           box-shadow: 0 15px 15px 0 #646464;
   position: relative;
-  margin: 15px;
+  margin: 25px;
 }
 
 .productsSection .container .rightSide .products .product img {
@@ -371,7 +370,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           flex-direction: column;
   position: absolute;
   top: 40px;
-  left: 25px;
+  left: 15px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   opacity: 0;
