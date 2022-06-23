@@ -313,11 +313,11 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   background-color: #BDCFCC;
 }
 
-.productsSection .container .rightSide .products {
+.productsSection .container .rightSide #products {
   height: 100%;
 }
 
-.productsSection .container .rightSide .products .product {
+.productsSection .container .rightSide #products .product {
   display: inline-block;
   height: 350px;
   width: 250px;
@@ -327,12 +327,12 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   margin: 25px;
 }
 
-.productsSection .container .rightSide .products .product img {
+.productsSection .container .rightSide #products .product .avatar {
   height: 220px;
   width: 100%;
 }
 
-.productsSection .container .rightSide .products .product .details {
+.productsSection .container .rightSide #products .product .details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -348,19 +348,19 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           align-items: center;
 }
 
-.productsSection .container .rightSide .products .product .details p {
+.productsSection .container .rightSide #products .product .details p {
   margin: 0;
 }
 
-.productsSection .container .rightSide .products .product .details .category {
+.productsSection .container .rightSide #products .product .details .category {
   padding: 20px;
 }
 
-.productsSection .container .rightSide .products .product .details .price {
+.productsSection .container .rightSide #products .product .details .price {
   font-size: 25px;
 }
 
-.productsSection .container .rightSide .products .product .cart {
+.productsSection .container .rightSide #products .product .cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,11 +376,11 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   opacity: 0;
 }
 
-.productsSection .container .rightSide .products .product .cart:hover {
+.productsSection .container .rightSide #products .product .cart:hover {
   opacity: 1;
 }
 
-.productsSection .container .rightSide .products .product .cart button {
+.productsSection .container .rightSide #products .product .cart .button {
   border: none;
   -webkit-box-shadow: 0 5px 5px 0 #646464;
           box-shadow: 0 5px 5px 0 #646464;
@@ -392,7 +392,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   cursor: pointer;
 }
 
-.productsSection .container .rightSide .products .product .cart .btn1 a {
+.productsSection .container .rightSide #products .product .cart .button a {
   color: #F5F5F5;
   text-decoration: none;
 }

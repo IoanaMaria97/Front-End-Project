@@ -156,7 +156,7 @@ header {
                 height: 170px;
                 background-color: $blue;
             }
-            .products {
+            #products {
                 height: 100%;
                 .product {
                     display: inline-block;
@@ -165,7 +165,7 @@ header {
                     box-shadow: 0 15px 15px 0 $darkGrey;
                     position: relative;
                     margin: 25px;
-                    img {
+                    .avatar {
                         height: 220px;
                         width: 100%;
                     }
@@ -195,7 +195,7 @@ header {
                         &:hover {
                             opacity: 1;
                         }
-                        button {
+                        .button {
                             border: none;
                             box-shadow: 0 5px 5px 0 $darkGrey;
                             height: 50px;
@@ -204,8 +204,6 @@ header {
                             background-color: $brown;
                             color: $milky;
                             cursor: pointer;
-                        }
-                        .btn1 {
                             a {
                                 color: $milky;
                                 text-decoration: none;

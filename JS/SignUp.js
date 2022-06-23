@@ -8,7 +8,7 @@ function generateRandomCoffeeType(type) {
 }
 
 function generateRandomAvatar() {
-  let avatar = ["../Img/coffee_item_5.jpeg", "../Img/coffee_item_6.jpeg", "../Img/coffee_item_7.jpeg", "../Img/coffee_item_8.jpeg"]; // ne vom folosi de acest src generat random pentru avatarul produsului
+  let avatar = ["../Img/coffee_item_4.jpeg", "../Img/coffee_item_5.jpeg", "../Img/coffee_item_6.jpeg", "../Img/coffee_item_7.jpeg", "../Img/coffee_item_8.jpeg", "../Img/coffee_item_9.jpeg"]; // ne vom folosi de acest src generat random pentru avatarul produsului
   let randomAvatar = Math.floor(Math.random() * avatar.length);
   let resultAvatar = avatar[randomAvatar];
   return resultAvatar;
