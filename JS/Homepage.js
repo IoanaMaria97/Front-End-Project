@@ -47,7 +47,7 @@ let containerCard = document.getElementsByClassName("containerCard");
 // console.log(parentDiv.length); //3
 
 
-function createCard(slide, index, source, category, type, price) {
+function createCard(slide, index, product) {
     // fiecare CARD => id unic 
     let card = document.createElement("div");
     card.setAttribute("class", "card");
@@ -67,7 +67,7 @@ function createCard(slide, index, source, category, type, price) {
     flipCardInner.appendChild(flipCardFront);
 
     let img = document.createElement("img");
-    img.setAttribute("src", source );
+    img.setAttribute("src", product.Avatar);
     img.setAttribute("class", "img");
     flipCardFront.appendChild(img);
 
@@ -76,15 +76,15 @@ function createCard(slide, index, source, category, type, price) {
     flipCardInner.appendChild(flipCardBack);
 
     let paragraph1 = document.createElement("p");
-    paragraph1.textContent = category ;
+    paragraph1.textContent = product.Category ;
     flipCardBack.appendChild(paragraph1);
 
     let paragraph2 = document.createElement("p");
-    paragraph2.textContent = type ;
+    paragraph2.textContent = product.CoffeeType ;
     flipCardBack.appendChild(paragraph2);
 
     let paragraph3 = document.createElement("p");
-    paragraph3.textContent = price;
+    paragraph3.textContent = `${product.Price} ${product.Currency}`;
     flipCardBack.appendChild(paragraph3);
 
     let btn = document.createElement("div");
@@ -95,6 +95,35 @@ function createCard(slide, index, source, category, type, price) {
     let button = document.createElement("button");
     button.setAttribute("id", "btn"+index);
     btn.appendChild(button);
+
+     // button Add to Cart
+     button.addEventListener("click", function() {
+      let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
+      let update = [];
+      update.push(product, 1);
+      if(cartProducts.length > 0) {
+        // variabila de control 
+        let wasCartProductsUpdated = false;
+        cartProducts.forEach(element => {
+          if(element[0].Id === update[0].Id) {
+            // console.log("se repeta");
+            // console.log(`Local Storage: ${element[1]} Update: ${update[1]} Suma lor: ${element[1]+update[1]}`);
+            wasCartProductsUpdated = true;
+            if(element[1]+update[1] < 6) {
+              element[1] += update[1];
+            } else {
+              alert("No more than 5 products!");
+            }
+          }
+        });
+        if(wasCartProductsUpdated === false) {
+          cartProducts.push(update);
+        }
+      } else {
+       cartProducts.push(update);
+      }
+      localStorage.setItem("cart", JSON.stringify(cartProducts));
+});
 
     let iconSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     let iconPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -110,23 +139,22 @@ function createCard(slide, index, source, category, type, price) {
     button.appendChild(iconSvg);
 }
 
-// fiecare slide contine 2 card-uri
-// fiecare card trebuie sa aiba id UNIC
-// ne folosim de j pentru a creste la fiecare apelare a functiei produsul
-// astfel, o sa rezulte => card cu id=0 este produsul cu id=1 din Local Storage 
+// fiecare slide contine 2 card-uri (varianta de mobile => 1 card pe fiecare slide)
+// ne folosim de j pentru a schimba la fiecare apelare a functiei produsul cu urmatorul din lista de produse
 
 let mobile = window.matchMedia( "(max-width: 768px)" ); // pentru varianta de mobile => afisam cate un produs
+// https://stackoverflow.com/questions/33596109/check-window-size-always-jquery
 
 let j = 0; 
 for(let i = 0; i < containerCard.length; i++) {
     if(mobile.matches) {
-        createCard(i, j, products[j].Avatar, products[j].Category, products[j].CoffeeType, products[j].Price);
+      createCard(i, j, products[j]);
         j++;
     } else {
-        createCard(i, j, products[j].Avatar, products[j].Category, products[j].CoffeeType, products[j].Price);
+      createCard(i, j, products[j]);
         j++;
-        createCard(i, j, products[j].Avatar, products[j].Category, products[j].CoffeeType, products[j].Price);
-        j++;
+      createCard(i, j, products[j]);
+      j++;
     }
 }
 

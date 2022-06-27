@@ -55,7 +55,7 @@
     </header>
 
     <section class="checkout">
-        <div class="leftSide">
+        <div class="formSide">
             <h1>Checkout</h1>
             <div class="details">
                 <p class="title">Billing Details</p>
@@ -109,8 +109,42 @@
                 </div>
             </div>
         </div>
-        <div class="rightSide"></div>
+        <div id="cartSide">
+            <!--Test pentru a vedea design-ul inainte de implementare-->
+            <!-- <div class="displayProduct">
+                    <img class="avatar" src="../Img/coffee_item_7.jpeg">
+                    <div class="infoProduct">
+                        <p class="title" id="title[i]">Type <span class="remove" id="remove[i]">X</span></p>
+                        <div class="inline">
+                            <button id="btnDecrement[i]" onclick="decrementNumber(number1); decrementSubtotal(price1, number1)">-</button>
+                            <p class="number" id="number[i]">1</p>
+                            <button id="btnIncrement[i]" onclick="incrementNumber(number1); incrementSubtotal(price1, number1)">+</button>
+                            <p class="price" id="price[i]">20</p>
+                        </div>
+                    </div>
+                </div> -->
+            <div id="notEmpty">
+                <p id="emptyCart">The cart is empty.</p>
+            </div>
+            <div class="finish">
+                <p id="subtotal">Subtotal:</p>
+                <span id="subtotalNumber"></span>
+            </div>
+            <div class="finish">
+                <p id="shipping">Shipping:</p>
+                <span id="shippingNumber"></span>
+            </div>
+            <div class="finish">
+                <p id="total">Total:</p>
+                <span id="totalNumber"></span>
+            </div>
+            <button id="btnFinish">Finish oreder</button>
+        </div>
     </section>
+
+
+
+       
 
     <footer>
         <div class="footerContainer">

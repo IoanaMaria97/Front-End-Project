@@ -231,27 +231,27 @@ span {
     padding-top: 0;
     padding-bottom: 0;
   }
-  .checkout .leftSide {
+  .checkout .formSide {
     height: 100%;
     width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
     padding-bottom: 20px;
   }
-  .checkout .leftSide h1 {
+  .checkout .formSide h1 {
     padding-left: 50px;
     margin: 50px 0;
   }
-  .checkout .leftSide .details {
+  .checkout .formSide .details {
     padding-left: 50px;
     padding-right: 50px;
   }
-  .checkout .leftSide .details .title {
+  .checkout .formSide .details .title {
     font-size: 18px;
     color: #8C7268;
     font-weight: bold;
   }
-  .checkout .leftSide .details .form {
+  .checkout .formSide .details .form {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -259,22 +259,22 @@ span {
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
   }
-  .checkout .leftSide .details .form .section input {
+  .checkout .formSide .details .form .section input {
     display: block;
     width: 90%;
     height: 35px;
     margin: 10px 0;
   }
-  .checkout .leftSide .details .form .section input, .checkout .leftSide .details .form .section label {
+  .checkout .formSide .details .form .section input, .checkout .formSide .details .form .section label {
     background-color: #F5F5F5;
   }
-  .checkout .leftSide .details .form .section input[type="radio"] {
+  .checkout .formSide .details .form .section input[type="radio"] {
     display: inline;
     width: 15%;
     height: 20px;
     margin: 0;
   }
-  .checkout .leftSide .details .form .center {
+  .checkout .formSide .details .form .center {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -283,8 +283,8 @@ span {
             align-items: center;
     width: 100%;
   }
-  .checkout .rightSide {
-    height: 350px;
+  .checkout #cartSide {
+    height: 100%;
     width: 90%;
     max-width: 400px;
     -webkit-box-shadow: 0 15px 15px 0 #646464;

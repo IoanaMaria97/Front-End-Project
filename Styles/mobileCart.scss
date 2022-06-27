@@ -103,7 +103,7 @@
         background-color: $milky;
         padding-top: 0;
         padding-bottom: 0;
-        .leftSide {
+        .formSide {
             height: 100%;
             width: 100%;
             box-shadow: none;
@@ -149,8 +149,8 @@
                 }
             }
         }
-        .rightSide {
-            height: 350px;
+        #cartSide {
+            height: 100%;
             width: 90%;
             max-width: 400px;
             box-shadow: 0 15px 15px 0 $darkGrey;

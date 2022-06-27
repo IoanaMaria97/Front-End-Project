@@ -385,12 +385,12 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   color: black;
 }
 
-.middle .container .product .price .title {
+.middle .container .product .price #title {
   font-size: 22px;
   margin-top: 30px;
 }
 
-.middle .container .product .price .pret {
+.middle .container .product .price #price {
   margin: 0;
   font-size: 30px;
 }
