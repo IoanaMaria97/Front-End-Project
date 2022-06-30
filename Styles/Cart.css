@@ -292,7 +292,14 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 120%;
+}
+
+.checkout .formSide .details .form #paymentNumberSection, .checkout .formSide .details .form #paymentPinSection {
+  display: none;
+}
+
+.checkout .formSide .details #titlePayment {
+  margin-bottom: 30px;
 }
 
 .checkout #cartSide {

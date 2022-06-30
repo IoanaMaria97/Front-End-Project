@@ -62,3 +62,61 @@ function openFirstNav() {
 
 // https://stackoverflow.com/questions/26516194/onclick-event-is-not-keeping-the-change-permanently
 // https://blog.logrocket.com/localstorage-javascript-complete-guide/
+
+
+// filtrare dupa categorie si tip
+let productsData = JSON.parse(localStorage.getItem("productsData"));
+
+let basicCoffee = document.getElementById("categBasic");
+let expresso = document.getElementById("typeExpresso");
+let cappuccino = document.getElementById("typeCappuccino");
+let latte = document.getElementById("typeLatte");
+
+let signatureCoffee = document.getElementById("categSignature");
+let almond = document.getElementById("typeAlmond");
+let coldBrew = document.getElementById("typeColdBrew");
+let lavender = document.getElementById("typeLavender");
+
+let flavoredCoffee = document.getElementById("categFlavored");
+let vanillaLatte = document.getElementById("typeVanilla");
+let caramelM = document.getElementById("typeCaramelM");
+let caramelF = document.getElementById("typeCaramelF");
+
+
+function category(element) {
+  if(element) {
+    element.addEventListener("click", function() {
+        let result = productsData.filter((product) => {
+            if(product.Category === element.textContent) {
+                return product;
+            }
+        });
+        localStorage.setItem("display", JSON.stringify(result));
+    })
+  }
+}
+category(basicCoffee);
+category(signatureCoffee);
+category(flavoredCoffee);
+
+function type(element) {
+   if(element) {
+    element.addEventListener("click", function() {
+        let result = productsData.filter((product) => {
+            if(product.CoffeeType === element.textContent) {
+                return product;
+            }
+        });
+        localStorage.setItem("display", JSON.stringify(result));
+    })
+   }
+}
+type(expresso);
+type(cappuccino);
+type(latte);
+type(almond);
+type(coldBrew);
+type(lavender);
+type(vanillaLatte);
+type(caramelM);
+type(caramelF);

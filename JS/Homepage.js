@@ -112,9 +112,9 @@ function createCard(slide, index, product) {
             if(element[1]+update[1] < 6) {
               element[1] += update[1];
             } else {
-              alert("No more than 5 products!");
+              alert("No more than 5");
             }
-          }
+          } 
         });
         if(wasCartProductsUpdated === false) {
           cartProducts.push(update);

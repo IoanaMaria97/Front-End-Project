@@ -60,7 +60,7 @@ function logSubmit(event) {
 
   
   // 2.LOCAL STORAGE PRODUCTS
-let category = ["Basic Coffee", "Signatured Coffee", "Flavored Coffee"];
+let category = ["Basic Coffee", "Signature Coffee", "Flavored Coffee"];
 
 function generateRandomCoffeeType(type) {
   let randomCoffeeType = Math.floor(Math.random() * type.length); // imi genereaza un nr random

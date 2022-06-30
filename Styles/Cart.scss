@@ -139,8 +139,13 @@ header {
                 .center {
                     display: flex;
                     align-items: center;
-                    width: 120%;
                 }
+                #paymentNumberSection, #paymentPinSection {
+                    display: none;
+                }
+            }
+            #titlePayment {
+                margin-bottom: 30px;
             }
         }
     }

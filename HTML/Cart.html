@@ -28,26 +28,26 @@
                 <div id="firstSidenav" class="first_sidenav">
                     <a href="#" class="closeBtn" onclick="closeFirstNav()">&times;</a>
                     <a href="../HTML/Homepage.html">Home</a>
-                    <a href="../HTML/ProductsList.html">Basic Coffee</a>
+                    <a href="../HTML/ProductsList.html" id="categBasic">Basic Coffee</a>
                     <span id="plus1" class="inline" onclick="secondNav(btn1, plus1)">&plus;</span>
                     <div id="secondSidenav1" class="second_sidenav">
-                        <a class="subCategory" href="../HTML/ProductsList.html">Expresso</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Cappuccino</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Coffee Latte</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeExpresso">Expresso</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeCappuccino">Cappuccino</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeLatte">Coffee Latte</a>
                     </div>
-                    <a href="../HTML/ProductsList.html">Signature Coffee</a>
+                    <a href="../HTML/ProductsList.html" id="categSignature">Signature Coffee</a>
                     <span id="plus2" class="inline" onclick="secondNav(btn2, plus2)">&plus;</span>
                     <div id="secondSidenav2" class="second_sidenav">
-                        <a class="subCategory" href="../HTML/ProductsList.html">Almond Latte</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Cold Brew Coffee</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Lavender Cappuccino</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeAlmond">Almond Latte</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeColdBrew">Cold Brew Coffee</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeLavender">Lavender Cappuccino</a>
                     </div>
-                    <a href="../HTML/ProductsList.html">Flavored Coffee</a>
+                    <a href="../HTML/ProductsList.html" id="categFlavored">Flavored Coffee</a>
                     <span id="plus3" class="inline" onclick="secondNav(btn3, plus3)">&plus;</span>
                     <div id="secondSidenav3" class="second_sidenav">
-                        <a class="subCategory" href="../HTML/ProductsList.html">Vanilla Latte</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Caramel Macchiato</a>
-                        <a class="subCategory" href="../HTML/ProductsList.html">Caramel Frappucino</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeVanilla">Vanilla Latte</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeCaramelM">Caramel Macchiato</a>
+                        <a class="subCategory" href="../HTML/ProductsList.html" id="typeCaramelF">Caramel Frappucino</a>
                     </div>
                 </div>
             </div>
@@ -98,13 +98,24 @@
             </div>
 
             <div class="details">
-                <p class="title">Payment Details</p>
+                <p class="title" id="titlePayment">Payment Details</p>
                 <div class="form">
                     <div class="section center">
                         <input type="radio" id="cart_payment1" name="payment" value="e-Money">
                         <label for="payment">e-Money</label>
+                    </div>
+                    <div class="section center">
                         <input type="radio" id="cart_payment2" name="payment" value="Cash on Delivery">
                         <label for="payment">Cash on Delivery</label>
+                    </div>
+                    <div class="section" id="paymentNumberSection">
+                        <label for="paymentNumber">e-Money Number</label>
+                        <input id="paymentNumber" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"> 
+                        <!-- https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+                    </div>
+                    <div class="section" id="paymentPinSection">
+                        <label for="paymentPin">e-Money PIN</label>
+                        <input type="password" maxlength=4 id="paymentPin" placeholder="6891" required>
                     </div>
                 </div>
             </div>
@@ -141,10 +152,6 @@
             <button id="btnFinish">Finish oreder</button>
         </div>
     </section>
-
-
-
-       
 
     <footer>
         <div class="footerContainer">

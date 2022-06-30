@@ -21,7 +21,7 @@ function filtrare(filtru, plus) {
 
 // Sectiunea de afisare a produselor
 
-let productsList = JSON.parse(localStorage.getItem("productsData"));
+let productsList = JSON.parse(localStorage.getItem("display"));
 let containerParent = document.getElementById("products");
 
 function createProduct(product) {
@@ -102,3 +102,5 @@ function createProduct(product) {
 for(let i = 0; i < productsList.length; i++) {
     createProduct(productsList[i]);
 }
+
+// Sectiunea de filtrare

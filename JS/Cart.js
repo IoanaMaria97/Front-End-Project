@@ -16,9 +16,27 @@ function populateCart(user) {
 }
 populateCart(registerUserCart);
 
+let title = document.getElementById("titlePayment");
+let eMoney = document.getElementById("cart_payment1");
+let paymentNumber = document.getElementById("paymentNumberSection");
+let paymentPin = document.getElementById("paymentPinSection");
+
+eMoney.addEventListener("click", function () {
+  title.style.marginBottom = "0";
+  paymentNumber.style.display = "block";
+  paymentPin.style.display = "block";
+});
+
+let cash = document.getElementById("cart_payment2");
+cash.addEventListener("click", function () {
+  title.style.marginBottom = "30px";
+  paymentNumber.style.display = "none";
+  paymentPin.style.display = "none";
+});
+
 
 // populate right side to finish order
-
+cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
 let notEmpty = document.getElementById("notEmpty");
 let subtotal = document.getElementById("subtotalNumber");
 let shipping = document.getElementById("shippingNumber");
@@ -43,6 +61,7 @@ function createElement(product) {
   title.setAttribute("id", `title${product[0].Id}`);
   title.textContent = product[0].CoffeeType;
   info.appendChild(title);
+
   let remove = document.createElement("span");
   remove.textContent = "X";
   remove.setAttribute("class", "remove");
@@ -90,21 +109,29 @@ function createElement(product) {
     number.textContent = product[1];
     price.textContent = `${product[0].Price * product[1]}${product[0].Currency}`; // actualizam pretul in functie de numarul de produse 
   });
+
+  // remove.addEventListener("click", function () {
+  //   cartProducts.splice(cartProducts.indexOf(product), 1);
+  //   createCart(cartProducts);
+  // });
+  // TO DO: trebuie actualizata lista cu produse dupa eliminarea unuia
 }
 
 function createCart() {
-  cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
+  // cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
   let sum = 0;
   if(cartProducts.length > 0) {
     for(let i = 0; i < cartProducts.length; i++) {
       createElement(cartProducts[i]);
-      sum += cartProducts[i][0].Price*cartProducts[i][1];
+      sum += cartProducts[i][0].Price * cartProducts[i][1]; 
+      // console.log(sum);
     }
     sum = sum.toFixed(2); // https://www.delftstack.com/howto/javascript/javascript-round-to-2-decimal-places/
     subtotal.textContent = `${sum}$`;
     let sum2 = 20;
     shipping.textContent = `${sum2}$`;
     let sum3 = Number(sum)+Number(sum2);
+    sum3 = sum3.toFixed(2);
     total.textContent = `${sum3}$`;
     let empty = document.getElementById("emptyCart");
     empty.style.display = "none";
@@ -115,3 +142,16 @@ function createCart() {
   }
 }
 createCart();
+
+
+// butonul de plasare a comenzii
+let submit = document.getElementById("btnFinish");
+if(cartProducts.length > 0) {
+  submit.addEventListener("click", function() {
+    window.localStorage.removeItem("cart");
+    location.href = "../HTML/Homepage.html";
+    alert("Your order is placed!");
+  });
+} else {
+  submit.setAttribute("disabled", "disabled");
+}
