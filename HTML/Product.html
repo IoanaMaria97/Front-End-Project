@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <div class="navigation">
-                <div class="logo">CoffeeShop</div>
+                <div class="logo" id="logo">CoffeeShop</div>
                 <div class="navigation_items">
                     <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"/></svg>
                     <a href="../HTML/Cart.html">Your cart</a>
@@ -56,16 +56,16 @@
     </header>
 
     <section class="search">
-        <input type="text" placeholder="Search here...">
-        <button>
-        <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
-        </button>
+        <input id="searchValue" name="search" type="search" placeholder="Search here...">
+        <label for="search" id="searchBtn">
+            <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+         </label>
     </section>
 
     <section class="breadcrumbs">
         <ul class="breadcrumbsMenu">
             <li><a class="menuItem" href="../HTML/Homepage.html">Homepage</a></li>
-            <li><a class="menuItem noBorder" href="#">Category</a></li>
+            <li><a class="menuItem noBorder" id="categ">Category</a></li>
         </ul>
     </section>
 
@@ -207,6 +207,7 @@
 
 <script src="../JS/Product.js"></script>
 <script src="../JS/Header.js"></script>
+<script src="../JS/SearchBar.js"></script>
 
 </body>
 </html>

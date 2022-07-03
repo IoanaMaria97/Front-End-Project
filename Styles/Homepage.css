@@ -314,15 +314,19 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   font-size: 18px;
 }
 
-.coffeeLovers .containerCoffeeLovers .search button {
-  background-color: transparent;
-  border: none;
-  margin-left: 10px;
+.coffeeLovers .containerCoffeeLovers .search label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
   height: 50px;
   cursor: pointer;
 }
 
-.coffeeLovers .containerCoffeeLovers .search button .fill {
+.coffeeLovers .containerCoffeeLovers .search label .fill {
   fill: black;
 }
 

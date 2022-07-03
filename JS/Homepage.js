@@ -160,3 +160,5 @@ for(let i = 0; i < containerCard.length; i++) {
 
 // https://www.youtube.com/watch?v=gor5BvT2z88 => https://github.com/karlhadwen/carousel
 // https://dev.to/tqbit/how-to-create-svg-elements-with-javascript-4mmp
+
+

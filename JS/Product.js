@@ -61,8 +61,8 @@ document.getElementById("number").textContent = data;
     }
 
    // button Add to Cart
- let button = document.getElementById("btnCart");
- button.addEventListener("click", function() {
+ let btn = document.getElementById("btnCart");
+ btn.addEventListener("click", function() {
         let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
         let update = [];
         update.push(product, data);
@@ -91,3 +91,7 @@ document.getElementById("number").textContent = data;
  });
 
  // https://bobbyhadz.com/blog/javascript-count-duplicates-in-array
+
+ // Breadcrumbs Menu
+
+

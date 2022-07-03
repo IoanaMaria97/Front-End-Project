@@ -237,14 +237,18 @@ span {
     border: none;
     font-size: 18px;
   }
-  .search button {
-    background-color: transparent;
-    border: none;
-    margin-left: 10px;
+  .search label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 20px;
     height: 50px;
     cursor: pointer;
   }
-  .search button .fill {
+  .search label .fill {
     fill: black;
   }
   .breadcrumbs {

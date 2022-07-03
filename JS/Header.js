@@ -120,3 +120,10 @@ type(lavender);
 type(vanillaLatte);
 type(caramelM);
 type(caramelF);
+
+// click logo => homepage
+let logo = document.getElementById("logo");
+logo.addEventListener("click", function() {
+    location.href = "../HTML/Homepage.html";
+})
+logo.style.cursor = "pointer";

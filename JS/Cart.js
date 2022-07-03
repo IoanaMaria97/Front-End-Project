@@ -2,12 +2,13 @@ let registerUserCart = JSON.parse(localStorage.getItem("registerUser"));
 
 // precompletare Cart
 
+let firstName = document.getElementById("cart_firstName");
+let lastName = document.getElementById("cart_lastName");
+let email = document.getElementById("cart_email");
+let city = document.getElementById("cart_city");
+let country = document.getElementById("cart_country");
+
 function populateCart(user) {
-  let firstName = document.getElementById("cart_firstName");
-  let lastName = document.getElementById("cart_lastName");
-  let email = document.getElementById("cart_email");
-  let city = document.getElementById("cart_city");
-  let country = document.getElementById("cart_country");
   firstName.value = user.firstName;
   lastName.value = user.lastName;
   email.value = user.email;
@@ -145,13 +146,19 @@ createCart();
 
 
 // butonul de plasare a comenzii
+
+// let address = document.getElementById("cart_address").value;
 let submit = document.getElementById("btnFinish");
+
 if(cartProducts.length > 0) {
   submit.addEventListener("click", function() {
     window.localStorage.removeItem("cart");
     location.href = "../HTML/Homepage.html";
-    alert("Your order is placed!");
+    alert("Your order is placed!")
   });
 } else {
   submit.setAttribute("disabled", "disabled");
 }
+
+
+

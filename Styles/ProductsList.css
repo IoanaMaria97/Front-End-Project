@@ -249,15 +249,19 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   font-size: 18px;
 }
 
-.productsSection .search button {
-  background-color: transparent;
-  border: none;
-  margin-left: 10px;
+.productsSection .search label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
   height: 50px;
   cursor: pointer;
 }
 
-.productsSection .search button .fill {
+.productsSection .search label .fill {
   fill: black;
 }
 
@@ -280,6 +284,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   -webkit-box-shadow: 0 15px 15px 0 #646464;
           box-shadow: 0 15px 15px 0 #646464;
   padding: 10px;
+  margin: 25px 0;
 }
 
 .productsSection .container .filter .filterContainer1 {
@@ -306,11 +311,6 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .productsSection .container .rightSide {
   width: 65%;
   height: 100%;
-}
-
-.productsSection .container .rightSide .sort {
-  height: 170px;
-  background-color: #BDCFCC;
 }
 
 .productsSection .container .rightSide #products {

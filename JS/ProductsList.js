@@ -1,4 +1,4 @@
-// Sectiunea de filtre
+// Sectiunea de filtrare
 let filterBrand = document.getElementById("filterBrand");
 let filterCategory = document.getElementById("filterCategory");
 let filterStrength = document.getElementById("filterStrength");
@@ -23,6 +23,7 @@ function filtrare(filtru, plus) {
 
 let productsList = JSON.parse(localStorage.getItem("display"));
 let containerParent = document.getElementById("products");
+
 
 function createProduct(product) {
     let containerChild = document.createElement("div");
@@ -103,4 +104,16 @@ for(let i = 0; i < productsList.length; i++) {
     createProduct(productsList[i]);
 }
 
-// Sectiunea de filtrare
+// Right side
+if(productsList.length === 0) {
+  let message = document.createElement("p");
+  message.textContent = "No products to show.";
+  message.style.display = "flex";
+  message.style.justifyContent = "center";
+  message.style.alignContent = "center";
+  message.style.padding = "100px";
+  containerParent.appendChild(message);
+}
+
+
+
