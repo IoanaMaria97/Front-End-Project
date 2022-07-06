@@ -92,73 +92,112 @@ function createElement(product) {
   let price = document.createElement("p");
   price.setAttribute("class", "price");
   price.setAttribute("id", `price${product[0].Id}` );
-  price.textContent = `${product[0].Price*product[1]}${product[0].Currency}`;
+  price.textContent = `${(product[0].Price*product[1]).toFixed(2)}${product[0].Currency}`;
   inline.appendChild(price);
 
   btnDecrement.addEventListener("click",  function decrement() {
     if(product[1] > 1) {
       product[1] --;
     }
-    number.textContent = product[1] ; 
-    price.textContent = `${product[0].Price * product[1]}${product[0].Currency}`; // actualizam pretul in functie de numarul de produse 
+    let update = [product[0], product[1]];
+    if(cartProducts.length > 0) {
+      let wasCartProductsUpdated = false;
+      cartProducts.forEach(element => {
+      if(element[0].Id === update[0].Id) {
+        wasCartProductsUpdated = true;
+        element[1] = update[1];
+        }
+      });
+      localStorage.setItem("cart", JSON.stringify(cartProducts));
+      container.innerHTML = '';
+      createCart();
+    }
   });
   
   btnIncrement.addEventListener("click", function increment() {
     if(product[1] < 5) {
       product[1]++;
     }
-    number.textContent = product[1];
-    price.textContent = `${product[0].Price * product[1]}${product[0].Currency}`; // actualizam pretul in functie de numarul de produse 
+    let update = [product[0], product[1]];
+    if(cartProducts.length > 0) {
+      let wasCartProductsUpdated = false;
+      cartProducts.forEach(element => {
+      if(element[0].Id === update[0].Id) {
+        wasCartProductsUpdated = true;
+        element[1] = update[1];
+        }
+      });
+      localStorage.setItem("cart", JSON.stringify(cartProducts));
+      container.innerHTML = '';
+      createCart();
+    }
   });
 
-  // remove.addEventListener("click", function () {
-  //   cartProducts.splice(cartProducts.indexOf(product), 1);
-  //   createCart(cartProducts);
-  // });
-  // TO DO: trebuie actualizata lista cu produse dupa eliminarea unuia
+  remove.addEventListener("click", function() {
+    cartProducts.splice(cartProducts.indexOf(product), 1);
+    localStorage.setItem("cart", JSON.stringify(cartProducts));
+    update();
+    createCart();
+  })
+}
+
+function calculateTotal() {
+  let sum = 0;
+  for(let i = 0; i < cartProducts.length; i++) {
+    sum += cartProducts[i][0].Price * cartProducts[i][1];
+  }
+  sum = sum.toFixed(2); // https://www.delftstack.com/howto/javascript/javascript-round-to-2-decimal-places/
+  subtotal.textContent = `${sum}$`;
+  let sum2 = 20;
+  shipping.textContent = `${sum2}$`;
+  let sum3 = Number(sum)+Number(sum2);
+  sum3 = sum3.toFixed(2);
+  total.textContent = `${sum3}$`;
+}
+
+function elements() {
+  cartProducts.forEach(element => {
+  createElement(element);
+});
+}
+
+
+function update() {
+  notEmpty.replaceChildren();
 }
 
 function createCart() {
-  // cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
-  let sum = 0;
   if(cartProducts.length > 0) {
-    for(let i = 0; i < cartProducts.length; i++) {
-      createElement(cartProducts[i]);
-      sum += cartProducts[i][0].Price * cartProducts[i][1]; 
-      // console.log(sum);
-    }
-    sum = sum.toFixed(2); // https://www.delftstack.com/howto/javascript/javascript-round-to-2-decimal-places/
-    subtotal.textContent = `${sum}$`;
-    let sum2 = 20;
-    shipping.textContent = `${sum2}$`;
-    let sum3 = Number(sum)+Number(sum2);
-    sum3 = sum3.toFixed(2);
-    total.textContent = `${sum3}$`;
-    let empty = document.getElementById("emptyCart");
-    empty.style.display = "none";
+    update();
+    elements();
+    calculateTotal();
   } else {
     subtotal.textContent = "0$";
     shipping.textContent = "0$";
-    total.textContent = "0$";    
+    total.textContent = "0$"; 
+
+
+    let empty = document.createElement("p");
+    empty.textContent = "The Cart is empty.";
+    empty.setAttribute("id", "emptyCart");
+    notEmpty.appendChild(empty);
   }
 }
 createCart();
 
 
 // butonul de plasare a comenzii
-
-// let address = document.getElementById("cart_address").value;
-let submit = document.getElementById("btnFinish");
-
-if(cartProducts.length > 0) {
-  submit.addEventListener("click", function() {
-    window.localStorage.removeItem("cart");
-    location.href = "../HTML/Homepage.html";
-    alert("Your order is placed!")
-  });
-} else {
-  submit.setAttribute("disabled", "disabled");
+function placeOrder() {
+  let submit = document.getElementById("btnFinish");
+  if(cartProducts.length > 0) {
+    submit.addEventListener("click", function() {
+      window.localStorage.removeItem("cart");
+      location.href = "../HTML/Homepage.html";
+      alert("Your order is placed!")
+    });
+  } else {
+    submit.setAttribute("disabled", "disabled");
+  }
 }
-
-
+placeOrder();
 

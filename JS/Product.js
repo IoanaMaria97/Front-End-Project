@@ -93,5 +93,6 @@ document.getElementById("number").textContent = data;
  // https://bobbyhadz.com/blog/javascript-count-duplicates-in-array
 
  // Breadcrumbs Menu
-
+let categ = document.getElementById("categ");
+categ.setAttribute("href", "../HTML/ProductsList.html");
 
