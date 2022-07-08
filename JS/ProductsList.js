@@ -114,6 +114,3 @@ if(productsList.length === 0) {
   message.style.padding = "100px";
   containerParent.appendChild(message);
 }
-
-
-

@@ -1,41 +1,5 @@
 let registerUserCart = JSON.parse(localStorage.getItem("registerUser"));
 
-// precompletare Cart
-
-let firstName = document.getElementById("cart_firstName");
-let lastName = document.getElementById("cart_lastName");
-let email = document.getElementById("cart_email");
-let city = document.getElementById("cart_city");
-let country = document.getElementById("cart_country");
-
-function populateCart(user) {
-  firstName.value = user.firstName;
-  lastName.value = user.lastName;
-  email.value = user.email;
-  city.value = user.city;
-  country.value = user.country;
-}
-populateCart(registerUserCart);
-
-let title = document.getElementById("titlePayment");
-let eMoney = document.getElementById("cart_payment1");
-let paymentNumber = document.getElementById("paymentNumberSection");
-let paymentPin = document.getElementById("paymentPinSection");
-
-eMoney.addEventListener("click", function () {
-  title.style.marginBottom = "0";
-  paymentNumber.style.display = "block";
-  paymentPin.style.display = "block";
-});
-
-let cash = document.getElementById("cart_payment2");
-cash.addEventListener("click", function () {
-  title.style.marginBottom = "30px";
-  paymentNumber.style.display = "none";
-  paymentPin.style.display = "none";
-});
-
-
 // populate right side to finish order
 cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
 let notEmpty = document.getElementById("notEmpty");
@@ -141,6 +105,16 @@ function createElement(product) {
   })
 }
 
+function totalNoRegister() {
+  subtotal.textContent = "0$";
+  shipping.textContent = "0$";
+  total.textContent = "0$"; 
+  let empty = document.createElement("p");
+  empty.textContent = "The Cart is empty.";
+  empty.setAttribute("id", "emptyCart");
+  notEmpty.appendChild(empty);
+}
+
 function calculateTotal() {
   let sum = 0;
   for(let i = 0; i < cartProducts.length; i++) {
@@ -161,7 +135,6 @@ function elements() {
 });
 }
 
-
 function update() {
   notEmpty.replaceChildren();
 }
@@ -172,15 +145,7 @@ function createCart() {
     elements();
     calculateTotal();
   } else {
-    subtotal.textContent = "0$";
-    shipping.textContent = "0$";
-    total.textContent = "0$"; 
-
-
-    let empty = document.createElement("p");
-    empty.textContent = "The Cart is empty.";
-    empty.setAttribute("id", "emptyCart");
-    notEmpty.appendChild(empty);
+    totalNoRegister();
   }
 }
 createCart();
@@ -200,4 +165,48 @@ function placeOrder() {
   }
 }
 placeOrder();
+
+// precompletare Cart
+
+let firstName = document.getElementById("cart_firstName");
+let lastName = document.getElementById("cart_lastName");
+let email = document.getElementById("cart_email");
+let city = document.getElementById("cart_city");
+let country = document.getElementById("cart_country");
+
+function populateCart(user) {
+  firstName.value = user.firstName;
+  lastName.value = user.lastName;
+  email.value = user.email;
+  city.value = user.city;
+  country.value = user.country;
+}
+
+
+function isUserRegister() {
+  if(registerUserCart) {
+    populateCart(registerUserCart);
+  } else {
+    totalNoRegister();
+  }
+}
+isUserRegister();
+
+let title = document.getElementById("titlePayment");
+let eMoney = document.getElementById("cart_payment1");
+let paymentNumber = document.getElementById("paymentNumberSection");
+let paymentPin = document.getElementById("paymentPinSection");
+
+eMoney.addEventListener("click", function () {
+  title.style.marginBottom = "0";
+  paymentNumber.style.display = "block";
+  paymentPin.style.display = "block";
+});
+
+let cash = document.getElementById("cart_payment2");
+cash.addEventListener("click", function () {
+  title.style.marginBottom = "30px";
+  paymentNumber.style.display = "none";
+  paymentPin.style.display = "none";
+});
 

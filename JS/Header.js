@@ -24,6 +24,7 @@ function register() {
         login.textContent = "Login";
         register_user.style.cursor = "pointer";
         login.setAttribute("href", "../HTML/SignIn.html");
+        localStorage.removeItem("cart");
     }
 }
 register();
@@ -127,3 +128,42 @@ logo.addEventListener("click", function() {
     location.href = "../HTML/Homepage.html";
 })
 logo.style.cursor = "pointer";
+
+
+// products section
+let shopBtn1 = document.getElementById("shopBtn1");
+let shopBtn2 = document.getElementById("shopBtn2");
+
+// shopBtn1.addEventListener("click", function(){
+//     let result = productsData.filter((product) => {
+//         if(product.Category === "Signature Coffee") {
+//             return product;
+//         }
+//     });
+//     localStorage.setItem("display", JSON.stringify(result));
+//     location.href = "../HTML/ProductsList.html";
+// })
+
+// shopBtn2.addEventListener("click", function(){
+//     let result = productsData.filter((product) => {
+//         if(product.Category === "Flavored Coffee") {
+//             return product;
+//         }
+//     });
+//     localStorage.setItem("display", JSON.stringify(result));
+//     location.href = "../HTML/ProductsList.html";
+// })
+
+function productsSection(element, categ) {
+    element.addEventListener("click", function(){
+        let result = productsData.filter((product) => {
+            if(product.Category === categ) {
+                return product;
+            }
+        });
+        localStorage.setItem("display", JSON.stringify(result));
+        location.href = "../HTML/ProductsList.html";
+    })
+}
+productsSection(shopBtn1, "Signature Coffee");
+productsSection(shopBtn2, "Flavored Coffee");
