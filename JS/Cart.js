@@ -151,21 +151,6 @@ function createCart() {
 createCart();
 
 
-// butonul de plasare a comenzii
-function placeOrder() {
-  let submit = document.getElementById("btnFinish");
-  if(cartProducts.length > 0) {
-    submit.addEventListener("click", function() {
-      window.localStorage.removeItem("cart");
-      location.href = "../HTML/Homepage.html";
-      alert("Your order is placed!")
-    });
-  } else {
-    submit.setAttribute("disabled", "disabled");
-  }
-}
-placeOrder();
-
 // precompletare Cart
 
 let firstName = document.getElementById("cart_firstName");
@@ -186,9 +171,7 @@ function populateCart(user) {
 function isUserRegister() {
   if(registerUserCart) {
     populateCart(registerUserCart);
-  } else {
-    totalNoRegister();
-  }
+  } 
 }
 isUserRegister();
 
@@ -210,3 +193,90 @@ cash.addEventListener("click", function () {
   paymentPin.style.display = "none";
 });
 
+// butonul de plasare a comenzii
+
+let address = document.getElementById("cart_address");
+let payment1 = document.getElementById("cart_payment1");
+let payment2 = document.getElementById("cart_payment2");
+
+let submit = document.getElementById("btnFinish");
+
+function verifyPayment() {
+  let number = document.getElementById("paymentNumber");
+  let pin = document.getElementById("paymentPin");
+  if(payment1.checked) {
+    if(number.value !== "" && pin.value !== "") {
+      return [true, ''];
+    } else {
+      return [false, 'Number or Pin missing.'];
+    }
+  } else if(payment2.checked) {
+    return [true, ''];
+  } else {
+    return [false,'Please select a payment method.'];
+  }
+}
+
+function verifyUser() {
+  if(registerUserCart) {
+    if(address.value !== "") {
+      return [true, ''];
+    } else {
+      return [false,'Please fill in the address.'];
+    }
+  } else {
+    const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(firstName.value === "") {
+      return [false, 'Please fill in your first name.'];
+    } else if(lastName.value === "") {
+      return [false, 'Please fill in your last name.'];
+    } else if(!validEmail.test(email.value)) {
+      return [false, 'Please fill in a valid email address.'];
+    } else if(address.value === "") {
+      return [false, 'Please fill in your address.'];
+    } else if(city.value === "") {
+      return [false, 'Please fill in your city.'];
+    } else if (country.value === "") {
+      return [false, 'Please fill in your country.'];
+    } else {
+      return [true, ''];
+    }
+  }
+}
+
+function verifyCart() {
+  if(cartProducts.length > 0) {
+    return [true, ''];
+  } else {
+    return [false, 'Cart is empty'];
+  }
+}
+
+function verify() {
+  let response1 = verifyCart();
+  let response2 = verifyUser();
+  let response3 = verifyPayment();
+  if(!response1[0]) {
+    return [false, response1[1]];
+  } else if(!response2[0]) {
+    return [false, response2[1]];
+  } else if(!response3[0]) {
+    return [false, response3[1]];
+  } else {
+    return [true, ''];
+  }
+}
+
+submit.addEventListener("click", function() {
+  let response = verify();
+  if(response[0]) {
+    window.localStorage.removeItem("cart");
+    location.href = "../HTML/Homepage.html";
+    alert("Your order is placed!");
+  } else {
+    alert(response[1]);
+  }
+});
+
+// https://stackoverflow.com/questions/3797462/what-is-opposite-to-javascript-match
+// https://stackoverflow.com/questions/59473850/disable-submit-button-if-all-some-input-textarea-and-radio-buttons-are-empty

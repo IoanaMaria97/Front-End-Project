@@ -50,14 +50,14 @@ document.getElementById("number").textContent = data;
           data--;
       }
     document.getElementById("number").textContent = data; 
-    price.textContent = `${product.Price * data}${product.Currency}`; // actualizam pretul in functie de numarul de produse 
+    price.textContent = `${(product.Price * data).toFixed(2)}${product.Currency}`; // actualizam pretul in functie de numarul de produse 
   }
   function increment() {
       if(data < 5) {
         data++;
       }
       document.getElementById("number").textContent = data;
-      price.textContent = `${product.Price * data}${product.Currency}`; // actualizam pretul in functie de numarul de produse 
+      price.textContent = `${(product.Price * data).toFixed(2)}${product.Currency}`; // actualizam pretul in functie de numarul de produse 
     }
 
    // button Add to Cart
