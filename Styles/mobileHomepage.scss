@@ -335,64 +335,76 @@
         }
     }
     
-    .products {
+    .bestCategories {
         background-color: rgba($blue, 0.7);
-        height: 800px;
-        display: flex;
-        justify-content: center;
-        .containerProducts {
-            width: 100%;
+        h3 {
+            font-size: 20px;
+            margin: 0;
+            padding-top: 50px;
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            .productCart {
-                height: 35%;
-                width: 80%;
-                max-width: 400px;
-                background-size: cover;
-                position: relative;
-                margin-bottom: 50px;
-                .details {
-                    height: 25%;
+            justify-content: center;
+        }
+        .products {
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            h4, h5 {
+                font-size: 18px;
+            }
+            .containerProducts {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                .productCart {
+                    height: 35%;
                     width: 80%;
-                    background-color: white;
-                    position: absolute;
-                    top: 87%;
-                    left: 10%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    .productTitle {
-                        margin: 5px;
-                        font-size: 17px;
-                    }
-                    .productParag {
-                        margin: 0;
-                        font-size: 14px;
-                        text-align: center;
-                    }
-                }
-                .btn {
-                    button {
-                        height: 15%;
-                        width: 50%;
+                    max-width: 400px;
+                    background-size: cover;
+                    position: relative;
+                    margin-bottom: 50px;
+                    .details {
+                        height: 25%;
+                        width: 80%;
+                        background-color: white;
                         position: absolute;
-                        top: 104%;
-                        left: 25%;
-                        border: none;
-                        background-color: $brown;
-                        color: $milky;
-                        box-shadow: 0px 10px 20px 0px $darkGrey;
-                        cursor: pointer;
+                        top: 87%;
+                        left: 10%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .productTitle {
+                            margin: 5px;
+                            font-size: 17px;
+                        }
+                        .productParag {
+                            margin: 0;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+                    .btn {
+                        button {
+                            height: 15%;
+                            width: 50%;
+                            position: absolute;
+                            top: 104%;
+                            left: 25%;
+                            border: none;
+                            background-color: $brown;
+                            color: $milky;
+                            box-shadow: 0px 10px 20px 0px $darkGrey;
+                            cursor: pointer;
+                        }
                     }
                 }
-            }
-            .productImgLeft {
-                background-image: url("../Img/coffee10.jpg");
-            }
-            .productImgRight {
-                background-image: url("../Img/coffee5.jpg");
+                .productImgLeft {
+                    background-image: url("../Img/coffee10.jpg");
+                }
+                .productImgRight {
+                    background-image: url("../Img/coffee5.jpg");
+                }
             }
         }
     }
@@ -411,9 +423,10 @@
             align-items: center;
             margin-bottom: 40px;
             .title {
-                h5 {
-                    margin-top: 0;
-                    margin-bottom: 30px;
+                h6 {
+                    margin-top: 20px;
+                    margin-bottom: 50px;
+                    font-size: 20px;
                 }
             }
             .grid {
@@ -436,6 +449,14 @@
                             font-size: 14px;
                             text-align: center;
                         }
+                        .card {
+                            top: 17px;
+                            button {
+                                height: 35px;
+                                width: 100px;
+                            }
+                        }
+                        
                    }
                 }
         }

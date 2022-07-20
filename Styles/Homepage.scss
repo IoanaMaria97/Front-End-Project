@@ -146,7 +146,7 @@ header {
                 input {
                     width: 500px;
                     height: 50px;
-                    background-color: rgba($milky, 0.5);
+                    background-color: rgba($milky, 0.7);
                     border: none;
                     font-size: 18px;
                 }
@@ -156,6 +156,8 @@ header {
                     margin-left: 20px;
                     height: 50px;
                     cursor: pointer;
+                    position: relative;
+                    right: 50px;
                     .fill {
                         fill: $black;
                     }
@@ -260,7 +262,7 @@ header {
                         .btn {
                             height: 15%;
                             width: 60%; 
-                            margin: 20px auto;   
+                            margin: 15px auto;   
                             button {
                                 height: 100%;
                                 width: 100%;
@@ -323,68 +325,79 @@ header {
     }
 }
 
-.products {
+.bestCategories {
     background-color: rgba($blue, 0.7);
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    .containerProducts {
-        width: 80%;
+    h3 {
+        font-size: 30px;
+        margin: 0;
+        padding-top: 150px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .productCart {
-            height: 60%;
-            width: 45%;
-            background-size: cover;
-            position: relative;
-            .details {
-                height: 25%;
-                width: 80%;
-                background-color: white;
-                position: absolute;
-                top: 87%;
-                left: 10%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .productTitle {
-                    margin: 5px;
-                }
-                .productParag {
-                    margin: 0;
-                    font-size: 18px;
-                    text-align: center;
-                }
-            }
-            .btn {
-                button {
-                    height: 15%;
-                    width: 50%;
+        justify-content: center;
+    }
+    .products {
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        h4, h5 {
+            font-size: 22px;
+        }
+        .containerProducts {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .productCart {
+                height: 60%;
+                width: 45%;
+                background-size: cover;
+                position: relative;
+                .details {
+                    height: 25%;
+                    width: 80%;
+                    background-color: white;
                     position: absolute;
-                    top: 104%;
-                    left: 25%;
-                    border: none;
-                    background-color: $brown;
-                    color: $milky;
-                    box-shadow: 0px 10px 20px 0px $darkGrey;
-                    cursor: pointer;
+                    top: 87%;
+                    left: 10%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .productTitle {
+                        margin: 5px;
+                    }
+                    .productParag {
+                        margin: 0;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+                .btn {
+                    button {
+                        height: 15%;
+                        width: 50%;
+                        position: absolute;
+                        top: 104%;
+                        left: 25%;
+                        border: none;
+                        background-color: $brown;
+                        color: $milky;
+                        box-shadow: 0px 10px 20px 0px $darkGrey;
+                        cursor: pointer;
+                    }
                 }
             }
-        }
-        .productImgLeft {
-            background-image: url("../Img/coffee10.jpg");
-        }
-        .productImgRight {
-            background-image: url("../Img/coffee5.jpg");
+            .productImgLeft {
+                background-image: url("../Img/coffee10.jpg");
+            }
+            .productImgRight {
+                background-image: url("../Img/coffee5.jpg");
+            }
         }
     }
 }
 
 .brightIdea {
     background-image: linear-gradient(rgba($blue, 0.7), $milky, $milky);
-    height: 950px;
-    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     .containerIdea {
@@ -395,9 +408,10 @@ header {
         align-items: center;
         margin-bottom: 40px;
         .title {
-            h5 {
-                margin-top: 40px;
-                margin-bottom: 70px;
+            h6 {
+                margin-top: 60px;
+                margin-bottom: 100px;
+                font-size: 30px;
             }
         }
         .grid {
@@ -410,6 +424,7 @@ header {
                    flex-direction: column;
                    justify-content: center;
                    align-items: center;
+                   position: relative;
                    .gridImg {
                         height: 250px;
                         width: 250px;
@@ -417,8 +432,40 @@ header {
                     }
                     .gridParag {
                         font-family: 'Gill Sans', sans-serif;
-                        font-size: 17px;
+                        font-size: 18px;
                         text-align: center;
+                        margin: 0;
+                        margin-top: 15px;
+                    }
+                    .bold {
+                        font-weight: bold;
+                    }
+                    .card {
+                        position: absolute;
+                        top: 15%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        transition: 0.5s ease;
+                        opacity: 0;
+                        &:hover {
+                            opacity: 1;
+                        }
+                        button {
+                            border: none;
+                            box-shadow: 0 5px 5px 0 $darkGrey;
+                            height: 45px;
+                            width: 150px;
+                            margin: 10px;
+                            background-color: $brown;
+                            color: $milky;
+                            cursor: pointer;
+                            border-radius: 5%;
+                            a {
+                                color: $milky;
+                                text-decoration: none;
+                            }
+                        }
                     }
                }
             }

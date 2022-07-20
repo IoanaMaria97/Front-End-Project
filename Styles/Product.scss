@@ -111,6 +111,8 @@ header {
         margin-left: 20px;
         height: 50px;
         cursor: pointer;
+        position: relative;
+        right: 50px;
         .fill {
             fill: $black;
         }

@@ -79,13 +79,18 @@ function createCard(slide, index, product) {
     paragraph1.textContent = product.Category ;
     flipCardBack.appendChild(paragraph1);
 
-    let paragraph2 = document.createElement("p");
-    paragraph2.textContent = product.CoffeeType ;
-    flipCardBack.appendChild(paragraph2);
+    // let paragraph2 = document.createElement("p");
+    // paragraph2.textContent = product.CoffeeType ;
+    // flipCardBack.appendChild(paragraph2);
 
     let paragraph3 = document.createElement("p");
     paragraph3.textContent = `${product.Price} ${product.Currency}`;
     flipCardBack.appendChild(paragraph3);
+
+    let paragraph4 = document.createElement("p");
+    paragraph4.textContent = product.CoffeeType ;
+    paragraph4.style.margin = "0";
+    card.appendChild(paragraph4);
 
     let btn = document.createElement("div");
     btn.setAttribute("class", "btn");
@@ -133,7 +138,7 @@ function createCard(slide, index, product) {
     iconSvg.setAttribute("class", "fill");
     iconPath.setAttribute(
       "d",
-      "M21 14.655l-5.799.908 3.393 6.917-3.111 1.52-3.413-6.982-4.07 3.651v-15.857l13 9.843zm-15-6.212c-1.19-.693-2-1.969-2-3.443 0-2.206 1.794-4 4-4 2.235 0 4.164 1.875 3.969 4.309l.928.703c.637-3.087-1.715-6.012-4.897-6.012-2.761 0-5 2.239-5 5 0 2.049 1.236 3.806 3 4.578v-1.135z"
+      "M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z"
     );
     iconSvg.appendChild(iconPath);
     button.appendChild(iconSvg);
@@ -162,3 +167,92 @@ for(let i = 0; i < containerCard.length; i++) {
 // https://dev.to/tqbit/how-to-create-svg-elements-with-javascript-4mmp
 
 
+// Bright Idea 
+let product1 = document.getElementById("product1");
+product1.setAttribute("src", products[0].Avatar);
+
+let product2 = document.getElementById("product2");
+product2.setAttribute("src", products[1].Avatar);
+
+let product3 = document.getElementById("product3");
+product3.setAttribute("src", products[50].Avatar);
+
+let product4 = document.getElementById("product4");
+product4.setAttribute("src", products[51].Avatar);
+
+let product5 = document.getElementById("product5");
+product5.setAttribute("src", products[100].Avatar);
+
+let product6 = document.getElementById("product6");
+product6.setAttribute("src", products[101].Avatar);
+
+function details(element) {
+  localStorage.setItem("productDetails", JSON.stringify(element));
+}
+
+function addCart(element) {
+  let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
+        let update = [];
+        update.push(element, 1);
+        if(cartProducts.length > 0) {
+          // variabila de control 
+          let wasCartProductsUpdated = false;
+          cartProducts.forEach(element => {
+            if(element[0].Id === update[0].Id) {
+              // console.log("se repeta");
+              // console.log(`Local Storage: ${element[1]} Update: ${update[1]} Suma lor: ${element[1]+update[1]}`);
+              wasCartProductsUpdated = true;
+              if(element[1]+update[1] < 6) {
+                element[1] += update[1];
+              } else {
+                alert("No more than 5 products!");
+              }
+            }
+          });
+          if(wasCartProductsUpdated === false) {
+            cartProducts.push(update);
+          }
+        } else {
+         cartProducts.push(update);
+        }
+        localStorage.setItem("cart", JSON.stringify(cartProducts));
+    }
+
+
+// products section
+let shopBtn1 = document.getElementById("shopBtn1");
+let shopBtn2 = document.getElementById("shopBtn2");
+
+// shopBtn1.addEventListener("click", function(){
+//     let result = productsData.filter((product) => {
+//         if(product.Category === "Signature Coffee") {
+//             return product;
+//         }
+//     });
+//     localStorage.setItem("display", JSON.stringify(result));
+//     location.href = "../HTML/ProductsList.html";
+// })
+
+// shopBtn2.addEventListener("click", function(){
+//     let result = productsData.filter((product) => {
+//         if(product.Category === "Flavored Coffee") {
+//             return product;
+//         }
+//     });
+//     localStorage.setItem("display", JSON.stringify(result));
+//     location.href = "../HTML/ProductsList.html";
+// })
+
+function productsSection(element, categ) {
+    element.addEventListener("click", function(){
+        let result = productsData.filter((product) => {
+            if(product.Category === categ) {
+                return product;
+            }
+        });
+        localStorage.setItem("display", JSON.stringify(result));
+        location.href = "../HTML/ProductsList.html";
+    })
+}
+productsSection(shopBtn1, "Signature Coffee");
+productsSection(shopBtn2, "Flavored Coffee");

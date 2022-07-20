@@ -68,7 +68,7 @@
                 <source src="../Img/coffee_video_3.mp4" type="video/mp4" />
             </video>
             <div class="search">
-                <input id="searchValue" name="search" type="search" placeholder="Search here...">
+                <input id="searchValue" name="search" type="text" placeholder="Search here...">
                 <label for="search" id="searchBtn">
                     <svg class="fill" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
                 </label>
@@ -101,25 +101,28 @@
     </section>
 
     <!-- design inspiration: https://www.blissworld.com -->
-    <section class="products">
-        <div class="containerProducts">
-            <div class="productCart productImgLeft">
-                <div class="details">
-                   <h3 class="productTitle">Signature Coffee!</h3>
-                    <p class="productParag">Best experience you can have!</p>
+    <section class="bestCategories">
+        <h3>Best Categories</h3>
+        <div class="products">
+            <div class="containerProducts">
+                <div class="productCart productImgLeft">
+                    <div class="details">
+                       <h4 class="productTitle">Signature Coffee!</h4>
+                        <p class="productParag">Best experience you can have!</p>
+                    </div>
+                    <div class="btn">
+                        <button id="shopBtn1">Shop</button>
+                    </div>
                 </div>
-                <div class="btn">
-                    <button id="shopBtn1">Shop</button>
-                </div>
-            </div>
-
-            <div class="productCart productImgRight">
-                <div class="details">
-                    <h4 class="productTitle">Flavored Coffee!</h4>
-                    <p class="productParag">Best experience you can have!</p>
-                </div>
-                <div class="btn">
-                    <button id="shopBtn2">Shop</button>
+    
+                <div class="productCart productImgRight">
+                    <div class="details">
+                        <h5 class="productTitle">Flavored Coffee!</h5>
+                        <p class="productParag">Best experience you can have!</p>
+                    </div>
+                    <div class="btn">
+                        <button id="shopBtn2">Shop</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,32 +131,68 @@
     <section class="brightIdea">
         <div class="containerIdea">
             <div class="title">
-                <h5>Bright Idea</h5>
+                <h6>Bright Idea</h6>
             </div>
             <div class="grid">  
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product1" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Coffee Latte</p>
+                        <p class="gridParag">4.99$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                       <div class="card">
+                        <button class="button1"><a href="../HTML/Product.html" onclick="details(products[0])">View details</a></button>
+                        <button class="button2"><a onclick="addCart(products[0])">Add to cart</a></button>
+                       </div>
                     </div>
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product2" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Expresso</p>
+                        <p class="gridParag">20$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                        <div class="card">
+                            <button class="button1"><a href="../HTML/Product.html" onclick="details(products[1])">View details</a></button>
+                            <button class="button2"><a onclick="addCart(products[1])">Add to cart</a></button>
+                           </div>
                     </div>
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product3" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Cold Brew Coffee</p>
+                        <p class="gridParag">19.99$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                        <div class="card">
+                            <button class="button1"><a href="../HTML/Product.html" onclick="details(products[50])">View details</a></button>
+                            <button class="button2"><a onclick="addCart(products[50])">Add to cart</a></button>
+                           </div>
                     </div>
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product4" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Almond Latte</p>
+                        <p class="gridParag">29.99$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                        <div class="card">
+                            <button class="button1"><a href="../HTML/Product.html" onclick="details(products[51])">View details</a></button>
+                            <button class="button2"><a onclick="addCart(products[51])">Add to cart</a></button>
+                           </div>
                     </div>
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product5" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Caramel Frappucino</p>
+                        <p class="gridParag">20$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                        <div class="card">
+                            <button class="button1"><a href="../HTML/Product.html" onclick="details(products[100])">View details</a></button>
+                            <button class="button2"><a onclick="addCart(products[100])">Add to cart</a></button>
+                           </div>
                     </div>
                     <div class="style">
-                        <img class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
-                        <p class="gridParag">Espresso is a concentrated form of coffee served in small, strong shots and is the base for many coffee drinks.</p>
+                        <img id="product6" class= "gridImg" src="../Img/coffee_item_6.jpeg" alt="coffee">
+                        <p class="gridParag bold">Vanilla Latte</p>
+                        <p class="gridParag">19.99$</p>
+                        <p class="gridParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus voluptatibus in, voluptatum.</p>
+                        <div class="card">
+                            <button class="button1"><a href="../HTML/Product.html" onclick="details(products[101])">View details</a></button>
+                            <button class="button2"><a onclick="addCart(products[101])">Add to cart</a></button>
+                           </div>
                     </div>
             </div>
         </div>

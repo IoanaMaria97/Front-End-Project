@@ -69,6 +69,9 @@ span {
   h5 {
     font-size: 18px;
   }
+  h6 {
+    font-size: 20px;
+  }
   p {
     font-size: 14px;
   }
@@ -309,7 +312,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .coffeeLovers .containerCoffeeLovers .search input {
   width: 500px;
   height: 50px;
-  background-color: rgba(245, 245, 245, 0.5);
+  background-color: rgba(245, 245, 245, 0.7);
   border: none;
   font-size: 18px;
 }
@@ -324,6 +327,8 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   margin-left: 20px;
   height: 50px;
   cursor: pointer;
+  position: relative;
+  right: 50px;
 }
 
 .coffeeLovers .containerCoffeeLovers .search label .fill {
@@ -497,7 +502,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .btn {
   height: 15%;
   width: 60%;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 .bestSeller .containerBestSeller .carousel .carousel_item .containerCard .card .btn button {
@@ -581,8 +586,23 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   color: white;
 }
 
-.products {
+.bestCategories {
   background-color: rgba(189, 207, 204, 0.7);
+}
+
+.bestCategories h3 {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bestCategories .products {
   height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -592,7 +612,11 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           justify-content: center;
 }
 
-.products .containerProducts {
+.bestCategories .products h4, .bestCategories .products h5 {
+  font-size: 22px;
+}
+
+.bestCategories .products .containerProducts {
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,14 +629,14 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           align-items: center;
 }
 
-.products .containerProducts .productCart {
+.bestCategories .products .containerProducts .productCart {
   height: 60%;
   width: 45%;
   background-size: cover;
   position: relative;
 }
 
-.products .containerProducts .productCart .details {
+.bestCategories .products .containerProducts .productCart .details {
   height: 25%;
   width: 80%;
   background-color: white;
@@ -631,17 +655,17 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
           align-items: center;
 }
 
-.products .containerProducts .productCart .details .productTitle {
+.bestCategories .products .containerProducts .productCart .details .productTitle {
   margin: 5px;
 }
 
-.products .containerProducts .productCart .details .productParag {
+.bestCategories .products .containerProducts .productCart .details .productParag {
   margin: 0;
   font-size: 18px;
   text-align: center;
 }
 
-.products .containerProducts .productCart .btn button {
+.bestCategories .products .containerProducts .productCart .btn button {
   height: 15%;
   width: 50%;
   position: absolute;
@@ -655,19 +679,18 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   cursor: pointer;
 }
 
-.products .containerProducts .productImgLeft {
+.bestCategories .products .containerProducts .productImgLeft {
   background-image: url("../Img/coffee10.jpg");
 }
 
-.products .containerProducts .productImgRight {
+.bestCategories .products .containerProducts .productImgRight {
   background-image: url("../Img/coffee5.jpg");
 }
 
 .brightIdea {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(189, 207, 204, 0.7)), color-stop(#F5F5F5), to(#F5F5F5));
   background-image: linear-gradient(rgba(189, 207, 204, 0.7), #F5F5F5, #F5F5F5);
-  height: 950px;
-  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,9 +717,10 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   margin-bottom: 40px;
 }
 
-.brightIdea .containerIdea .title h5 {
-  margin-top: 40px;
-  margin-bottom: 70px;
+.brightIdea .containerIdea .title h6 {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  font-size: 30px;
 }
 
 .brightIdea .containerIdea .grid {
@@ -723,6 +747,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .brightIdea .containerIdea .grid .style .gridImg {
@@ -733,8 +758,54 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 
 .brightIdea .containerIdea .grid .style .gridParag {
   font-family: 'Gill Sans', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.brightIdea .containerIdea .grid .style .bold {
+  font-weight: bold;
+}
+
+.brightIdea .containerIdea .grid .style .card {
+  position: absolute;
+  top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.brightIdea .containerIdea .grid .style .card:hover {
+  opacity: 1;
+}
+
+.brightIdea .containerIdea .grid .style .card button {
+  border: none;
+  -webkit-box-shadow: 0 5px 5px 0 #646464;
+          box-shadow: 0 5px 5px 0 #646464;
+  height: 45px;
+  width: 150px;
+  margin: 10px;
+  background-color: #8C7268;
+  color: #F5F5F5;
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.brightIdea .containerIdea .grid .style .card button a {
+  color: #F5F5F5;
+  text-decoration: none;
 }
 
 footer {
