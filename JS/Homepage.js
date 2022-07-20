@@ -256,3 +256,5 @@ function productsSection(element, categ) {
 }
 productsSection(shopBtn1, "Signature Coffee");
 productsSection(shopBtn2, "Flavored Coffee");
+
+localStorage.setItem("display", JSON.stringify(products));
