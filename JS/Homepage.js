@@ -257,4 +257,5 @@ function productsSection(element, categ) {
 productsSection(shopBtn1, "Signature Coffee");
 productsSection(shopBtn2, "Flavored Coffee");
 
+// Bright Idea -> product -> products(afisare toate produsele)
 localStorage.setItem("display", JSON.stringify(products));

@@ -1,10 +1,10 @@
 // Searchbar
 let searchInfo = localStorage.getItem("search");  
 let productsElements = JSON.parse(localStorage.getItem("productsData"));
-async function test() {
-  await delay(500);
-}
-test();
+// async function test() {
+//   await delay(500);
+// }
+// test();
 localStorage.removeItem("search");
 
 let input = document.getElementById("searchValue");
@@ -12,10 +12,6 @@ input.value = searchInfo;
 input.onkeydown = function(event){
   if(event.key === 'Enter') {
   let value = input.value.toLowerCase();
-  // if(value === "") {
-  //   console.log("Ok");
-  //   localStorage.setItem("search", "OK");
-  // }
   localStorage.setItem("search", value);
   let result = [];
   productsElements.forEach(product => {

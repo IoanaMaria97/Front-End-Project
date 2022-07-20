@@ -96,3 +96,15 @@ document.getElementById("number").textContent = data;
 let categ = document.getElementById("categ");
 categ.setAttribute("href", "../HTML/ProductsList.html");
 
+// Review
+let reviewBtn = document.getElementById("review");
+let form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+  // let name = document.getElementById("name");
+  // let email = document.getElementById("email");
+  // let text = document.getElementById("text");
+  // if(name.value === "" && email.value === "" && text.value === "") {
+  //   event.preventDefault();
+  // }
+  alert("Thank you for your review!");
+});
