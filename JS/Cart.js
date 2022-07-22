@@ -1,4 +1,5 @@
 let registerUserCart = JSON.parse(localStorage.getItem("registerUser"));
+let products = JSON.parse(localStorage.getItem("productsData"));
 
 // populate right side to finish order
 cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
@@ -15,6 +16,12 @@ function createElement(product) {
   let avatar = document.createElement("img");
   avatar.setAttribute("src", product[0].Avatar);
   avatar.setAttribute("class", "avatar");
+  avatar.style.cursor = "pointer";
+  avatar.addEventListener("click", function() {
+    localStorage.setItem("productDetails", JSON.stringify(product[0]));
+    localStorage.setItem("display", JSON.stringify(products));
+    location.href = "../HTML/Product.html";
+  });
   container.appendChild(avatar);
 
   let info = document.createElement("div");

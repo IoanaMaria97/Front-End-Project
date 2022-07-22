@@ -14,6 +14,6 @@ async function Timer(time = 10) {
         }
     location.href = "../HTML/Homepage.html";
   }
-Timer(10);
+Timer(15);
 
 // https://masteringjs.io/tutorials/fundamentals/wait-1-second-then

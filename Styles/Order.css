@@ -114,14 +114,13 @@ body .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .container .logo {
   margin: 30px auto;
-}
-
-body .container .message {
-  font-size: 22px;
 }
 
 body .container .social svg {

@@ -312,7 +312,7 @@ header .container .category .first_sidenav .second_sidenav .subCategory {
 .coffeeLovers .containerCoffeeLovers .search input {
   width: 500px;
   height: 50px;
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(245, 245, 245, 0.8);
   border: none;
   font-size: 18px;
 }

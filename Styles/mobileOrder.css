@@ -1,0 +1,116 @@
+* {
+  font-family: 'Gill Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 18px;
+}
+
+li, a {
+  font-size: 18px;
+}
+
+button {
+  font-size: 18px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+figcaption {
+  font-size: 18px;
+}
+
+span {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+  }
+  li, a {
+    font-size: 12px;
+  }
+  button {
+    font-size: 12px;
+  }
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=mobileOrder.css.map */
