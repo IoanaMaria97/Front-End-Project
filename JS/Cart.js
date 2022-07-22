@@ -271,8 +271,8 @@ submit.addEventListener("click", function() {
   let response = verify();
   if(response[0]) {
     window.localStorage.removeItem("cart");
-    location.href = "../HTML/Homepage.html";
-    alert("Your order is placed!");
+    location.href = "../HTML/Order.html";
+    // alert("Your order is placed!");
   } else {
     alert(response[1]);
   }

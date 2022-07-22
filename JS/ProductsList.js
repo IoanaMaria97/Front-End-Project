@@ -1,24 +1,3 @@
-// Sectiunea de filtrare
-let filterBrand = document.getElementById("filterBrand");
-let filterCategory = document.getElementById("filterCategory");
-let filterStrength = document.getElementById("filterStrength");
-
-let plusFilter1 = document.getElementById("plusFilter1");
-let plusFilter2 = document.getElementById("plusFilter2");
-let plusFilter3 = document.getElementById("plusFilter3");
-let plusFilter4 = document.getElementById("plusFilter4");
-
-function filtrare(filtru, plus) {
-  if (filtru.style.display === "block") {
-            filtru.style.display = "none";
-            plus.textContent = "+";
-
-        } else {
-            filtru.style.display = "block";
-            plus.textContent = "-";
-        }
-}
-
 // Sectiunea de afisare a produselor
 
 let productsList = JSON.parse(localStorage.getItem("display"));
@@ -114,3 +93,149 @@ if(productsList.length === 0) {
   message.style.padding = "100px";
   containerParent.appendChild(message);
 }
+
+// Sectiunea de filtrare
+let filterBrand = document.getElementById("filterBrand");
+let filterCategory = document.getElementById("filterCategory");
+let filterStrength = document.getElementById("filterStrength");
+
+let plusFilter1 = document.getElementById("plusFilter1");
+let plusFilter2 = document.getElementById("plusFilter2");
+let plusFilter3 = document.getElementById("plusFilter3");
+let plusFilter4 = document.getElementById("plusFilter4");
+
+function filtrare(filtru, plus) {
+  if (filtru.style.display === "block") {
+            filtru.style.display = "none";
+            plus.textContent = "+";
+
+        } else {
+            filtru.style.display = "block";
+            plus.textContent = "-";
+        }
+}
+
+// Brand
+let Nescafe = document.getElementById("filterBrand1");
+let Lavazza = document.getElementById("filterBrand2");
+let Starbucks = document.getElementById("filterBrand3");
+let Costa = document.getElementById("filterBrand4");
+let McCafe = document.getElementById("filterBrand5");
+
+function brand(element, name) {
+  for(let i = 0; i < productsList.length; i++) {
+    if(productsList[i].Brand === name) {
+      element.checked = true;
+    }
+  }
+}
+brand(Nescafe, "Nescafe");
+brand(Lavazza, "Lavazza");
+brand(Starbucks, "Starbucks");
+brand(Costa, "Costa");
+brand(McCafe, "McCafe");
+
+
+// Category
+let Basic = document.getElementById("filterCategory1");
+let Signature = document.getElementById("filterCategory2");
+let Flavored = document.getElementById("filterCategory3");
+
+function category(element, name) {
+  for(let i = 0; i < productsList.length; i++) {
+    if(productsList[i].Category === name) {
+      element.checked = true;
+    }
+  }
+}
+category(Basic, "Basic Coffee");
+category(Signature, "Signature Coffee");
+category(Flavored, "Flavored Coffee");
+
+// Type
+let Expresso = document.getElementById("filterTypes1");
+let Cappuccino = document.getElementById("filterTypes2");
+let Latte = document.getElementById("filterTypes3");
+let Almond = document.getElementById("filterTypes4");
+let ColdBrew = document.getElementById("filterTypes5");
+let Lavender = document.getElementById("filterTypes6");
+let Vanilla = document.getElementById("filterTypes7");
+let CaramelM = document.getElementById("filterTypes8");
+let CaramelF = document.getElementById("filterTypes9");
+
+function type(element, name) {
+  for(let i = 0; i < productsList.length; i++) {
+    if(productsList[i].CoffeeType === name) {
+      element.checked = true;
+    }
+  }
+}
+type(Expresso, "Expresso");
+type(Cappuccino, "Cappuccino");
+type(Latte, "Coffee Latte");
+type(Almond, "Almond Latte");
+type(ColdBrew, "Cold Brew Coffee");
+type(Lavender, "Lavender Cappuccino");
+type(Vanilla, "Vanilla Latte");
+type(CaramelM, "Caramel Macchiato");
+type(CaramelF, "Caramel Frappucino");
+
+
+// Strength
+let light = document.getElementById("filterStrength1");
+let medium = document.getElementById("filterStrength2");
+let mediumDark = document.getElementById("filterStrength3");
+let dark = document.getElementById("filterStrength4");
+
+function strength(element, name) {
+  for(let i = 0; i < productsList.length; i++) {
+    if(productsList[i].Strength === name) {
+      element.checked = true;
+    }
+  }
+}
+strength(light, "Light to Medium Roast");
+strength(medium, "Medium Roast");
+strength(mediumDark, "Medium to Dark Roast");
+strength(dark, "Dark Roast");
+
+
+
+// liste
+let brandFilter = [];
+for(let i = 0; i < productsList.length; i++) {
+  brandFilter.push(productsList[i].Brand);
+}
+console.log(brandFilter);
+
+
+let categoryFilter = [];
+for(let i = 0; i < productsList.length; i++) {
+  categoryFilter.push(productsList[i].Category);
+}
+console.log(categoryFilter);
+
+
+let typeFilter = [];
+for(let i = 0; i < productsList.length; i++) {
+  typeFilter.push(productsList[i].CoffeeType);
+}
+console.log(typeFilter);
+
+
+let strengthFilter = [];
+for(let i = 0; i < productsList.length; i++) {
+  strengthFilter.push(productsList[i].Strength);
+}
+console.log(strengthFilter);
+
+
+
+// let resultBrand = brandFilter.filter(function brand_filter(element, name) {
+//   for(let i = 0; i < productsList.length; i++) {
+//     if(element.checked === true && productsList[i].Brand === name) {
+//       return productsList[i];
+//     }
+//   }
+//   brand_filter(Nescafe, "Nescafe");
+// });

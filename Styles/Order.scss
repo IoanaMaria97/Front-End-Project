@@ -1,0 +1,38 @@
+@import "colors";
+@import "base";
+
+body {
+    background-color: rgba($blue, 0.7);
+    .container {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        background-color: $milky;
+        box-shadow: 0px 10px 30px 0px $darkGrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo {
+            margin: 30px auto;
+        }
+        .message {
+            font-size: 22px;
+        }
+        .social {
+            svg {
+                margin: 0 10px;
+            }
+        }
+        .redirect {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            .redirectHome {
+                margin: 5px;
+            }
+        }
+    }
+}
